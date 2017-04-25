@@ -480,6 +480,7 @@ predict(final, type = "coefficients", s = bestlambda)
 
 As expected, none of the coefficients are zero---ridge regression does not perform variable selection!
 
+
 # Lasso Regression
 
 In order to fit a lasso moedl, we once again use the `glmnet()` function; however, this time we use the argument `alpha = 1`.
