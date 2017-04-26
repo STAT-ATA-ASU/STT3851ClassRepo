@@ -284,7 +284,7 @@ Start Project 2
 **Apr 25:**
 
 * Turn in Project 2 - NLT April 26, 10 am
-* Make sure a single `.Rmd` with the sections outlined in the [Example Paper](../BDbetaTemplate/TemplateBookDown.html) is in your `Project2` directory under your private course repository.  This is 10% of the assignment grade.
+* Make sure a single `.Rmd` with the sections outlined in the [Example Paper](../BDbetaTemplate/TemplateBookDown.html) is in your `Project2` directory under your private course repository.
 * Send an email to the instructor using a subject of "House Data Predictions" with an attached vector (csv file) of your predictions using the data set `housedataTEST.csv`.  Note: your vector should contain 4229 predictions. 
 
 **Apr 27:**
