@@ -3,8 +3,7 @@ title: "The Bootstrap"
 author: "Modified Example from ISLR"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output:
-  html_document:
-    css: ../CSS/asu.css
+  bookdown::html_document2:
     highlight: textmate
     theme: yeti
 ---
@@ -13,8 +12,11 @@ output:
 set.seed(123)
 library(knitr)
 knitr::opts_chunk$set(comment = NA,  fig.align = 'center', fig.height = 5, fig.width = 5, warning = FALSE, message = FALSE, tidy.opts=list(blank = TRUE, width.cutoff= 75))
+library(tidyverse)
 ```
 
+
+# Investment Example
 
 Suppose that we wish to invest a fixed sum of money in two financial
 assets that yield returns of $X$ and $Y$ , respectively, where $X$ and $Y$ are
@@ -64,9 +66,9 @@ alphahat <- (var(Xorig)[2,2] - var(Xorig)[1,2]) /
 alphahat
 ```
 
-Consider generating four simulated data sets.
+Consider generating four simulated data sets.  The resulting simulations are shown in Figure \@ref(fig:FourGs).
 
-```{r, fig.width = 7, fig.height = 7}
+```{r, label = "FourGs", fig.width = 7, fig.height = 7, fig.cap = "Four simulated data sets"}
 set.seed(123)
 X1 <- rmvnorm(n = n, mean = c(0, 0), sigma = SIGMA, method = "chol")
 X2 <- rmvnorm(n = n, mean = c(0, 0), sigma = SIGMA, method = "chol")
@@ -85,21 +87,37 @@ alphahat3 <- (var(X3)[2,2] - var(X3)[1,2]) /
 alphahat4 <- (var(X4)[2,2] - var(X4)[1,2]) / 
   (var(X4)[1,1] + var(X4)[2, 2] - 2*var(X4)[1, 2])
 c(alphahat1, alphahat2, alphahat3, alphahat4)
-par(mfrow = c(2, 2))
-plot(X1, col = "blue")
-plot(X2, col = "blue")
-plot(X3, col = "blue")
-plot(X4, col = "blue")
-par(mfrow = c(1, 1))
+# par(mfrow = c(2, 2))
+# plot(X1, col = "blue")
+# plot(X2, col = "blue")
+# plot(X3, col = "blue")
+# plot(X4, col = "blue")
+# par(mfrow = c(1, 1))
+p1 <- ggplot(data = data.frame(X1), aes(x = X, y = Y)) + 
+  geom_point(color = "blue") + 
+  theme_bw()
+p2 <- ggplot(data = data.frame(X2), aes(x = X, y = Y)) + 
+  geom_point(color = "blue") + 
+  theme_bw()
+p3 <- ggplot(data = data.frame(X3), aes(x = X, y = Y)) + 
+  geom_point(color = "blue") + 
+  theme_bw()
+p4 <- ggplot(data = data.frame(X4), aes(x = X, y = Y)) + 
+  geom_point(color = "blue") + 
+  theme_bw()
+gridExtra::grid.arrange(p1, p2, p3, p4, ncol = 2)
 ```
 
 The value of $\hat{\alpha}$ resulting from each simulated data set ranges from `r min(alphahat1, alphahat2, alphahat3, alphahat4)` to `r max(alphahat1, alphahat2, alphahat3, alphahat4)`.
+
+## Simulating the sampling distribution of $\hat{\alpha}$
 
 It is natural to wish to quantify the accuracy of our estimate of $\alpha$.  To estimate the standard deviation of $\hat{\alpha}$, we repeat the process of simulating 100 paired observations of $X$ and $Y$, and estimating $\alpha$ 10,000 times.  We thereby obtained 10,000 estimates of $\alpha$, which we can call $\hat{\alpha}_1, \hat{\alpha}_2, \ldots, \hat{\alpha}_{10,000}.$
 
 ```{r}
 set.seed(213)
 R <- 10000
+n <- 100
 alpha <- numeric(R)
 for(i in 1:R){
   X <- rmvnorm(n = n, mean= c(0, 0), sigma = SIGMA, method = "chol")
@@ -111,23 +129,29 @@ alphasd <- sd(alpha)
 c(alphabar, alphasd)
 alphabar <- round(alphabar, 4)
 alphasd <- round(alphasd, 4)
+ggplot(data = data.frame(alpha = alpha), aes(x = alpha)) +
+  geom_density(fill = "pink") + 
+  theme_bw() + 
+  labs(x = expression(hat(alpha)))
 ```
 
-The mean of all $`r R`$ estimates of $\alpha$ is `r alphabar`, very close to $\alpha = 0.6$, and the standard deviation of the estimates is `r alphasd`.  This gives us a very good idea of the accuracy of $\hat{\alpha}$: $\text{SE}(\hat{\alpha}) \approx `r alphasd`$. So roughly speaking, for a random samle from the population, we would expect $\hat{\alpha}$ to differ from $\alpha$ by approximately `r round(alphasd, 2)`, on average.
+The mean of all $`r R`$ estimates of $\alpha$ is `r alphabar`, very close to $\alpha = 0.6$, and the standard deviation of the estimates is `r alphasd`.  This gives us a very good idea of the accuracy of $\hat{\alpha}$: $\text{SE}(\hat{\alpha}) \approx `r alphasd`$. So roughly speaking, for a random sample from the population, we would expect $\hat{\alpha}$ to differ from $\alpha$ by approximately `r round(alphasd, 2)`, on average.
 
 In practice, however, the procedure for estimating $\text{SE}(\hat{\alpha})$ outlined above
 cannot be applied, because for real data we cannot generate new samples
 from the original population. However, the bootstrap approach allows us
 to use a computer to emulate the process of obtaining new sample sets, so that
 so that we can estimate the variability of $\hat{\alpha}$ without generating additional
-samples. Rather than repeatedly obtaining independent data sets from the
-population, we instead obtain distinct data sets by repeatedly sampling
-observations from the original data set.
+samples. 
 
-This approach is illustrated in the Figure below on a simple data set, which
+## The bootstrap
+
+Rather than repeatedly obtaining independent data sets from the
+population, we instead obtain distinct data sets by repeatedly sampling
+observations from the original data set.  This approach is illustrated in Figure \@ref(fig:BF) on a simple data set, which
 we call $Z$, that contains only $n = 3$ observations. 
 
-```{r, echo = FALSE}
+```{r, label = "BF", echo = FALSE, fig.cap = "Bootstrap schematic"}
 knitr::include_graphics("BootstrapGraph.png", dpi = 96)
 ```
 
@@ -146,7 +170,7 @@ We can compute the standard error of these bootstrap estimates using the formula
 
 $$\text{SE}_B(\hat{\alpha}) = \sqrt{\frac{1}{B-1}\sum_{r = 1}^{B}\left(\hat{\alpha}^{*r} -\frac{1}{B}\sum_{r' = 1}^{B}\hat{\alpha}^{*r'} \right)^2}.$$
 
-This serves a an estimate of the standard error of $\hat{\alpha}$ estimated from the original data set.
+This serves as an estimate of the standard error of $\hat{\alpha}$ estimated from the original data set.
 
 ```{r}
 set.seed(11)
@@ -178,6 +202,21 @@ ggplot(data = DF2, aes(x = values)) +
 ```
 
 Note that the bootstrap density looks very similar to the simulation density of $\alpha$.  In particular the bootstrap estimate $\text{SE}(\hat{\alpha})= `r round(sd(alphaBS),4)`$ is very close to the estimate $`r round(sd(alpha),4)`$ obtained using $`r R`$ simulated data sets. 
+
+### Bootstrap Bias
+
+$$BIAS_{boot}(\hat{\theta}^*) = E(\hat{\theta}^*) - \hat{\theta}$$ 
+
+```{r}
+alphahat <- (var(Xorig)[2,2] - var(Xorig)[1,2]) / 
+  (var(Xorig)[1,1] + var(Xorig)[2, 2] - 2*var(Xorig)[1, 2])
+alphahat
+Ealpha_star <- mean(alphaBS)
+Ealpha_star
+BB <- Ealpha_star - alphahat
+BB # Bootstrap bias
+```
+
 
 ## General Bootstrap Schematic
 
@@ -216,7 +255,7 @@ alpha.fn(Portfolio, sample(x = 1:100, size = 100, replace = TRUE))
 alpha.fn(Xorig, sample(x = 1:100, size = 100, replace = TRUE))
 ```
 
-We can implement a bootstrap analysis by performing this command many times, recording all of the corresponding estimates for $\alpha$, and computing the resulting standard deviation.  However, the `boot()` function (from the `boot` package) automates this apporach.  Below we produce $R = 1,000$ bootstrap estimates for $\alpha$.
+We can implement a bootstrap analysis by performing this command many times, recording all of the corresponding estimates for $\alpha$, and computing the resulting standard deviation.  However, the `boot()` function (from the `boot` package) automates this approach.  Below we produce $R = 1,000$ bootstrap estimates for $\alpha$.
 
 ```{r}
 set.seed(1)
