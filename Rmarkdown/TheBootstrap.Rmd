@@ -257,7 +257,7 @@ alpha.fn(Xorig, sample(x = 1:100, size = 100, replace = TRUE))
 
 We can implement a bootstrap analysis by performing this command many times, recording all of the corresponding estimates for $\alpha$, and computing the resulting standard deviation.  However, the `boot()` function (from the `boot` package) automates this approach.  Below we produce $R = 1,000$ bootstrap estimates for $\alpha$.
 
-```{r}
+```{r, fig.width = 8, fig.height = 4}
 set.seed(1)
 library(boot)
 boot.obj1 <- boot(data = Portfolio, statistic = alpha.fn, R = 1000)
