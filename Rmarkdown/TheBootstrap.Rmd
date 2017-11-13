@@ -41,7 +41,7 @@ sigmaX2 <- 1
 sigmaY2 <- 1.25
 sigmaXY <- 0.5
 SIGMA <- matrix(c(sigmaX2, sigmaXY, sigmaXY, sigmaY2), nrow = 2, byrow = TRUE)
-SIGMA          # Variance Covaraince Matrix
+SIGMA          # Variance Covariance Matrix
 n <- 100       
 set.seed(141)
 Xorig <- rmvnorm(n = n, mean = c(0, 0), sigma = SIGMA, method = "chol")
@@ -68,7 +68,7 @@ alphahat
 
 Consider generating four simulated data sets.  The resulting simulations are shown in Figure \@ref(fig:FourGs).
 
-```{r, label = "FourGs", fig.width = 7, fig.height = 7, fig.cap = "Four simulated data sets"}
+```{r, label = "FourGs", fig.width = 8, fig.height = 8, fig.cap = "Four simulated data sets"}
 set.seed(123)
 X1 <- rmvnorm(n = n, mean = c(0, 0), sigma = SIGMA, method = "chol")
 X2 <- rmvnorm(n = n, mean = c(0, 0), sigma = SIGMA, method = "chol")
@@ -144,7 +144,7 @@ to use a computer to emulate the process of obtaining new sample sets, so that
 so that we can estimate the variability of $\hat{\alpha}$ without generating additional
 samples. 
 
-## The bootstrap
+## The Bootstrap
 
 Rather than repeatedly obtaining independent data sets from the
 population, we instead obtain distinct data sets by repeatedly sampling
