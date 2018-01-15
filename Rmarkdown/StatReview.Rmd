@@ -1,6 +1,6 @@
 ---
 title: "Statistics Review"
-author: "Alan Arnholt"
+author: "Alan T. Arnholt"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output:
   bookdown::html_document2:
