@@ -186,7 +186,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Lab1: Subset Selection Methods</h1>
 <h4 class="author"><em>Alan T. Arnholt</em></h4>
-<h4 class="date"><em>Last Updated on: Mar 14, 2019 at 01:24:39 PM</em></h4>
+<h4 class="date"><em>Last Updated on: Mar 14, 2019 at 01:39:30 PM</em></h4>
 
 </div>
 
@@ -580,6 +580,11 @@ Resampling results across tuning parameters:
 
 RMSE was used to select the optimal model using the smallest value.
 The final value used for the model was nvmax = 9.</code></pre>
+<pre class="r"><code>coef(regfit_seq$finalModel, id = 9)</code></pre>
+<pre><code>  (Intercept)         AtBat          Hits         Walks        CAtBat 
+ 146.24960033   -1.93676754    6.65672102    5.55204413   -0.09953904 
+        CRuns          CRBI        CWalks     DivisionW       PutOuts 
+   1.25067124    0.66176849   -0.77798498 -115.34950146    0.27773062 </code></pre>
 <pre class="r"><code>head(predict(regfit_seq, newdata = Hitters[test,]))</code></pre>
 <pre><code>    -Andre Dawson -Andres Galarraga        -Al Newman  -Argenis Salazar 
        1139.68770         519.19903         175.44980          27.91548 

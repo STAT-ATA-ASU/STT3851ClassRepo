@@ -253,6 +253,7 @@ regfit_seq <- train(Salary ~ ., data = Hitters,
                     tuneGrid = expand.grid(nvmax = 2:15)
                     )
 regfit_seq
+coef(regfit_seq$finalModel, id = 9)
 head(predict(regfit_seq, newdata = Hitters[test,]))
 ### Note that the following is the same output
 coef(reg.best, 9)
