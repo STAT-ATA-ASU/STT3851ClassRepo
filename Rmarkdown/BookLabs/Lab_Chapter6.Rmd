@@ -36,7 +36,7 @@ dim(Hitters)
 sum(is.na(Hitters))
 ```
 
-The `regsubsets()` function (part of the `leaps` library) performs best subset selection by identifying the best model that contains a given number of predictors, where best is quantified using RSS. The syntax is the same as for `lm()`. The `summary()` command outputs the best set of variables for each model size.
+The `regsubsets()` function (part of the `leaps` package) performs best subset selection by identifying the best model that contains a given number of predictors, where best is quantified using RSS. The syntax is the same as for `lm()`. The `summary()` command outputs the best set of variables for each model size.
 
 ```{r}
 library(leaps)
@@ -206,7 +206,7 @@ folds <- sample(1:k, size = nrow(Hitters), replace = TRUE)
 cv.errors <- matrix(NA, k, 19, dimnames = list(NULL, paste(1:19)))
 ```
 
-Now we write a for loop that performs cross-validation. In the $j^{th}$ fold, theelements of `folds` that equal `j` are in the test set, and the remainder are in the training set. We make our predictions for each model size (using our new `predict()` method), compute the test errors on the appropriate subset, and store them in the appropriate slot in the matrix `cv.errors`.
+Now we write a for loop that performs cross-validation. In the $j^{th}$ fold, the elements of `folds` that equal `j` are in the test set, and the remainder are in the training set. We make our predictions for each model size (using our new `predict()` method), compute the test errors on the appropriate subset, and store them in the appropriate slot in the matrix `cv.errors`.
 
 ```{r}
 for(j in 1:k){
@@ -223,6 +223,7 @@ This has given us a $10 \times 19$ matrix, of which the $(i, j)$th element corre
 ```{r}
 mean_cv_errors <- apply(cv.errors, 2, mean)
 mean_cv_errors
+which.min(mean_cv_errors)
 plot(mean_cv_errors, type = "b")
 ```
 
@@ -245,16 +246,16 @@ myControl <- trainControl(## 10-fold CV
                            ## repeated ten times
                            repeats = 10)
 set.seed(314)
-regfit_fwd <- train(Salary ~ ., data = Hitters,
-                    method = "leapForward",
+regfit_seq <- train(Salary ~ ., data = Hitters,
+                    method = "leapSeq",
                     trControl = myControl,
                     # tuneLength = 15
                     tuneGrid = expand.grid(nvmax = 2:15)
                     )
-regfit_fwd
-head(predict(regfit_fwd, newdata = Hitters[test,]))
+regfit_seq
+head(predict(regfit_seq, newdata = Hitters[test,]))
 ### Note that the following is the same output
 coef(reg.best, 9)
-head(predict(reg.best, id= 9, newdata = Hitters[test,]))
+head(predict(reg.best, id = 9, newdata = Hitters[test,]))
 
 ```
