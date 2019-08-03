@@ -3,9 +3,9 @@ title: "Welcome"
 ---
 
 
-* The course syllabus is stored in the [`Syllabus`](./Syllabus/STT3851Spring2017Syllabus.html) directory of the STT 3851 repository.
+* The course syllabus is stored in the [`Syllabus`](./Syllabus/STT3851Fall2019Syllabus.html) directory of the STT 3851 repository.
 
-* Course pacing and assignments are stored in the [`Assignments`](./Assignments/AssignmentsSTT3851Spring2017.html) directory of the STT 3851 repository.
+* Course pacing and assignments are stored in the [`Assignments`](./Assignments/AssignmentsSTT3851Fall2019.html) directory of the STT 3851 repository.
 
 * [Class RStudio Server](https://mathr.math.appstate.edu) (you must be registered in the course to access the server)
 
@@ -13,7 +13,6 @@ title: "Welcome"
 
 * [The Bootstrap](./Rmarkdown/TheBootstrap.html)
 
-* Questions related to course materials should be addressed with the [piazza account for STT 3851](https://piazza.com/appstate/spring2017/stt/home).
 
 
 ## Resources you may find helpful
@@ -22,7 +21,7 @@ title: "Welcome"
 
 * [Web site for _An Introduction to Statistical Learning_ (free pdf of book)](http://www-bcf.usc.edu/~gareth/ISL/)
 
-* [Course Notes STT 3850 (Spring 2014)](https://alanarnholt.github.io/STT3850/Notes/Parent/Parent.html) 
+* [Course Notes STT 3850 (Spring 2018)](https://alanarnholt.github.io/STT3850/Notes/Parent/Parent.html) 
 
 ### Chapter 1: Introduction ([slides](https://lagunita.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/introduction.pdf))
 
