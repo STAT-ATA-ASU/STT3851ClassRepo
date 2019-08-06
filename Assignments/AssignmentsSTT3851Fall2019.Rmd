@@ -226,8 +226,9 @@ _____________________
 **Oct 9:**
 
 * Before class:
-    + [Project 1](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569) - Read the hyperlinked paper---Accept assignment from GitHub Classroom - Due Oct 25 - ALAN update directions
+    + Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
     + The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
+    + [Project 1]()---Accept assignment from GitHub Classroom - Due Oct 25 - ALAN update directions
 
 
 **Oct 11:**
