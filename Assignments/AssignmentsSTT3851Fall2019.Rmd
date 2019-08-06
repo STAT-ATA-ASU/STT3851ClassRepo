@@ -208,12 +208,19 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 
 * Workday
 * Due TODAY: Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4
-* Homework: Reproduce [Lab: Linear Regression](../Rmarkdown/LabChap3.html) - Accept assignment from GitHub classroom - Due Oct 11
+* Homework: Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub classroom - Due Oct 11
 
 
 **Oct 7:**
 
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
+
+
+_____________________
+
+Github ClassRoom assignments done to here---time to hit the pool---will update Project one directions this afternoon--- 8/6/19, 10:40
+
+_____________________
 
 
 **Oct 9:**
