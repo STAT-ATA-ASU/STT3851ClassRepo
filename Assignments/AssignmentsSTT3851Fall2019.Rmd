@@ -51,7 +51,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * Homework:
     + Read Chapters 1-2 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
     + Watch [Lab: Introduction to R](https://www.youtube.com/watch?v=jwBgGS_4RQA) (14:12)
-    + Reproduce [Modified Introduction to R](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom. Due Aug 30 
+    + Reproduce [Modified Introduction to R (Lab1)](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom. Due Aug 30 
 
 **Aug 26:**
 
@@ -83,7 +83,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * [Overplotting Examples and possible Solutions](../Rmarkdown/HousingData.html)
 
 * Due TODAY:
-    + Reproduce [Modified Introduction to R](../Rmarkdown/LabChap2.html).  Accept assignment from GitHub Classroom. Due Aug 30 
+    + Reproduce [Modified Introduction to R (Lab1)](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom. Due Aug 30 
     
 * Homework:
     + Reproduce [Writing Assignment](../Rmarkdown/WritingAssignment.html).  Accept assignment from GitHub Classroom.  Due Sep 6
