@@ -233,7 +233,7 @@ _____________________
 **Oct 11:**
 
 * Workday
-* Due TODAY: Reproduce [Lab: Linear Regression](../Rmarkdown/LabChap3.html) - Accept assignment from GitHub classroom - Due Oct 11
+* Due TODAY: Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub classroom - Due Oct 11
 
 ~~**Oct 14:**~~ No Class - Fall Break 
 
