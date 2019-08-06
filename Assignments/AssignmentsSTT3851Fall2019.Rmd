@@ -74,7 +74,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Aug 30:**
 
 * Before class:
-    + Read chapter 1 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Read chapter 1 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
     + Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
     + Read Section 3.4 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
@@ -86,7 +86,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
     + Reproduce [Modified Introduction to R (Lab1)](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom. Due Aug 30 
     
 * Homework:
-    + Reproduce [Writing Assignment](../Rmarkdown/WritingAssignment.html).  Accept assignment from GitHub Classroom.  Due Sep 6
+    + Reproduce [Writing Assignment (Lab2)](https://stat-ata-asu.github.io/WritingAssignment-SC/WritingAssignment-Solution.html).  Accept assignment from GitHub Classroom.  Due Sep 6
 
 
 ~~**Sep 2:**~~ **No Class - State Holiday**
@@ -96,7 +96,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Sep 4:**
 
 * Before class:
-    + Read chapter 2 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Read chapter 2 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Statistical Learning and Regression](https://www.youtube.com/watch?v=WjyuiK5taS8) (11:41)
     + Watch [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=UvxHOkYQl8g) (11:40)
     + Watch [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VusKAosxxyk) (10:04)
@@ -106,22 +106,22 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Sep 6:**
 
 * Before class: 
-    + Review/read chapter 2 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review/read chapter 2 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=vVj2itVNku4) (15:37)
 * Lecture - Bias Variance Tradeoff - Take notes - [Slides](../Rmarkdown/BiasVarDer.pdf) 
-* Due TODAY:  Reproduce [Writing Assignment](../Rmarkdown/WritingAssignment.html).  Accept assignment from GitHub Classroom.  Due Sep 6
+* Due TODAY:  Reproduce [Writing Assignment (Lab2)](https://stat-ata-asu.github.io/WritingAssignment-SC/WritingAssignment-Solution.html).  Accept assignment from GitHub Classroom.  Due Sep 6
 
 
 **Sep 9:**
 
 * Before class: 
-    + Review/read chapter 2 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review/read chapter 2 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 * Go over [Bias Variance Graphs](../Rmarkdown/BiasVariance.html) 
 * Go over [Chapter 2 Graphs](../Rmarkdown/Chap2Slides.html)
 * Discuss flexible models and when to use them
 * Homework:
-    + Data Camp Correlation and Regression - Due Sep 13
-    + Data Camp Correlation and Regression - Accept assignment from GitHub Classroom - Due Sep 20
+    + [Data Camp Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) - Due Sep 13
+    + Reproduce [Data Camp Correlation and Regression](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom - Due Sep 20
 
 
 **Sep 11:**
@@ -135,59 +135,59 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Sep 13:**
 
 * Work Day
-* Due TODAY: Data Camp Correlation and Regression - Due Sep 13
-* Homework: Data Camp Correlation and Regression - Accept assignment from GitHub Classroom - Due Sep 20
+* [Data Camp Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) - Due Sep 13
+* Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom - Due Sep 20
 
 **Sep 16:**
 
 * Before class:
-    + Read pages 59-82 of [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Read pages 59-82 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=PsE9UqoWtS4) (13:01)
     + Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
     + Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=1hbCJyM9ccs) (15:38)
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Homework: Data Camp Correlation and Regression - Accept assignment from GitHub Classroom - Due Sep 20
+* Homework: Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom - Due Sep 20
 
 **Sep 18:**
 
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Homework: Data Camp Correlation and Regression - Accept assignment from GitHub Classroom - Due Sep 20
+* Homework: Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom - Due Sep 20
 
 **Sep 20:**
 
 * Workday
-* Due TODAY: Data Camp Correlation and Regression - Accept assignment from GitHub Classroom - Due Sep 20
+* Due TODAY: Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom - Due Sep 20
 
 **Sep 23:**
 
 * Before class:
-    + Read pages 82-120 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Read pages 82-120 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
 * Go over [Bias Variance Graphs again](../Rmarkdown/BiasVarianceGGplot.html)
 * Homework: 
-    +  Data Camp Multiple and Logistic Regression - Due Sep 27
-    +  Data Camp Multiple and Logistic Regression - Accept assignment from GitHub Classroom - Due Oct 4
+    +  [Data Camp Multiple and Logistic Regression](https://www.datacamp.com/courses/multiple-and-logistic-regression) - Due Sep 27
+    +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4
 
 
 **Sep 25:**
 
 * Before class:
-    + Review pages 82-120 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review pages 82-120 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
 * Homework: 
-    +  Data Camp Multiple and Logistic Regression - Due Sep 27
-    +  Data Camp Multiple and Logistic Regression - Accept assignment from GitHub Classroom - Due Oct 4
+    +  [Data Camp Multiple and Logistic Regression](https://www.datacamp.com/courses/multiple-and-logistic-regression) - Due Sep 27
+    +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4
 
 **Sep 27:**
 
 * Before class:
-    + Review pages 82-120 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review pages 82-120 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
 * Due TODAY: Data Camp Multiple and Logistic Regression - Due Sep 27    
 * Homework: 
-    +  Data Camp Multiple and Logistic Regression - Accept assignment from GitHub Classroom - Due Oct 4    
+    + Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4   
 
 
 **Sep 30:**
@@ -195,19 +195,19 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
 * Answer questions at the end of [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html).
 * Homework:
-      +  Data Camp Multiple and Logistic Regression - Accept assignment from GitHub Classroom - Due Oct 4 
+      +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4
       
 **Oct 2:**
 
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
 * Answer questions at the end of [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html).
 * Homework:
-      +  Data Camp Multiple and Logistic Regression - Accept assignment from GitHub Classroom - Due Oct 4 
+      +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4
 
 **Oct 4:**
 
 * Workday
-* Due TODAY: Data Camp Multiple and Logistic Regression - Accept assignment from GitHub Classroom - Due Oct 4 
+* Due TODAY: Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom - Due Oct 4
 * Homework: Reproduce [Lab: Linear Regression](../Rmarkdown/LabChap3.html) - Accept assignment from GitHub classroom - Due Oct 11
 
 
@@ -248,7 +248,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Oct 23:**
 
 * Before class:
-    + Read chapter 5 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Read chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=_2ij6eaaSl0) (14:01)
 
 **Oct 25:**
@@ -259,20 +259,20 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Oct 28:**
 
 * Before class:
-    + Review chapter 5 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
     + Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
 
 **Oct 30:**
 
 * Before class:
-    + Review chapter 5 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
 
 **Nov 1:**
 
 * Before class:
-    + Review chapter 5 [ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf)
+    + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Lab: Cross-Validation](https://www.youtube.com/watch?v=6dSXlqHAoMk) (11:21)
 * Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
 * Homework: [Reproduce _Lab: Cross-Validation_](../Rmarkdown/LabCrossValidation.html) --- Accept assignment from GitHub Classroom - Due Nov 8
