@@ -291,9 +291,9 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Nov 8:**
 
 * Workday
-* Due TODAY: [Reproduce _Lab: Cross-Validation_(Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom - Due Nov 8
-* Homework: Data Camp Machine Learning Toolbox - Due Nov 15 
-* Homework: Data Camp Machine Learning Toolbox - Accept assignment from Github Classroom Due Nov 22 
+* Due TODAY: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom - Due Nov 8
+* Homework: [Data Camp Machine Learning Toolbox](https://www.datacamp.com/courses/machine-learning-toolbox) - Due Nov 15 
+* Homework: Reproduce [Data Camp Machine Learning Toolbox (DataCamp3)](https://stat-ata-asu.github.io/MachineLearningToolbox/) --- Accept assignment from GitHub Classroom - Due Nov 22 
 
 **Nov 11:**
 
@@ -305,7 +305,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 
 **Nov 15:**
 
-* Due TODAY: Data Camp Machine Learning Toolbox - Due Nov 15 
+* Due TODAY: [Data Camp Machine Learning Toolbox](https://www.datacamp.com/courses/machine-learning-toolbox) - Due Nov 15 
 
 **Nov 18:**
 
@@ -330,8 +330,7 @@ Start Project 2
 **Nov 22:**
 
 * Workday
-* Due TODAY: Data Camp Machine Learning Toolbox - Accept assignment from Github Classroom Due Nov 22 
-
+* Due TODAY: Reproduce [Data Camp Machine Learning Toolbox (DataCamp3)](https://stat-ata-asu.github.io/MachineLearningToolbox/) --- Accept assignment from GitHub Classroom - Due Nov 22 
 **Nov 25:**
 
 * Before class:
