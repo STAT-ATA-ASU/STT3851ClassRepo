@@ -42,10 +42,10 @@ This course covers elements of data management, descriptive statistics,  and inf
 **Course Grading:**
 
 
-* 30% of the course grade will come from Data Camp assignments (3)
-* 40% of the grade will come from labs (4)
+* 36% of the course grade will come from Data Camp assignments (3-(4), 3-(8))
+* 32% of the grade will come from labs (4-(8))
 * 25% of the grade will come from two projects (10% first project, 15% second project)
-* 5% of the course grade will come from participation (attendance, participation in discussion in-class and/or online).
+* 7% of the course grade will come from quizzes
 
 
 **How To Get Unstuck**
