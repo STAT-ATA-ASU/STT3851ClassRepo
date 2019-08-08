@@ -216,20 +216,12 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
 
 
-_____________________
-
-Github ClassRoom assignments done to here---time to hit the pool---will update Project one directions this afternoon--- 8/6/19, 10:40
-
-_____________________
-
-
 **Oct 9:**
 
 * Before class:
     + Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
     + The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
-    + [Project 1]()---Accept assignment from GitHub Classroom - Due Oct 25 - ALAN update directions
-
+    + Project 1---Accept assignment from GitHub Classroom - Due Oct 25
 
 **Oct 11:**
 
@@ -240,7 +232,7 @@ _____________________
 
 **Oct 16:**
 
-* [Work on Project 1](../Rmarkdown/DirectionsMHP.html)----ALAN update directions ASAP-----Due Oct 25
+* Work on Project 1---Accept assignment from GitHub Classroom - Due Oct 25
 * [Code for class notes](../Rmarkdown/BodyTemperatures.html)
 
 
@@ -283,23 +275,23 @@ _____________________
     + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Lab: Cross-Validation](https://www.youtube.com/watch?v=6dSXlqHAoMk) (11:21)
 * Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
-* Homework: [Reproduce _Lab: Cross-Validation_](../Rmarkdown/LabCrossValidation.html) --- Accept assignment from GitHub Classroom - Due Nov 8
+* Homework: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom - Due Nov 8
 
 
 **Nov 4:**
 
 * Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
-* Homework: [Reproduce _Lab: Cross-Validation_](../Rmarkdown/LabCrossValidation.html) --- Accept assignment from GitHub Classroom - Due Nov 8
+* Homework: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom - Due Nov 8
 
 **Nov 6:**
 
 * Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
-* Homework: [Reproduce _Lab: Cross-Validation_](../Rmarkdown/LabCrossValidation.html) --- Accept assignment from GitHub Classroom - Due Nov 8
+* Homework: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom - Due Nov 8
 
 **Nov 8:**
 
 * Workday
-* Due TODAY: [Reproduce _Lab: Cross-Validation_](../Rmarkdown/LabCrossValidation.html) --- Accept assignment from GitHub Classroom - Due Nov 8
+* Due TODAY: [Reproduce _Lab: Cross-Validation_(Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom - Due Nov 8
 * Homework: Data Camp Machine Learning Toolbox - Due Nov 15 
 * Homework: Data Camp Machine Learning Toolbox - Accept assignment from Github Classroom Due Nov 22 
 
