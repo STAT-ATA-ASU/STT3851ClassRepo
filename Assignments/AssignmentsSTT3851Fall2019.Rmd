@@ -45,6 +45,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
     + [Phillip Guo's Unix-like command line tutorials (Four tutorials about 10 minutes each)](http://www.pgbovine.net/command-line-tutorial.htm)
     + [Phillip Guo's Basic Git and Github tutorials (Three tutorials about 10 minutes each)](http://www.pgbovine.net/git-tutorial.htm)
     + [Clone a GitHub Repo with RStudio (Video)](https://www.youtube.com/watch?v=YxZ8J2rqhEM) (5:05)
+* Before class read [Steps for downloading and editing assignments from GitHub Classroom](https://github.com/jfiksel/github-classroom-for-students)
 * In class lecture: Review of one and two sample inference, permutation tests, and bootstrap procedures --- take notes
 * [Statistics Review](../Rmarkdown/StatReview.html)
 
