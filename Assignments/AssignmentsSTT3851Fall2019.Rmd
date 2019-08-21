@@ -29,6 +29,7 @@ output:
 
 * [Statistics Review](../Rmarkdown/StatReview.html)
 * Link to [Day One Activity and Code](../Rmarkdown/DayOne.html)
+* Link to [Day two Activity and Code](../Rmarkdown/day2.html)
     
     ```{block2, note-text, type='rmdnote'}
 Most GitHub Classroom assignments due dates are 5 p.m. Friday.
@@ -48,6 +49,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * Before class read [Steps for downloading and editing assignments from GitHub Classroom](https://github.com/jfiksel/github-classroom-for-students)
 * In class lecture: Review of one and two sample inference, permutation tests, and bootstrap procedures --- take notes
 * [Statistics Review](../Rmarkdown/StatReview.html)
+* Link to [Day two Activity and Code](../Rmarkdown/day2.html)
 
 * Homework:
     + Read Chapters 1-2 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)

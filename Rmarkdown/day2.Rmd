@@ -1,0 +1,75 @@
+---
+title: "Class"
+author: "Alan T. Arnholt"
+date: "8/21/2019"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+```
+
+## Creating `DF` 
+
+```{r}
+eyecolor <- c("blue", "blue", "green", "brown", "green", "green", "blue", "brown", 
+              "green", "gray", "green", "green", "brown", "brown", "green",
+              rep("brown", 3))
+height <- c(69, 69, 76, 73, 67, 73, 72, 70,68, 71, 67, 70, 75, 71, 67, 69, 60, 64)
+DF <- data.frame(eyecolor, height)
+rm(eyecolor, height)
+DT::datatable(DF)
+```
+
+The average height for this class is `r round(mean(DF$height),2)` inches.
+
+## Base R Graphs
+
+### Quantitative Graphs
+
+```{r}
+hist(DF$height, col = "red")
+boxplot(DF$height, col = "blue", horizontal = TRUE)
+```
+
+### Categorical Graphs
+
+```{r}
+table(DF$eyecolor)
+barplot(table(DF$eyecolor), col = c("blue", "brown", "gray", "darkgreen"))
+```
+
+## `ggplot2` Graphs
+
+### Quantitative
+
+```{r}
+library(ggplot2)
+ggplot(data = DF, aes(x = height)) +
+  geom_histogram(binwidth = 2, fill = "peachpuff", color = "black") + 
+  theme_bw()
+```
+
+```{r}
+ggplot(data = DF, aes(x = "", y = height)) + 
+  geom_boxplot(fill = "pink") + 
+  coord_flip() + 
+  labs(x = "") + 
+  theme_bw()
+```
+
+### Categorical `ggplot2`
+
+```{r}
+ggplot(data = DF, aes(x = eyecolor)) +
+  geom_bar(fill = c("blue", "brown", "gray", "darkgreen")) + 
+  theme_bw()
+```
+
+## Writing Mathematics
+
+The standard deviation ($s$) is defined as
+
+$$s = \sqrt{\sum_{i=1}^n \frac{(x_i - \bar{x})^2}{n-1}}$$
+
