@@ -13,7 +13,11 @@ output:
 set.seed(123)
 library(knitr)
 knitr::opts_chunk$set(comment = NA, fig.show = 'as.is', fig.align = 'center', fig.height = 7, fig.width = 7, prompt = TRUE, highlight = TRUE, tidy = FALSE, warning = FALSE, message = FALSE, tidy.opts=list(blank = TRUE, width.cutoff= 75, cache = TRUE))
+# Parallel Processing
+library(doMC)
+registerDoMC(cores = 12)
 ```
+
 # Bias Variance Tradeoff
 
 ## Four Training Sets
