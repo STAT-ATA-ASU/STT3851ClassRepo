@@ -140,6 +140,7 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * Work Day
 * [Data Camp Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) - Due Sep 13
 * Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Sep 20
+* [Code](https://raw.githubusercontent.com/alanarnholt/GeneralStatistics/master/rmarkdown/ResidualGraphs.Rmd) to help with the creation of Figure 6.1 in the DataCamp assignment.
 
 **Sep 16:**
 
