@@ -1,0 +1,24 @@
+---
+title: "Step AIC"
+author: "Alan T. Arnholt"
+date: "9/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+library(MASS)
+names(Boston)
+
+stepAIC(lm(medv ~ 1, data = Boston), scope = (~crim+zn + indus + chas + nox + rm + age +dis + rad + tax + ptratio + black +lstat), direction = "forward", test = "F")
+### OR
+null <- lm(medv ~ 1, data = Boston)
+full <- lm(medv ~ ., data = Boston)
+stepAIC(null, scope = list(lower = null, upper = full), direction = "forward", test = "F")
+```
+
