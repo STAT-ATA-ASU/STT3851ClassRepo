@@ -14,11 +14,44 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(MASS)
 names(Boston)
-
+cor(Boston)
 stepAIC(lm(medv ~ 1, data = Boston), scope = (~crim+zn + indus + chas + nox + rm + age +dis + rad + tax + ptratio + black +lstat), direction = "forward", test = "F")
 ### OR
 null <- lm(medv ~ 1, data = Boston)
 full <- lm(medv ~ ., data = Boston)
 stepAIC(null, scope = list(lower = null, upper = full), direction = "forward", test = "F")
+```
+```{r}
+mod <- lm(medv ~ lstat + rm + ptratio + dis, data = Boston)
+summary(mod)
+```
+
+```{r}
+par(mfrow = c(2, 2))
+plot(mod)
+par(mfrow = c(1,1))
+```
+
+```{r}
+mod2 <- lm(medv ~ . - age - indus, data = Boston)
+summary(mod2)
+plot(mod2)
+```
+
+```{r}
+library(car)
+residualPlots(mod)
+modM <- lm(medv ~ lstat + rm + ptratio + dis + I(rm^2) + I(lstat^2), data = Boston)
+residualPlots(modM)
+plot(modM)
+summary(modM)
+```
+
+```{r}
+residualPlots(mod2)
+mod3 <- update(mod2, .~. + I(lstat^2) + I(rm^2))
+mod3
+summary(mod3)
+residualPlots(mod3)
 ```
 
