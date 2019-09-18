@@ -19,7 +19,7 @@ knitr::opts_chunk$set(comment = NA,  fig.align = 'center', fig.height = 5, fig.w
 # Read in data with `read.csv()`
 
 ```{r message = FALSE}
-site <- "http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv"
+site <- "http://faculty.marshall.usc.edu/gareth-james/ISL/Advertising.csv"
 AD <- read.csv(site)
 head(AD)
 dim(AD)
@@ -31,20 +31,20 @@ datatable(AD[, -1], rownames = FALSE,
 ## Base R Graph
 
 ```{r}
-plot(Sales ~ TV, data = AD, col = "red", pch = 19)
-mod1 <- lm(Sales ~ TV, data = AD)
+plot(sales ~ TV, data = AD, col = "red", pch = 19)
+mod1 <- lm(sales ~ TV, data = AD)
 abline(mod1, col = "blue")
 ```
 ```{r, fig.width = 12, fig.height = 4}
 par(mfrow=c(1, 3))
-plot(Sales ~ TV, data = AD, col = "red", pch = 19)
-mod1 <- lm(Sales ~ TV, data = AD)
+plot(sales ~ TV, data = AD, col = "red", pch = 19)
+mod1 <- lm(sales ~ TV, data = AD)
 abline(mod1, col = "blue")
-plot(Sales ~ Radio, data = AD, col = "red", pch = 19)
-mod2 <- lm(Sales ~ Radio, data = AD)
+plot(sales ~ radio, data = AD, col = "red", pch = 19)
+mod2 <- lm(sales ~ radio, data = AD)
 abline(mod2, col = "blue")
-plot(Sales ~ Newspaper, data = AD, col = "red", pch = 19)
-mod3 <- lm(Sales ~ Newspaper, data = AD)
+plot(sales ~ newspaper, data = AD, col = "red", pch = 19)
+mod3 <- lm(sales ~ newspaper, data = AD)
 abline(mod3, col = "blue")
 par(mfrow=c(1, 1))
 ```
@@ -55,7 +55,7 @@ par(mfrow=c(1, 1))
 ```{r}
 library(ggplot2)
 library(MASS)
-p <- ggplot(data = AD, aes(x = TV, y = Sales)) +
+p <- ggplot(data = AD, aes(x = TV, y = sales)) +
   geom_point(color = "lightblue") +
   geom_smooth(method = "lm", se = FALSE, color = "blue") +
   geom_smooth(method = "loess", color = "red", se = FALSE) + 
@@ -66,15 +66,15 @@ p
 
 ```{r, fig.width = 12, fig.height = 4}
 library(gridExtra)
-p1 <- ggplot(data = AD, aes(x = TV, y = Sales)) +
+p1 <- ggplot(data = AD, aes(x = TV, y = sales)) +
         geom_point(color = "lightblue") + 
         geom_smooth(method = "lm", se = FALSE, color = "blue") +
         theme_bw()
-p2 <- ggplot(data = AD, aes(x = Radio, y = Sales)) +
+p2 <- ggplot(data = AD, aes(x = radio, y = sales)) +
         geom_point(color = "lightblue") +
         geom_smooth(method = "lm", se = FALSE, color = "blue") +
         theme_bw()
-p3 <- ggplot(data = AD, aes(x = Newspaper, y = Sales)) +
+p3 <- ggplot(data = AD, aes(x = newspaper, y = sales)) +
         geom_point(color = "lightblue") +
         geom_smooth(method = "lm", se = FALSE, color = "blue") + 
         theme_bw()
@@ -86,7 +86,7 @@ grid.arrange(p1, p2, p3, ncol = 3)
 ```{r message = FALSE}
 library(ggvis)
 AD %>% 
-  ggvis(x = ~TV, y = ~Sales) %>% 
+  ggvis(x = ~TV, y = ~sales) %>% 
   layer_points() %>% 
   layer_model_predictions(model = "lm", se = FALSE) %>% 
   layer_model_predictions(model = "MASS::rlm", se = FALSE, stroke := "blue") %>%
@@ -106,7 +106,7 @@ p11
 
 ```{r, fig.width = 8, fig.height = 8}
 library(car)
-scatterplotMatrix(~ Sales + TV + Radio + Newspaper, data = AD)
+scatterplotMatrix(~ sales + TV + radio + newspaper, data = AD)
 ```
 
 
@@ -115,7 +115,7 @@ scatterplotMatrix(~ Sales + TV + Radio + Newspaper, data = AD)
 Recall `mod1`
 
 ```{r}
-mod1 <- lm(Sales ~ TV, data = AD)
+mod1 <- lm(sales ~ TV, data = AD)
 summary(mod1)
 ```
 
@@ -148,7 +148,7 @@ $$b_0 = \hat{\beta_0} = \bar{y} - b_1\bar{x}$$
 $$b_1 = \hat{\beta_1} = \frac{\sum_{i = 1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n(x_i-\bar{x})^2}$$
 
 ```{r}
-y <- AD$Sales
+y <- AD$sales
 x <- AD$TV
 b1 <- sum( (x - mean(x))*(y - mean(y)) ) / sum((x - mean(x))^2)
 b0 <- mean(y) - b1*mean(x)
@@ -325,7 +325,7 @@ predict(mod.lm, newdata = data.frame(sat = 1300), interval = "conf", level = 0.9
 ## Multiple Linear Regression
 
 ```{r}
-mod2 <- lm(Sales ~ TV + Radio, data = AD)
+mod2 <- lm(sales ~ TV + radio, data = AD)
 summary(mod2)
 ```
 
@@ -333,21 +333,21 @@ summary(mod2)
 
 ```{r, echo = FALSE}
 library(scatterplot3d)
-s3d <- scatterplot3d(x = AD$TV, y = AD$Radio, 
-              z = AD$Sales, xlab = "TV", 
-              ylab = "Radio", zlab = "Sales",
+s3d <- scatterplot3d(x = AD$TV, y = AD$radio, 
+              z = AD$sales, xlab = "TV", 
+              ylab = "radio", zlab = "sales",
               box = TRUE, pch = 20, color = "white",
               cex.symbols = 0.75, angle = 60, grid = FALSE)
-s3d$plane3d(mod2 <- lm(Sales ~ TV + Radio, data = AD), 
+s3d$plane3d(mod2 <- lm(sales ~ TV + radio, data = AD), 
             lty = "dotted", lty.box = "solid")
-orig <- s3d$xyz.convert(x = AD$TV, y = AD$Radio, 
-                        z = AD$Sales)
-plane <- s3d$xyz.convert(x = AD$TV, y = AD$Radio,  fitted(mod2))
+orig <- s3d$xyz.convert(x = AD$TV, y = AD$radio, 
+                        z = AD$sales)
+plane <- s3d$xyz.convert(x = AD$TV, y = AD$radio,  fitted(mod2))
 i.negpos <- 1 + (resid(mod2) > 0)
 segments(orig$x, orig$y, plane$x, plane$y,
          col = c("darkblue", "lightblue3")[i.negpos])
-s3d$points3d(x = AD$TV, y = AD$Radio, 
-             z = AD$Sales,
+s3d$points3d(x = AD$TV, y = AD$radio, 
+             z = AD$sales,
              col = c("darkblue", "lightblue3")[i.negpos],
              pch = 20)
 ```
@@ -359,7 +359,7 @@ s3d$points3d(x = AD$TV, y = AD$Radio,
 ## Is There a Relationship Between the Response and Predictors?
 
 ```{r}
-mod3 <- lm(Sales ~ TV + Radio + Newspaper, data = AD)
+mod3 <- lm(sales ~ TV + radio + newspaper, data = AD)
 summary(mod3)
 ```
 
@@ -396,12 +396,12 @@ anova(mod1, mod3)
 * Forward selection
 
 ```{r}
-mod.fs <- lm(Sales ~ 1, data = AD)
-SCOPE <- (~ TV + Radio + Newspaper)
+mod.fs <- lm(sales ~ 1, data = AD)
+SCOPE <- (~ TV + radio + newspaper)
 add1(mod.fs, scope = SCOPE, test = "F")
 mod.fs <- update(mod.fs, .~. + TV)
 add1(mod.fs, scope = SCOPE, test = "F")
-mod.fs <- update(mod.fs, .~. + Radio)
+mod.fs <- update(mod.fs, .~. + radio)
 add1(mod.fs, scope = SCOPE, test = "F")
 summary(mod.fs)
 ```
@@ -409,10 +409,10 @@ summary(mod.fs)
 * Using `stepAIC`
 
 ```{r}
-stepAIC(lm(Sales ~ 1, data = AD), scope = (~TV + Radio + Newspaper), direction = "forward", test = "F")
+stepAIC(lm(sales ~ 1, data = AD), scope = (~TV + radio + newspaper), direction = "forward", test = "F")
 # Or
-null <- lm(Sales ~ 1, data = AD)
-full <- lm(Sales ~ ., data = AD)
+null <- lm(sales ~ 1, data = AD)
+full <- lm(sales ~ ., data = AD)
 stepAIC(null, scope = list(lower = null, upper = full), direction = "forward", test = "F")
 ```
 
@@ -420,9 +420,9 @@ stepAIC(null, scope = list(lower = null, upper = full), direction = "forward", t
 * Backward elimination
 
 ```{r}
-mod.be <- lm(Sales ~ TV + Radio + Newspaper, data = AD)
+mod.be <- lm(sales ~ TV + radio + newspaper, data = AD)
 drop1(mod.be, test = "F")
-mod.be <- update(mod.be, .~. - Newspaper)
+mod.be <- update(mod.be, .~. - newspaper)
 drop1(mod.be, test = "F")
 summary(mod.be)
 ```
@@ -430,7 +430,7 @@ summary(mod.be)
 * Using `stepAIC`
 
 ```{r}
-stepAIC(lm(Sales ~ TV + Radio + Newspaper, data = AD), scope = (~TV + Radio + Newspaper), direction = "backward", test = "F")
+stepAIC(lm(sales ~ TV + radio + newspaper, data = AD), scope = (~TV + radio + newspaper), direction = "backward", test = "F")
 # Or
 stepAIC(full, scope = list(lower = null, upper = full), direction = "backward", test = "F")
 
@@ -447,26 +447,26 @@ influenceIndexPlot(mod2)
 
 
 
-We use a _confidence interval_ to quantify the uncertainty surrounding the _average_ `Sales` over a large number of cities.  For example, given that $100,000 is spent on `TV` advertising and $20,000 is spent on `Radio` advertising in each city, the 95% confidence interval is [`r predict(mod.be, newdata = data.frame(TV = 100, Radio = 20), interval = "conf")[2]`, `r predict(mod.be, newdata = data.frame(TV = 100, Radio = 20), interval = "conf")[3]`].  We interpret this to mean that 95% of intervals of this form will contain the true value of `Sales`.
+We use a _confidence interval_ to quantify the uncertainty surrounding the _average_ `sales` over a large number of cities.  For example, given that $100,000 is spent on `TV` advertising and $20,000 is spent on `radio` advertising in each city, the 95% confidence interval is [`r predict(mod.be, newdata = data.frame(TV = 100, radio = 20), interval = "conf")[2]`, `r predict(mod.be, newdata = data.frame(TV = 100, radio = 20), interval = "conf")[3]`].  We interpret this to mean that 95% of intervals of this form will contain the true value of `sales`.
 
 ```{r}
-predict(mod.be, newdata = data.frame(TV = 100, Radio = 20), interval = "conf")
+predict(mod.be, newdata = data.frame(TV = 100, radio = 20), interval = "conf")
 ```
 
-On the other hand, a _prediction interval_ can be used to quantify the uncertainty surrounding `Sales` for a _particular_ city.  Given that $100,000 is spent on `TV` advertising and $20,000 is spent on `Radio` advertising in **a particular** city, the 95% prediction interval is [`r predict(mod.be, newdata = data.frame(TV = 100, Radio = 20), interval = "pred")[2]`, `r predict(mod.be, newdata = data.frame(TV = 100, Radio = 20), interval = "pred")[3]`].  We interpret this to mean that 95% of intervals of this form will contain the true value of `Sales` for this city.
+On the other hand, a _prediction interval_ can be used to quantify the uncertainty surrounding `sales` for a _particular_ city.  Given that $100,000 is spent on `TV` advertising and $20,000 is spent on `radio` advertising in **a particular** city, the 95% prediction interval is [`r predict(mod.be, newdata = data.frame(TV = 100, radio = 20), interval = "pred")[2]`, `r predict(mod.be, newdata = data.frame(TV = 100, radio = 20), interval = "pred")[3]`].  We interpret this to mean that 95% of intervals of this form will contain the true value of `sales` for this city.
 
 ```{r}
-predict(mod.be, newdata = data.frame(TV = 100, Radio = 20), interval = "pred")
+predict(mod.be, newdata = data.frame(TV = 100, radio = 20), interval = "pred")
 ```
 
-Note that both the intervals are centered at `r predict(mod.be, newdata = data.frame(TV = 100, Radio = 20))`, but that the prediction interval is substantially wider than the confidence interval, reflecting the increased uncertainty about `Sales` for a given city in comparison to the average `Sales` over many locations.
+Note that both the intervals are centered at `r predict(mod.be, newdata = data.frame(TV = 100, radio = 20))`, but that the prediction interval is substantially wider than the confidence interval, reflecting the increased uncertainty about `sales` for a given city in comparison to the average `sales` over many locations.
 
 ## Non-Additive Models
 
 ```{r}
-nam1 <- lm(Sales ~ TV*Radio, data = AD)
+nam1 <- lm(sales ~ TV*radio, data = AD)
 # Same as 
-nam2 <- lm(Sales ~ TV + Radio + TV:Radio, data = AD)
+nam2 <- lm(sales ~ TV + radio + TV:radio, data = AD)
 summary(nam1)
 summary(nam2)
 ```
@@ -482,7 +482,7 @@ summary(nam2)
 In the `Credit` data frame there are four qualitative features/variables `Gender`, `Student`, `Married`, and `Ethnicity`.
 
 ```{r}
-Credit <- read.csv("http://www-bcf.usc.edu/~gareth/ISL/Credit.csv")
+Credit <- read.csv("http://faculty.marshall.usc.edu/gareth-james/ISL/Credit.csv")
 datatable(Credit[, -1], rownames = FALSE)
 ```
 

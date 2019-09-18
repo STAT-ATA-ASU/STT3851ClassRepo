@@ -24,6 +24,25 @@ stepAIC(null, scope = list(lower = null, upper = full), direction = "forward", t
 ```{r}
 mod <- lm(medv ~ lstat + rm + ptratio + dis, data = Boston)
 summary(mod)
+# 
+X <- model.matrix(mod)
+XTXI <- solve(t(X)%*%X)
+XTXI
+# But best to get XTXI using cov.unscaled
+XTXI <- summary(mod)$cov.unscaled
+XTXI
+betahat <- XTXI%*%t(X)%*%Boston$medv
+betahat
+MSE <- summary(mod)$sigma^2
+vcmat <- MSE*XTXI
+vcmat
+se <- diag(vcmat)^.5
+ts <- betahat/se
+pvalues <- pt(abs(ts), 501, lower = FALSE)*2
+pvalues
+CI <- betahat[2] + c(-1, 1)*qt(.975, 501)*se[2]
+CI
+confint(mod)
 ```
 
 ```{r}
