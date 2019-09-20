@@ -74,3 +74,108 @@ summary(mod3)
 residualPlots(mod3)
 ```
 
+## Conceptual and Computational
+
+```{r}
+airline <- readr::read_csv("../Data/airline.csv")
+airline
+```
+* Fit a linear model by regressing `fare` onto `miles`.
+
+```{r}
+mod <- lm(fare ~ miles, data = airline)
+summary(mod)
+```
+
+* Find $R^2$
+
+The $R^2$ value is `r summary(mod)$r.squared`.
+
+* What does $R^2$ mean in this context? 
+
+`r round(summary(mod)$r.squared*100, 2)`% of the variability in airfares is explained by changes in distance.
+
+* What is the slope of the regression line?
+
+`r summary(mod)$coef[2, 1]`
+
+* What is the $y$-intercept?
+
+`r summary(mod)$coef[1, 1]`
+
+* What is the equation of the linear model?
+
+$\widehat{fare} = `r summary(mod)$coef[1, 1]` + `r summary(mod)$coef[2, 1]` \times \text{miles}$
+
+* Estimate the fare for a 200 mile flight
+
+```{r}
+predict(mod, newdata = data.frame(miles = 200))
+```
+
+* Estimate the fare for a 2000 mile flight
+
+```{r}
+predict(mod, newdata = data.frame(miles = 2000))
+```
+
+* Explain what the y intercept means in this context.
+
+The model says a flight of zero miles will cost $177.21. This could be fixed costs of air travel.
+
+* Explain what the slope means in this context.
+
+An increase of 1 mile means an increase of 7.86 cents.
+
+* The fare to fly to Las Vegas, 1719 miles from Atlanta, is $252. What is the residual?
+
+```{r}
+yhat <- predict(mod, newdata = data.frame(miles = 1719))
+yhat
+(resid <- 252 - yhat)
+```
+
+* In general a positive residual means...
+
+The model has underpredicted the actual value
+
+* In general a negative residual means...
+
+The model has overpredicted the actual value
+
+* Is a linear model appropriate for estimating airfare from distance flown? Why or Why not?
+
+```{r}
+library(ggplot2)
+ggplot(data = airline, aes(x = miles, y = fare)) + 
+  geom_point() + 
+  theme_bw() + 
+  geom_smooth(se = FALSE, method = "lm")
+plot(mod, which = 1)
+```
+
+Yes, the scatterplot shows no curve, and the residual plot has no outliers, fan shape, or curve.
+
+* How strong is the model? Explain.
+
+The model is moderately strong according to an $R^2$ value of `r round(summary(mod)$r.squared*100,2)`%.
+
+* Identify any outliers. Why are they unusual?
+
+No outliers.
+
+* If you want to predict the distance of a flight from the fare, how does the model change?
+
+```{r}
+mod2 <- lm(miles ~ fare, data = airline)
+summary(mod2)
+```
+
+$\widehat{\text{miles}} = -644.29 + 6.131 \times \text{fare}$
+
+Use the fare calculated for a 2000 mile flight ($334.4526) to find out how far the model above suggest you could fly.
+
+```{r}
+predict(mod2, newdata = data.frame(fare = 334.4526))
+```
+
