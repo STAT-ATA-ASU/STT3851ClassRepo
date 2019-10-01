@@ -207,12 +207,14 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 * Answer questions at the end of [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html).
 * Homework:
       +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
+      +  Complete the take home chapter three assessment (will count as two quizzes) - Accept the assignment from GitHub Classroom --- link in ASULEARN - Due Oct 11
 
 **Oct 4:**
 
-* Workday
 * Due TODAY: Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
-* Homework: Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 11
+* Homework: 
+      + Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 11
+      +  Complete the take home chapter three assessment (will count as two quizzes) - Accept the assignment from GitHub Classroom --- link in ASULEARN - Due Oct 11
 
 
 **Oct 7:**
@@ -230,7 +232,9 @@ Most GitHub Classroom assignments due dates are 5 p.m. Friday.
 **Oct 11:**
 
 * Workday
-* Due TODAY: Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 11
+* Due TODAY: 
+      + Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 11
+      +  Complete the take home chapter three assessment (will count as two quizzes) - Accept the assignment from GitHub Classroom --- link in ASULEARN - Due Oct 11
 
 ~~**Oct 14:**~~ No Class - Fall Break 
 
