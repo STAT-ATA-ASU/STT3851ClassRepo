@@ -2,6 +2,8 @@
 
 library(PASWR2)
 library(tidyverse)
+head(SIMDATAXT)
+
 
 ggplot(data = SIMDATAXT, aes(x = x1, y = y)) + 
   geom_point() + 
