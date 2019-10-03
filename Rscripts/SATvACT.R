@@ -21,6 +21,8 @@ summary(mod3)
 library(car)
 vif(mod3)
 
+residualPlots(mod3)
+
 X <- model.matrix(mod3)
 XTX <- t(X)%*%X
 XTX
@@ -39,6 +41,8 @@ cor(y, x1)
 cor(y, x2)
 cor(x1, x2)
 mod4 <- lm(y ~ x1 + x2)
+
+residualPlots(mod4)
 summary(mod4)
 mod5 <- lm(y ~ x1)
 mod6 <- lm(y ~ x2)
