@@ -100,3 +100,19 @@ ggplot(data = SIMDATAST, aes(x = x2, y = 1/y2)) +
 modx2f <- lm(I(1/y2) ~ x2, data = SIMDATAST)
 residualPlots(modx2f)
 summary(modx2f)
+
+########
+library(MASS)
+head(Boston)
+with(data = Boston, cor(lstat, medv))
+with(data = Boston, plot(lstat, medv))
+library(car)
+mod <- lm(medv ~ lstat + I(lstat^2) + rm + I(rm^2), data = Boston)
+plot(mod, which = 1)
+residualPlots(mod)
+boxCox(mod)
+modt <- lm(I(medv^0.5) ~ lstat + I(lstat^2) + rm + I(rm^2), data = Boston)
+plot(modt, which = 1)
+boxCox(modt)
+residualPlots(modt)
+

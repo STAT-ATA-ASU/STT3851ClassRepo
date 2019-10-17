@@ -352,6 +352,24 @@ s3d$points3d(x = AD$TV, y = AD$radio,
              pch = 20)
 ```
 
+### Using **plotly**
+
+```{r}
+library(plotly)
+# draw the 3D scatterplot
+p <- plot_ly(data = AD, z = ~sales, x = ~TV, y = ~radio, opacity = 0.5) %>% 
+  add_markers
+p
+#
+x <- seq(0, 300, length = 70)
+y <- seq(0, 50, length = 70)
+plane <- outer(x, y, function(a, b){summary(mod2)$coef[1, 1] + summary(mod2)$coef[2, 1]*a + summary(mod2)$coef[3, 1]*b})
+# draw the plane
+p %>% 
+  add_surface(x = ~x, y = ~y, z = ~plane, showscale = FALSE)
+```
+
+
 
 
 
@@ -573,6 +591,20 @@ ggplot(data = Credit, aes(x = Limit, y = Balance, color = Student)) +
   geom_abline(intercept = coef(S2M)[1], slope = coef(S2M)[2], color = "red") + 
   geom_abline(intercept = coef(S2M)[1] + coef(S2M)[3], slope = coef(S2M)[2], color = "blue") + 
   scale_color_manual(values = c("red", "blue"))
+```
+
+
+```{r}
+# or using broom...
+library(broom)
+NM <- S2M %>% 
+  augment()
+head(NM)
+ggplot(data = NM, aes(x = Limit, y = Balance, color = Student)) + 
+  geom_point() + 
+  geom_line(aes(x = Limit, y =.fitted)) + 
+  scale_color_manual(values = c("red", "blue")) + 
+  theme_bw()
 ```
 
 ### Qualitative predictors with More than Two Levels
