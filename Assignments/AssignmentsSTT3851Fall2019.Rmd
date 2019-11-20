@@ -333,7 +333,9 @@ Start Project 2---InClass Kaggle competition
 * Before class:
     + Watch [Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared](https://www.youtube.com/watch?v=LkifE44myLc) (14:06)
     + Watch [Estimating Test Error Using Cross-Validation](https://www.youtube.com/watch?v=3p9JNaJCOb4) (8:43)
+* [Misc Issues](../Rmarkdown/OneHot.html)
 * [Notes on Credit Problem](../Rmarkdown/CreditProblemMore.html)
+
 
 **Nov 22:**
 
