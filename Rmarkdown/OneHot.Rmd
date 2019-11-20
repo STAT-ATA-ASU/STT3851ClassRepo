@@ -1,0 +1,458 @@
+---
+title: "One Hot Encoding"
+author: "Alan T. Arnholt"
+date: "11/15/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, message = FALSE, warning = FALSE)
+# Parallel Processing
+library(doMC)
+registerDoMC(cores = 12)
+```
+
+
+```{r}
+library(PASWR2)
+table(VIT2005$zone)
+table(VIT2005$category)
+table(VIT2005$out)
+table(VIT2005$conservation)
+table(VIT2005$streetcategory)
+table(VIT2005$heating)
+```
+
+
+
+```{r}
+##### Feature Creation
+library(tidyverse)
+VIT2005 <- VIT2005 %>% 
+  mutate(new_category =
+           case_when(category == "2A" ~ "good",
+                     category == "2B" ~ "good",
+                     category == "3A" ~ "good",
+                     category == "3B" ~ "fair",
+                     category == "4A" ~ "poor",
+                     category == "4B" ~ "poor",
+                     category == "5A" ~ "poor"))
+VIT2005$new_category <- factor(VIT2005$new_category)
+VIT2005 <- VIT2005 %>% 
+   mutate(new_out =
+            case_when(out == "E100" ~ "good",
+                      out == "E75" ~ "good",
+                      out == "E50" ~ "fair",
+                      out == "E25" ~ "fair"))
+VIT2005$new_out <- factor(VIT2005$new_out)
+table(VIT2005$new_out)
+
+VIT2005 <- VIT2005 %>% 
+  select(-c("zone", "conservation", "category", "out"))
+names(VIT2005)
+```
+
+
+```{r}
+library(caret)
+set.seed(48)
+trainIndex <- createDataPartition(y = VIT2005$totalprice,
+                                  p = 0.80,
+                                  list = FALSE,
+                                  times = 1)
+
+training <- VIT2005[trainIndex, ]
+testing <- VIT2005[-trainIndex, ]
+```
+
+
+
+
+
+```{r}
+# One-Hot Encoding
+# Creating dummy variables is converting a categorical variable to as many binary variables as here are categories.
+library(caret)
+dummies_model <- dummyVars(totalprice ~ ., data=training)
+
+# Create the dummy variables using predict. The Y variable (totalprice) will not be present in trainData_mat.
+trainData_mat <- predict(dummies_model, newdata = training)
+testData_mat <- predict(dummies_model, newdata = testing)
+# # Convert to dataframe
+trainData <- data.frame(trainData_mat)
+testData <- data.frame(testData_mat)
+# # See the structure of the new dataset
+str(trainData)
+trainData$totalprice <- training$totalprice
+str(trainData)
+```
+
+
+```{r}
+#### Problems with using one-hot encoded variables as they are colinear
+mod_bad <- lm(totalprice ~ . , data = trainData)
+summary(mod_bad)
+####  Use training data and R will encode using model.matrix()
+#### To see data used
+X <- model.matrix(lm(totalprice ~ ., data = training))
+head(X)
+####
+mod_good <- lm(totalprice ~ ., data = training)
+summary(mod_good)
+```
+
+
+```{r}
+# trainControl---10 fold cv repeated 5 times
+myControl <- trainControl(method = "repeatedcv",
+                          number = 10,
+                          repeats = 5,
+                          savePredictions = "final")
+# 5 fold cv
+myControl <- trainControl(method = "cv",
+                          number = 5,
+                          savePredictions = "final")
+```
+
+```{r}
+set.seed(31)
+mod_lm <- train(totalprice ~ .,
+                data = training,   
+                trControl = myControl,
+                method = "lm")
+mod_lm$results
+summary(mod_lm$finalModel)
+```
+
+
+
+```{r}
+set.seed(3)
+mod_lm2 <- train(y = training$totalprice,
+                 x = training[ ,-1],
+                 trControl = myControl,
+                 method = "lm")
+mod_lm2$results
+summary(mod_lm2$finalModel)
+#
+RMSE(predict(mod_lm2$finalModel, newdata = testing), testing$totalprice)
+```
+
+
+```{r}
+set.seed(3)
+mod_rf <- train(y = training$totalprice,
+                x = training[, -1],
+                # trControl = myControl,
+                tuneLength = 10,
+                method = "rf")
+mod_rf$results
+####
+# ND <- model.matrix( ~ ., data = testing)
+yhat <- predict(mod_rf$finalModel, newdata = testing)
+RMSE(yhat, testing$totalprice)
+```
+
+```{r}
+set.seed(3)
+mod_rf <- train(y = training$totalprice,
+                x = training[ , -1],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "rf")
+mod_rf$results
+
+RMSE(predict(mod_rf$finalModel, newdata = testing), testing$totalprice)
+```
+
+
+
+
+```{r}
+set.seed(3)
+mod_rf <- train(y = trainData$totalprice,
+                x = trainData[, -22],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "rf")
+mod_rf$results
+#
+RMSE(predict(mod_rf$finalModel, newdata = testData), testing$totalprice)
+```
+
+## Something New
+
+
+```{r}
+set.seed(3)
+mod_aic <- train(y = training$totalprice,
+                 x = training[, -1],
+                 trControl = myControl,
+                 method = "lmStepAIC")
+mod_aic$results
+summary(mod_aic$finalModel)
+RMSE(predict(mod_aic$finalModel, newdata = testing), testing$totalprice)
+```
+
+## What to do with missing values?
+
+* Delete rows with missing values --- can lead to problems
+
+* Impute the missing values --- median imputation and knn imputation
+
+NOTE: `lm()` automagically deletes them
+
+Consider the data set `Hitters` from the `ISLR` package.
+
+```{r}
+library(ISLR)
+summary(Hitters)
+```
+
+Note that there are 59 salary values that are NA.  Are these values missing at random or is there some non-random reason they are missing?
+
+Three data sets will be created: one with the missing rows deleted (RD), and one with the missing values imputed using `medianImpute` (IFDM), and one using `knnImpute` (HittersF).
+
+```{r}
+set.seed(43)
+dim(Hitters)
+RD <- na.omit(Hitters)
+dim(RD)
+IFDM <- preProcess(Hitters, method = "medianImpute")
+IFDM <- predict(IFDM, Hitters)
+summary(IFDM)
+IFDK <- preProcess(Hitters, method = "knnImpute")
+IFDK <- predict(IFDK, Hitters)
+summary(IFDK)
+Salary <-  IFDK$Salary * sd(Hitters$Salary, na.rm = TRUE) + mean(Hitters$Salary, na.rm = TRUE)
+HittersF <- Hitters
+HittersF$Salary <- Salary
+rm(Salary)
+summary(HittersF)
+compare <- data.frame(Original = Hitters$Salary, Imputed = HittersF$Salary)
+head(compare)
+tail(compare)
+```
+
+```{r}
+# One-Hot Encoding
+# Creating dummy variables is converting a categorical variable to as many binary variables as here are categories.
+dummies_model <- dummyVars(Salary ~ ., data=HittersF)
+
+# Create the dummy variables using predict. The Y variable (totalprice) will not be present in trainData_mat.
+Data_mat <- predict(dummies_model, newdata = HittersF)
+# # Convert to dataframe
+Data <- data.frame(Data_mat)
+Data$Salary <- HittersF$Salary
+# # See the structure of the new dataset
+str(Data)
+set.seed(31)
+trainIndex <- createDataPartition(y = HittersF$Salary,
+                                  p = 0.80,
+                                  list = FALSE,
+                                  times = 1)
+
+trainingDum <- Data[trainIndex, ]
+testingDum <- Data[-trainIndex, ]
+```
+
+
+
+```{r}
+set.seed(3)
+mod_regI <- train(y = HittersF$Salary,
+                 x = HittersF[, -19],
+                 trControl = myControl,
+                 tuneLength = 10,
+                 method = "lmStepAIC")
+mod_regI$results
+summary(mod_regI$finalModel)
+```
+```{r}
+set.seed(3)
+mod_regM <- train(y = IFDM$Salary,
+                 x = IFDM[, -19],
+                 trControl = myControl,
+                 tuneLength = 10,
+                 method = "lmStepAIC")
+mod_regM$results
+summary(mod_regM$finalModel)
+```
+
+
+
+```{r}
+set.seed(3)
+mod_reg <- train(y = RD$Salary,
+                 x = RD[, -19],
+                 trControl = myControl,
+                 tuneLength = 10,
+                 method = "lmStepAIC")
+mod_reg$results
+summary(mod_reg$finalModel)
+```
+
+## Ridge and Lasso Regression
+
+Note: need to encode data vefore using `glmnet` functions!
+
+$\alpha = 0 \rightarrow$ ridge
+$\alpha = 1 \rightarrow$ lasso
+
+```{r}
+set.seed(435)
+DM <- model.matrix(Salary ~ ., data = HittersF)
+mod_RL <- train(y = HittersF$Salary,
+                x = DM[, -1],
+                trControl = myControl,
+                tuneGrid = expand.grid(alpha  = 0:1, 
+                  lambda = seq(0.0001, 100, length = 20)),
+                method = "glmnet")
+round(mod_RL$results, 4)
+mod_RL$bestTune
+plot(mod_RL)
+coef(mod_RL$finalModel, mod_RL$bestTune$lambda) 
+```
+
+## Splitting the data
+
+```{r}
+set.seed(98)
+trainIndex <- createDataPartition(y = HittersF$Salary,
+                                  p = 0.80,
+                                  list = FALSE,
+                                  times = 1)
+
+training <- HittersF[trainIndex, ]
+testing <- HittersF[-trainIndex, ]
+```
+
+```{r}
+set.seed(44)
+DM <- model.matrix(Salary ~ ., data = training)
+mod_RLTT <- train(y = training$Salary,
+                  x = DM[, -1],
+                  trControl = myControl,
+                  tuneGrid = expand.grid(alpha  = 0:1, 
+                   lambda = seq(0.0001, 100, length = 20)),
+                  method = "glmnet")
+round(mod_RLTT$results, 4)
+mod_RLTT$bestTune
+plot(mod_RLTT)
+coef(mod_RL$finalModel, mod_RL$bestTune$lambda) 
+```
+
+```{r}
+set.seed(31)
+DM2 <- model.matrix(Salary ~ ., data = training)
+mod_LASSO <- train(y = training$Salary,
+                  x = DM2[, -1],
+                  trControl = myControl,
+                  tuneGrid = expand.grid(alpha  = 1, 
+                   lambda = seq(0.0001, 100, length = 20)),
+                  method = "glmnet")
+round(mod_LASSO$results, 4)
+mod_LASSO$bestTune
+plot(mod_LASSO)
+coef(mod_LASSO$finalModel, mod_LASSO$bestTune$lambda) 
+#
+TESTING <- model.matrix(Salary~., testing)
+#
+RMSE(predict(mod_LASSO, TESTING), testing$Salary)
+```
+
+## Random Forest
+
+```{r}
+set.seed(11)
+DM <- model.matrix(Salary ~ ., data = training)
+mod_RF <- train(y = training$Salary,
+                x = DM[, -1],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "rf")
+round(mod_RF$results, 4)
+mod_RF$bestTune
+plot(mod_RF)
+#
+TESTING <- model.matrix(Salary~., testing)
+#
+RMSE(predict(mod_RF, TESTING), testing$Salary)
+```
+
+```{r}
+set.seed(11)
+
+mod_RF3 <- train(y = trainingDum$Salary,
+                x = trainingDum[, -23],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "rf")
+round(mod_RF3$results, 4)
+mod_RF3$bestTune
+plot(mod_RF3)
+#
+#
+RMSE(predict(mod_RF3, testingDum), testingDum$Salary)
+```
+
+
+
+
+### Adding interactions
+
+* Really no need to add interactions with tree based methods...
+
+```{r}
+set.seed(11)
+DM2 <- model.matrix(Salary ~ .^2, data = training)
+mod_RF2 <- train(y = training$Salary,
+                x = DM[, -1],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "rf")
+round(mod_RF2$results, 4)
+mod_RF2$bestTune
+plot(mod_RF2)
+#
+TESTING <- model.matrix(Salary~.^2, testing)
+#
+RMSE(predict(mod_RF2, TESTING), testing$Salary)
+```
+
+
+
+## Boosted Trees
+
+```{r}
+set.seed(11)
+DM <- model.matrix(Salary ~ ., data = training)
+mod_GB <- train(y = training$Salary,
+                x = DM[, -1],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "gbm")
+round(mod_GB$results, 4)
+mod_GB$bestTune
+plot(mod_GB)
+#
+TESTING <- model.matrix(Salary~., testing)
+#
+RMSE(predict(mod_GB, TESTING), testing$Salary)
+```
+
+
+```{r}
+set.seed(11)
+mod_GB2 <- train(y = trainingDum$Salary,
+                x = trainingDum[, -23],
+                trControl = myControl,
+                tuneLength = 10,
+                method = "gbm")
+round(mod_GB2$results, 4)
+mod_GB2$bestTune
+plot(mod_GB2)
+#
+RMSE(predict(mod_GB, testingDum), testingDum$Salary)
+```
+
