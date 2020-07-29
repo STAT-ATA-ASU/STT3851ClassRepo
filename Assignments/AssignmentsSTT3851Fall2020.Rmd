@@ -35,10 +35,10 @@ Clarity  | Few errors of grammar and usage; any minor errors do not interfere wi
 
 _________
 
-## Week 1: (Aug 18--21) {-}
+## Week 1: (Aug 18, 20) {-}
 
 
-* Before the first class meeting, read chapter 1 (Getting Started with Data in R) of [MD](https://moderndive.com)---pgs 1-20
+* **Before** the first class meeting, read chapter 1 (Getting Started with Data in R) of [MD](https://moderndive.com)---pgs 1-20
 
 * Become familiar with the Appstate [RStudio server](https://mathr.math.appstate.edu/). You will use your Appstate user name and password to log in to the server.  You must be registered in the class to access the server.
 
@@ -72,7 +72,7 @@ _________
 
 ______________
 
-## Week 2: (Aug 25--28) {-}
+## Week 2: (Aug 25, 27) {-}
 
 * Before class read chapter 3 (Data Wrangling) of [MD](https://moderndive.com) --- pgs 65-96
 
@@ -95,12 +95,17 @@ ______________
 
 * Read [Getting used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/)
 
+* Watch the following Videos:
+    + [Phillip Guo's Unix-like command line tutorials (Four tutorials about 10 minutes each)](http://www.pgbovine.net/command-line-tutorial.htm)
+    + [Phillip Guo's Basic Git and Github tutorials (Three tutorials about 10 minutes each)](http://www.pgbovine.net/git-tutorial.htm)
+    + [Clone a GitHub Repo with RStudio (Video)](https://www.youtube.com/watch?v=YxZ8J2rqhEM) (5:05)
+
 ```
 
 __________________
 
 
-## Week 3: (Sep 1--4) {-}
+## Week 3: (Sep 1, 3) {-}
 
 * Before class read chapter 2 (Data Visualization) of [MD](https://moderndive.com) --- pgs 21-62
 
@@ -124,6 +129,10 @@ Test yourself:
 ```{block, week3optional, type='rmdoptional'}
 #### Optional {-}
 
+* [Overplotting Examples and possible Solutions](../Rmarkdown/HousingData.html)
+
+* Read Chapters 1-2 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+
 * Complete _Data Visualization with `ggplot2`_ (Part 1) [(DataCamp)](https://www.datacamp.com/)
 
 * Nice [Tidyverse Cheat Sheet](http://datacamp-community.s3.amazonaws.com/e63a8f6b-2aa3-4006-89e0-badc294b179c)
@@ -131,7 +140,7 @@ Test yourself:
 
 ___________
 
-## Week 4: (Sep 8--11) {-}
+## Week 4: (Sep 8, 10) {-}
 
 * Before class read chapter 5 (Basic Regression) of [MD](https://moderndive.com) --- pgs 119-160
 
@@ -145,6 +154,8 @@ ___________
 ```{block, week4optional, type='rmdoptional'}
 #### Optional {-}
 
+* Add an avatar or picture on your GitHub account
+
 * Read the [Git and GitHub](http://r-pkgs.had.co.nz/git.html) chapter from Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/)
 
 * Brian Caffo's take on [R IDEs](https://www.youtube.com/watch?v=O2UFfiGdGFA)
@@ -155,7 +166,7 @@ __________________
 
 
 
-## Week 5: (Sep 15--18) {-}
+## Week 5: (Sep 15, 17) {-}
 
 * Before class read chapter 6 (Multiple Regression) of [MD](https://moderndive.com) --- pgs 161-191
 
@@ -174,7 +185,7 @@ __________________
 
 _______________
 
-## Week 6: (Sep 21--25) {-}
+## Week 6: (Sep 22, 24) {-}
 
 * Before class read chapter 6 (Multiple Regression) of [MD](https://moderndive.com) --- pgs 161-191
 
@@ -200,81 +211,26 @@ _____________
 
 
 
-**Aug 19:**
-
-* Go over syllabus.
-* Become familiar with the Appstate [RStudio server](https://mathr.math.appstate.edu/). You will use your Appstate user name and password to log in to the server.  You must be registered in the class to access the server.
-* Sign-up for free accounts on [GitHub](https://github.com).
-* When you register for a free individual GitHub account, request a [student discount](https://education.github.com) to obtain a few private repositories as well as unlimited public repositories.  Please use something similar to **first_name_last_name** as your username when you register with GitHub.  For example, my username on GitHub is *alanarnholt*. If you have a popular name such as John Smith, you may need to provide some other distinquishing characteristic in your **username**.  
-* Once you have a GitHub account, send an email to arnholtat@appstate.edu with a Subject line of **STT3851 - GitHub Username**, and tell me in the body of your email your first name, last name, and your GitHub username.
-
-* Homework: 
-    + Watch this [video](https://www.youtube.com/watch?v=ZFaWxxzouCY&list=PLjTlxb-wKvXNSDfcKPFH2gzHGyjpeCZmJ&index=3) which provides some background on asking questions.  
-    + Read this stackoverflow thread details how to create a [minimal R reproducible example](http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example/5963610#5963610). 
-    + Read [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html) by Eric Raymond and Rick Moen and heed their advice.
-    + Read [Getting used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/)
-
-**Aug 21:**
-
-* In class lecture: Review of one and two sample inference, permutation tests, and bootstrap procedures --- take notes
-
-* [Statistics Review](../Rmarkdown/StatReview.html)
-* Link to [Day One Activity and Code](../Rmarkdown/DayOne.html)
-* Link to [Day two Activity and Code](../Rmarkdown/day2.html)
-    
-    ```{block2, note-text2, type='rmdnote'}
-Most GitHub Classroom assignments due dates are 5 p.m. Friday.
-```  
-
-* Homework: Watch the following Videos:
-    + [Phillip Guo's Unix-like command line tutorials (Four tutorials about 10 minutes each)](http://www.pgbovine.net/command-line-tutorial.htm)
-    + [Phillip Guo's Basic Git and Github tutorials (Three tutorials about 10 minutes each)](http://www.pgbovine.net/git-tutorial.htm)
-    + [Clone a GitHub Repo with RStudio (Video)](https://www.youtube.com/watch?v=YxZ8J2rqhEM) (5:05)
-
-**Aug 23:**
-
-* Before class watch the following Videos:
-    + [Phillip Guo's Unix-like command line tutorials (Four tutorials about 10 minutes each)](http://www.pgbovine.net/command-line-tutorial.htm)
-    + [Phillip Guo's Basic Git and Github tutorials (Three tutorials about 10 minutes each)](http://www.pgbovine.net/git-tutorial.htm)
-    + [Clone a GitHub Repo with RStudio (Video)](https://www.youtube.com/watch?v=YxZ8J2rqhEM) (5:05)
-* Before class read [Steps for downloading and editing assignments from GitHub Classroom](https://github.com/jfiksel/github-classroom-for-students)
-* In class lecture: Review of one and two sample inference, permutation tests, and bootstrap procedures --- take notes
-* [Statistics Review](../Rmarkdown/StatReview.html)
-* Link to [Day two Activity and Code](../Rmarkdown/day2.html)
-
-* Homework:
-    + Read Chapters 1-2 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
-    + Watch [Lab: Introduction to R](https://www.youtube.com/watch?v=jwBgGS_4RQA) (14:12)
-    + Reproduce [Modified Introduction to R (Lab1)](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom---link in ASULEARN. Due Aug 30 
-
-**Aug 26:**
-
-* Before class:
-    + Read/review [Getting used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/)
-    + Read the [Git and GitHub](http://r-pkgs.had.co.nz/git.html) chapter from Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/)
-* Follow the directions from [Happy Git and GitHub for the useR](http://happygitwithr.com/) to [Introduce yourself to Git](http://happygitwithr.com/hello-git.html), [Connect to GitHub](http://happygitwithr.com/push-pull-github.html), and [Cache credentials for HTTPS](http://happygitwithr.com/credential-caching.html).
-* Read/review Chapters 1-2 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
-
-
-**Aug 28:**
-
-* In class lecture: Review of one and two sample inference, permutation tests, and bootstrap procedures --- take notes
-* [Statistics Review](../Rmarkdown/StatReview.html)
-* [Schistosomiasis](../Rmarkdown/Schistosomiasis.html)
-* Use an avatar or picture on your GitHub account
 
 
 
-**Aug 30:**
 
-* Before class:
+
+
+
+
+
+
+
+
+* Read:
     + Read chapter 1 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
     + Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
     + Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
     + Read Section 3.4 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
 * Lecture - [Rmarkdown example](../Rmarkdown/FlowControl.html)
 * Bootstrap - [Rmarkdown example](../Rmarkdown/TheBootstrap.html)
-* [Overplotting Examples and possible Solutions](../Rmarkdown/HousingData.html)
+
 
 * Due TODAY:
     + Reproduce [Modified Introduction to R (Lab1)](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom---link in ASULEARN. Due Aug 30 
