@@ -210,55 +210,77 @@ _______________
 _____________
 
 
+## Week 7: (Sep 29, Oct 1) {-}
 
+* Read chapters 1 and 2 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-
-
-
-
-
-
-
-
-
-
-
-* Read:
-    + Read chapter 1 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
-    + Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
-    + Read Section 3.4 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
-* Lecture - [Rmarkdown example](../Rmarkdown/FlowControl.html)
-* Bootstrap - [Rmarkdown example](../Rmarkdown/TheBootstrap.html)
-
-
-* Due TODAY:
-    + Reproduce [Modified Introduction to R (Lab1)](https://stat-ata-asu.github.io/ISLR-CHAP2-LAB-SC/Lab1-Solution.html).  Accept assignment from GitHub Classroom---link in ASULEARN. Due Aug 30 
-    
-* Homework:
-    + Reproduce [Writing Assignment (Lab2)](https://stat-ata-asu.github.io/WritingAssignment-SC/WritingAssignment-Solution.html).  Accept assignment from GitHub Classroom---link in ASULEARN.  Due Sep 6
-
-
-~~**Sep 2:**~~ **No Class - State Holiday**
-
-
-
-**Sep 4:**
-
-* Before class:
-    + Read chapter 2 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Statistical Learning and Regression](https://www.youtube.com/watch?v=WjyuiK5taS8) (11:41)
-    + Watch [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=UvxHOkYQl8g) (11:40)
-    + Watch [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VusKAosxxyk) (10:04)
-* Lecture - Bias Variance Tradeoff - Take notes
-
-
-**Sep 6:**
-
-* Before class: 
-    + Review/read chapter 2 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=vVj2itVNku4) (15:37)
 * Lecture - Bias Variance Tradeoff - Take notes - [Slides](../Rmarkdown/BiasVarDer.pdf) 
+
+* Complete the **Visualizing two variables** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 2
+
+* Complete the **Correlation** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 2
+
+
+* Complete [Lab1](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 2---(assignment link in asulearn) 
+
+
+```{block, week7optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
+
+* Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
+
+* Watch [Statistical Learning and Regression](https://www.youtube.com/watch?v=WjyuiK5taS8) (11:41)
+
+* Watch [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=UvxHOkYQl8g) (11:40)
+
+* Watch [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VusKAosxxyk) (10:04)
+
+* Watch [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=vVj2itVNku4) (15:37)
+
+* Read Section 3.4 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+```
+
+_____________
+
+
+## Week 8: (Oct 6, 8) {-}
+
+* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Complete the **Simple Linear Regression** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 9
+
+* Complete the **Interpreting Regression Models** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 9
+
+* Complete the **Model Fit** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 9
+
+
+
+```{block, week8optional, type='rmdoptional'}
+#### Optional {-}
+* Watch [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=PsE9UqoWtS4) (13:01)
+
+* Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
+
+* Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=1hbCJyM9ccs) (15:38)
+
+* Flow control [example](../Rmarkdown/FlowControl.html)
+
+* Bootstrap [example](../Rmarkdown/TheBootstrap.html)
+```
+
+_____________
+
+
+
+
+
+
+
+
+
+
 * Due TODAY:  Reproduce [Writing Assignment (Lab2)](https://stat-ata-asu.github.io/WritingAssignment-SC/WritingAssignment-Solution.html).  Accept assignment from GitHub Classroom---link in ASULEARN.  Due Sep 6
 
 
