@@ -28,7 +28,7 @@ This course covers elements of data management, descriptive statistics,  and inf
 
 **Course Text:**
 
-[_An Introdution to Statistical Learning with Applications in R_](http://www-bcf.usc.edu/~gareth/ISL/) by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
+[_An Introduction to Statistical Learning with Applications in R_](http://www-bcf.usc.edu/~gareth/ISL/) by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
 
 **Optional References:**
 
