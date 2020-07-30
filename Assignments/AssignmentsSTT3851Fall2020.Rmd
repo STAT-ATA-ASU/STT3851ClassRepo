@@ -216,6 +216,12 @@ _____________
 
 * Lecture - Bias Variance Tradeoff - Take notes - [Slides](../Rmarkdown/BiasVarDer.pdf) 
 
+* Go over [Bias Variance Graphs](../Rmarkdown/BiasVariance.html) 
+
+* Go over [Chapter 2 Graphs](../Rmarkdown/Chap2Slides.html)
+
+* Discuss flexible models and when to use them
+
 * Complete the **Visualizing two variables** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 2
 
 * Complete the **Correlation** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 2
@@ -249,6 +255,10 @@ _____________
 
 * Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
+* Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
+
+* Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
+
 * Complete the **Simple Linear Regression** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 9
 
 * Complete the **Interpreting Regression Models** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 9
@@ -264,131 +274,187 @@ _____________
 * Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
 
 * Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=1hbCJyM9ccs) (15:38)
-
-* Flow control [example](../Rmarkdown/FlowControl.html)
-
-* Bootstrap [example](../Rmarkdown/TheBootstrap.html)
 ```
 
 _____________
 
 
+## Week 9: (Oct 13, 15) {-}
+
+* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
+
+* Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
+
+* Complete the **Multiple Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 16
+
+* Complete the **Evaluating and extending parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 16
 
 
+* Complete [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 16
 
+```{block, week9optional, type='rmdoptional'}
+#### Optional {-}
+* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
 
+* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
 
+* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
 
-
-
-* Due TODAY:  Reproduce [Writing Assignment (Lab2)](https://stat-ata-asu.github.io/WritingAssignment-SC/WritingAssignment-Solution.html).  Accept assignment from GitHub Classroom---link in ASULEARN.  Due Sep 6
-
-
-**Sep 9:**
-
-* Before class: 
-    + Review/read chapter 2 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-* Go over [Bias Variance Graphs](../Rmarkdown/BiasVariance.html) 
-* Go over [Chapter 2 Graphs](../Rmarkdown/Chap2Slides.html)
-* Discuss flexible models and when to use them
-* Homework:
-    + [Data Camp Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) - Due Sep 13
-    + Reproduce [Data Camp Correlation and Regression](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Sep 20
-
-
-**Sep 11:**
-
-* Before class:
-    + Review [_bookdown: Authoring Books and Technical Documents with R Markdown_](https://bookdown.org/yihui/bookdown/) as needed
-* Go over [Bias Variance Graphs](../Rmarkdown/BiasVariance.html) 
-* Go over [Chapter 2 Graphs](../Rmarkdown/Chap2Slides.html)
-
-
-**Sep 13:**
-
-* Work Day
-* [Data Camp Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) - Due Sep 13
-* Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Sep 20
 * [Code](https://raw.githubusercontent.com/alanarnholt/GeneralStatistics/master/rmarkdown/ResidualGraphs.Rmd) to help with the creation of Figure 6.1 in the DataCamp assignment.
 
-**Sep 16:**
+```
 
-* Before class:
-    + Read pages 59-82 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=PsE9UqoWtS4) (13:01)
-    + Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
-    + Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=1hbCJyM9ccs) (15:38)
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Homework: Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Sep 20
-
-**Sep 18:**
-
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Homework: Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Sep 20
-
-**Sep 20:**
-
-* Workday
-* Due TODAY: Reproduce [Data Camp Correlation and Regression (DataCamp1)](https://stat-ata-asu.github.io/CorrelationRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Sep 20
-
-**Sep 23:**
-
-* Before class:
-    + Read pages 82-120 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Go over [Bias Variance Graphs again](../Rmarkdown/BiasVarianceGGplot.html)
-* Homework: 
-    +  [Data Camp Multiple and Logistic Regression](https://www.datacamp.com/courses/multiple-and-logistic-regression) - Due Sep 27
-    +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
+_____________
 
 
-**Sep 25:**
+## Week 10: (Oct 20, 22) {-}
 
-* Before class:
-    + Review pages 82-120 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Homework: 
-    +  [Data Camp Multiple and Logistic Regression](https://www.datacamp.com/courses/multiple-and-logistic-regression) - Due Sep 27
-    +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
+* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-**Sep 27:**
+* Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
 
-* Before class:
-    + Review pages 82-120 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
-* Due TODAY: Data Camp Multiple and Logistic Regression - Due Sep 27    
-* Homework: 
-    + Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4   
+* Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
+
+* Complete the **Parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 23
+
+* Complete the **Logistic Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 23
+
+* Complete the **Case Study** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 23
 
 
-**Sep 30:**
-
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Answer questions at the end of [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html).
-* Homework:
-      +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
-      
-**Oct 2:**
-
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
-* Answer questions at the end of [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html).
-* Homework:
-      +  Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
-      +  Complete the take home chapter three assessment (will count as two quizzes) - Accept the assignment from GitHub Classroom --- link in ASULEARN - Due Oct 11
-
-**Oct 4:**
-
-* Due TODAY: Reproduce [Data Camp Multiple and Logistic Regression (DataCamp2)](https://stat-ata-asu.github.io/MultipleAndLogisticRegression/) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 4
-* Homework: 
-      + Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 11
-      +  Complete the take home chapter three assessment (will count as two quizzes) - Accept the assignment from GitHub Classroom --- link in ASULEARN - Due Oct 11
+* Complete [Lab3](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 23
 
 
-**Oct 7:**
+```{block, week10optional, type='rmdoptional'}
+#### Optional {-}
 
-* Discuss [Chapter 2 and 3 material](../Rmarkdown/Chap2Slides.html)
+* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
+
+* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
+
+* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
+
+```
+
+___________________
+
+
+
+## Week 11: (Oct 27, 29) {-}
+
+* Read chapter 5 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Resampling Methods ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/cv_boot.pdf))
+
+* Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
+
+* Flow control [example](../Rmarkdown/FlowControl.html)
+
+* Bootstrap [example](../Rmarkdown/TheBootstrap.html)
+
+
+* Complete the **Regression models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 30
+
+* Complete the **Classification models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 30
+
+
+* Complete [Lab4](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 30
+
+
+```{block, week11optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=_2ij6eaaSl0) (14:01)
+
+* Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
+
+* Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
+
+```
+
+___________________
+
+
+## Week 12: (Nov 3, 5) {-}
+
+* Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Model Selection and Regularization ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/model_selection.pdf))
+
+
+* Complete the **Tuning model parameters to improve performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 6
+
+* Complete the **Preprocessing your data** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 6
+
+* Complete the **Selecting models: a case study in churn prediction** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 6
+
+
+```{block, week12optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Linear Model Selection and Best Subset Selection](https://www.youtube.com/watch?v=91si52nk3LA) (13:44)
+
+* Watch [Forward Stepwise Selection](https://www.youtube.com/watch?v=nLpJd_iKmrE) (12:26)
+
+* Watch [Backward Stepwise Selection ](https://www.youtube.com/watch?v=NJhMSpI2Uj8) (5:26)
+
+* Watch [Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared](https://www.youtube.com/watch?v=LkifE44myLc) (14:06)
+
+* Watch [Estimating Test Error Using Cross-Validation](https://www.youtube.com/watch?v=3p9JNaJCOb4) (8:43)
+
+
+```
+
+___________________
+
+
+
+## Week 13: (Nov 10, 12) {-}
+
+* Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Model Selection and Regularization ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/model_selection.pdf))
+
+
+* Reproduce [Machine Learning with `caret` in R]() --- Due NLT Nov 13
+
+```{block, week13optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Shrinkage Methods and Ridge Regression](https://www.youtube.com/watch?v=cSKzqb0EKS0) (12:37)
+
+* Watch [The Lasso](https://www.youtube.com/watch?v=A5I1G1MfUmA) (15:21)
+
+* Watch [Tuning Parameter Selection for Ridge Regression and Lasso](https://www.youtube.com/watch?v=xMKVUstjXBE) (5:27)
+
+* Watch [Dimension Reduction](https://www.youtube.com/watch?v=QlyROnAjnEk) (4:45)
+
+* Watch [Principal Components Regression and Partial Least Squares ](https://www.youtube.com/watch?v=eYxwWGJcOfw) (15:48)
+
+* Watch [Lab: Best Subset Selection](https://www.youtube.com/watch?v=3kwdDGnV8MM) (10:36)
+
+* Watch [Lab: Forward Stepwise Selection and Model Selection Using Validation Set](https://www.youtube.com/watch?v=mv-vdysZIb4) (10:32)
+
+* Watch [Lab: Model Selection Using Cross-Validation](https://www.youtube.com/watch?v=F8MMHCCoALU) (5:32)
+
+* Watch [Lab: Ridge Regression and Lasso ](https://www.youtube.com/watch?v=1REe3qSotx8) (16:34)
+```
+
+___________________
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 **Oct 9:**
@@ -397,99 +463,6 @@ _____________
     + Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
     + The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
     + Project 1---Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 25
-
-**Oct 11:**
-
-* Workday
-* Due TODAY: 
-      + Reproduce [Lab: Linear Regression (Lab3)](https://stat-ata-asu.github.io/ISLR-CHAP3-LAB-SC/LabChap3-Solution.html) - Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 11
-      +  Complete the take home chapter three assessment (will count as two quizzes) - Accept the assignment from GitHub Classroom --- link in ASULEARN - Due Oct 11
-
-~~**Oct 14:**~~ No Class - Fall Break 
-
-**Oct 16:**
-
-* Work on Project 1---Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 25
-* [Code for class notes](../Rmarkdown/BodyTemperatures.html)
-
-
-**Oct 18:**
-
-* TBD
-
-**Oct 21:**
-
-* TBD
-
-
-**Oct 23:**
-
-* Before class:
-    + Read chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=_2ij6eaaSl0) (14:01)
-
-**Oct 25:**
-
-* Workday
-* Due TODAY: Project 1---Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 25
-
-**Oct 28:**
-
-* Before class:
-    + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
-    + Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
-
-**Oct 30:**
-
-* Before class:
-    + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
-
-**Nov 1:**
-
-* Before class:
-    + Review chapter 5 [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
-    + Watch [Lab: Cross-Validation](https://www.youtube.com/watch?v=6dSXlqHAoMk) (11:21)
-* Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
-* Homework: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom---link in ASULEARN - Due Nov 8
-
-
-**Nov 4:**
-
-* Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
-* Homework: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom---link in ASULEARN - Due Nov 8
-
-**Nov 6:**
-
-* Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
-* Homework: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom---link in ASULEARN - Due Nov 8
-
-**Nov 8:**
-
-* Workday
-* Due TODAY: [Reproduce _Lab: Cross-Validation_ (Lab4)](https://stat-ata-asu.github.io/ISLR-CHAP5-LAB-SC/Lab4-CV.html) --- Accept assignment from GitHub Classroom---link in ASULEARN - Due Nov 8
-* Homework: [Data Camp Machine Learning Toolbox](https://www.datacamp.com/courses/machine-learning-toolbox) - Due Nov 15 
-* Homework: Reproduce [Data Camp Machine Learning Toolbox (DataCamp3)](https://stat-ata-asu.github.io/MachineLearningToolbox/) --- Accept assignment from GitHub Classroom---link in ASULEARN - Due Nov 22 
-
-**Nov 11:**
-
-* TBD
-
-**Nov 13:**
-
-* TBD
-
-**Nov 15:**
-
-* Due TODAY: [Data Camp Machine Learning Toolbox](https://www.datacamp.com/courses/machine-learning-toolbox) - Due Nov 15 
-
-**Nov 18:**
-
-* Before class:
-    + Watch [Linear Model Selection and Best Subset Selection](https://www.youtube.com/watch?v=91si52nk3LA) (13:44)
-    + [Forward Stepwise Selection](https://www.youtube.com/watch?v=nLpJd_iKmrE) (12:26)
-    + [Backward Stepwise Selection ](https://www.youtube.com/watch?v=NJhMSpI2Uj8) (5:26)
     
 Start Project 2---InClass Kaggle competition 
 
@@ -497,38 +470,6 @@ Start Project 2---InClass Kaggle competition
 * Use the [housedata.csv](https://github.com/STAT-ATA-ASU/STT3851Spring2016/raw/gh-pages/Data/housedata.csv) file - See [King County Housing Data](../Rmarkdown/KingCounty.html)  
 * See ASULEARN for InClass prediction competition link.
 
-**Nov 20:**
-
-* Before class:
-    + Watch [Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared](https://www.youtube.com/watch?v=LkifE44myLc) (14:06)
-    + Watch [Estimating Test Error Using Cross-Validation](https://www.youtube.com/watch?v=3p9JNaJCOb4) (8:43)
-* [Misc Issues](../Rmarkdown/OneHot.html)
-* [Notes on Credit Problem](../Rmarkdown/CreditProblemMore.html)
-
-
-**Nov 22:**
-
-* Workday
-* Due TODAY: Reproduce [Data Camp Machine Learning Toolbox (DataCamp3)](https://stat-ata-asu.github.io/MachineLearningToolbox/) --- Accept assignment from GitHub Classroom---link in ASULEARN - Due Nov 22 
-**Nov 25:**
-
-* Before class:
-    + Watch [Shrinkage Methods and Ridge Regression](https://www.youtube.com/watch?v=cSKzqb0EKS0) (12:37)
-    + Watch [The Lasso](https://www.youtube.com/watch?v=A5I1G1MfUmA) (15:21)
-    + Watch [Tuning Parameter Selection for Ridge Regression and Lasso](https://www.youtube.com/watch?v=xMKVUstjXBE) (5:27)
-
-~~**Nov 27-29:**~~ No Class --- State Holiday
-
-**Dec 2:**
-
-* LAST DAY to submit new model for InClass kaggle competition.
-
-* Work on presentation
-
-
-**Dec 6:**
-
-* Final presentations 2-4:30; WA 307 B
 
 
 
