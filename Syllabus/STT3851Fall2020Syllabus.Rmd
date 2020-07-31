@@ -1,0 +1,79 @@
+---
+title: "STT 3851 Syllabus - Fall 2020"
+author: ''
+date: "Fall 2020"
+output:
+  html_document:
+    css: asu.css
+    highlight: textmate
+    theme: yeti
+---
+
+**Instructor:**  Dr. Alan T. Arnholt  
+**Office:** Walker Hall 237      
+**Office Hours:** 12:45-1:45pm M-F, and by appointment
+
+Make an appointment to see me by clicking https://arnholtat.youcanbook.me/.
+
+**Course Description:**  
+
+This course covers elements of data management, descriptive statistics,  and inferential statistics. The course also examines the variance-bias tradeoff, linear regression, cross-validation, bootstrapping, subset selection, ridge and lasso regression, and choosing optimal models. 
+
+**Course Objectives:**
+
+1.  Students will use a reproducible research work flow.
+2.  Students will improve their technology expertise.
+3.  Students will learn to apply statistical learning techniques.
+
+
+**Course Texts:**
+
+The principal documents for this course are [_ModernDive: An Introduction to Statistical and Data Sciences via R_](https://moderndive.com) (MD), [_Data Science with R_](https://stat-ata-asu.github.io/R_DS_BD2020/) (DSWR), and [_An Introduction to Statistical Learning with Applications in R_](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf) (ISLR)
+
+**Optional References:**
+
+[_Reproducible Research with R and RStudio, Second Edition_](https://github.com/christophergandrud/Rep-Res-Book) by Christopher Gandrud
+
+[_The Elements of Statistical Learning_](http://web.stanford.edu/~hastie/ElemStatLearn/) by Trevor Hastie, Robert Tibshirani, and Jerome Friedman
+
+[_R Graphics Cookbook_](http://www.amazon.com/R-Graphics-Cookbook-Winston-Chang/dp/1449316956) by Winston Chang - Available via `SafariBooksOnline` through the Appalachian State University [library](http://library.appstate.edu/). 
+
+
+**Course Grading:**
+
+
+* 25% of the course grade will come from (25) Data Camp assignments
+* 40% of the grade will come from six problem sets and four labs
+* 10% of the grade will come from reproducing a data camp assignment with bookdown
+* 10% of the grade will be from class participation and attendance
+* 5% of the course grade will come from a presentation during the final exam period
+
+
+**How To Get Unstuck**
+
+Well constructed questions will elicit answers more rapidly than poorly constructed questions.  This [video](https://www.youtube.com/watch?v=ZFaWxxzouCY&list=PLjTlxb-wKvXNSDfcKPFH2gzHGyjpeCZmJ&index=3) provides some background on asking questions.  This stackoverflow thread details how to create a [minimal R reproducible example](http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example/5963610#5963610). Please read [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html) by Eric Raymond and Rick Moen and heed their advice.
+
+**University Policies**
+
+This course conforms with all Appalachian State University policies with respect to academic integrity, disability services, and class attendance.  The details of the policies may be found at <http://academicaffairs.appstate.edu/resources/syllabi>.
+
+
+**Computers and Software**
+
+This course will use the RStudio server  (https://mathr.math.appstate.edu/) that has the programs listed below and more installed.
+
+* [R](http://cran.r-project.org) 
+* [Git](http://git-scm.com/downloads) 
+* [RStudio](http://www.rstudio.com/products/rstudio/download/)
+* [LaTeX](http://www.ctan.org/starter)
+
+You must have an active internet connection and be registered in the course to access the server. To access the server, point any web browser to <https://mathr.math.appstate.edu/>.  You will need to acknowledge the connection is unsecure and possibly add a security exception to your web browser. Use your Appstate Username and Password to access the server.  A screen shot of the RStudio server is shown below.
+
+<center>
+![](RStudioLogIn.png)
+</center>
+
+If you have problems with your Appstate Username or Password visit [IT Support Services](http://support.appstate.edu/) or call 262-6266.  
+
+***
+

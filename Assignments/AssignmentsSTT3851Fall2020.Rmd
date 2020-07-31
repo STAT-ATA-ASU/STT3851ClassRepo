@@ -420,6 +420,8 @@ ___________________
 
 * Reproduce [Machine Learning with `caret` in R]() --- Due NLT Nov 13
 
+* Start [kaggle](https://www.kaggle.com/) competition --- Last submission Nov 25
+
 ```{block, week13optional, type='rmdoptional'}
 #### Optional {-}
 
@@ -445,33 +447,35 @@ ___________________
 ___________________
 
 
+## Week 14: (Nov 17, 19) {-}
 
+* Work on [kaggle](https://www.kaggle.com/) competition --- Last submission Nov 25
 
+```{block, week14optional, type='rmdoptional'}
+#### Optional {-}
 
+* Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
 
-
-
-
-
-
-
-
-
-**Oct 9:**
-
-* Before class:
-    + Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
-    + The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
-    + Project 1---Accept assignment from GitHub Classroom---link in ASULEARN - Due Oct 25
+* The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
     
-Start Project 2---InClass Kaggle competition 
 
 * [Example Template Directory](https://github.com/STAT-ATA-ASU/STT3851Spring2016/blob/gh-pages/BDbetaTemplate)
+
 * Use the [housedata.csv](https://github.com/STAT-ATA-ASU/STT3851Spring2016/raw/gh-pages/Data/housedata.csv) file - See [King County Housing Data](../Rmarkdown/KingCounty.html)  
-* See ASULEARN for InClass prediction competition link.
+```
 
 
+___________________
+
+## Week 15: (Nov 24) {-}
+
+* Work on [kaggle](https://www.kaggle.com/) competition --- Last submission Nov 25
 
 
+_________________
 
+## Final Exam: (Dec 8---2-4:30) {-}
 
+* Three minute presentation on kaggle competition --- Limited to three slides.
+
+_________________
