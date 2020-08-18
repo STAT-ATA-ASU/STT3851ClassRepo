@@ -3,6 +3,7 @@ title: "STT 3851 Syllabus - Fall 2020"
 author: ''
 date: "Fall 2020"
 output:
+  pdf_document: default
   html_document:
     css: asu.css
     highlight: textmate
@@ -67,6 +68,8 @@ _____________
 * 10% of the grade will come from reproducing a data camp assignment with bookdown
 
 * 10% of the grade will be from class participation and attendance
+
+* 10% of the grade will come from a kaggle competition
 
 * 5% of the course grade will come from a presentation during the final exam period
 
