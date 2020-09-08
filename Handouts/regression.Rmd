@@ -57,6 +57,18 @@ Gpa %>%
   summarize(r = cor(collgpa, hsgpa))
 ```
 
+Note:
+
+```{r}
+p1 <- ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+  geom_point() + 
+  theme_bw()
+p2 <- ggplot(data = values, aes(x = zx, y = zy)) + 
+  geom_point() + 
+  theme_bw()
+library(gridExtra)
+grid.arrange(p1, p2, ncol = 1, nrow = 2)
+```
 
 
 # Least Squares Regression
