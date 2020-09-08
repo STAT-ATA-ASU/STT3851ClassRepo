@@ -6,7 +6,7 @@ output: bookdown::html_document2
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE, fig.align = "center")
 ```
 
 # Correlation
@@ -27,15 +27,16 @@ knitr::kable(Gpa)
 
 Create a scatterplot and then comment on the relationship between the two variables.
 
-```{r}
+```{r, label = "sp1", fig.cap = "Scatterplot of College GPA versus High School GPA"}
 library(tidyverse)
 library(BSDA)
 ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+  labs(x = "High School GPA", y = "College GPA") +
   geom_point() + 
   theme_bw()
 ```
 
-The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = 0.844$, which indicates that a straight line is a reasonable relationship between the two variables.
+The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot in Figure \@ref(fig:sp1) shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = 0.844$, which indicates that a straight line is a reasonable relationship between the two variables.
 
 * Compute the correlation coefficient using \@ref(eq:cor).
 
