@@ -1,0 +1,133 @@
+---
+title: "Least Squares Regression"
+author: "Alan T. Arnholt"
+date: "9/8/2020"
+output: bookdown::html_document2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE)
+```
+
+# Correlation
+
+The **correlation coefficient**, denoted by $r$, measures the direction and strength of the linear relationship between two numerical variables.  Is is given by the equation
+
+\begin{equation}
+r = \frac{1}{(n-1)}\sum_{i=1}^n\left(\frac{x_i - \bar{x}}{s_x}\right)\left(\frac{y_i - \bar{y}}{s_y}\right)
+(\#eq:cor)
+\end{equation}
+
+Following are the high school GPAs and the college GPAs at the end of the freshman year for ten different students from the `Gpa` data set of the `BSDA` package.
+
+```{r, echo = FALSE}
+library(BSDA)
+knitr::kable(Gpa)
+```
+
+Create a scatterplot and then comment on the relationship between the two variables.
+
+```{r}
+library(tidyverse)
+library(BSDA)
+ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+  geom_point() + 
+  theme_bw()
+```
+
+The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = 0.844$, which indicates that a straight line is a reasonable relationship between the two variables.
+
+* Compute the correlation coefficient using \@ref(eq:cor).
+
+```{r}
+head(Gpa)
+values <- Gpa %>% 
+  mutate(y_ybar = collgpa - mean(collgpa), x_xbar = hsgpa - mean(hsgpa), zx = x_xbar/sd(hsgpa), zy = y_ybar/sd(collgpa))
+values
+#
+values %>% 
+  summarize(r = (1/9)*sum(zx*zy))
+```
+
+Using the build in `cor()` function:
+
+```{r}
+Gpa %>% 
+  summarize(r = cor(collgpa, hsgpa))
+```
+
+
+
+# Least Squares Regression
+
+The equation of a straight line is
+
+$$y = b_0 + b_1x$$
+
+where $b_0$ is the $y$-intercept and $b_1$ is the slope of the line.  From the equation of the line that best fits the data,
+
+$$\hat{y} = b_0 + b_1x$$
+
+we can compute a predicted $y$ for each value of $x$ and then measure the error of the prediction.  The error of the prediction, $e_i$ (also called the residual) is the difference in the actual $y_i$ and the predicted $\hat{y}_i$.  That is, the residual associated with the data point $(x_i, y_i)$ is
+
+$$e_i = y_i - \hat{y}_i.$$
+
+The least squares regression line is
+
+$$\hat{y} = b_0 + b_1x$$
+
+where
+
+\begin{equation}
+b_1 = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2} = r\frac{s_y}{s_x}
+(\#eq:b1)
+\end{equation}
+
+and 
+
+\begin{equation}
+b_0 = \bar{y} - b_1\bar{x}
+(\#eq:b0)
+\end{equation}
+
+Find the least squares regression line $\hat{y} = b_0 + b_1x$ for the `Gpa` data.
+
+```{r}
+Gpa %>% 
+  summarize(b1 = cor(hsgpa, collgpa)*sd(collgpa)/sd(hsgpa),
+            b0 = mean(collgpa) - b1*mean(hsgpa))
+```
+
+The coefficients are also computed when using the `lm()` function.
+
+```{r}
+mod1 <- lm(collgpa ~ hsgpa, data = Gpa)
+mod1
+summary(mod1)
+library(moderndive)
+get_regression_table(mod1)
+```
+
+Find the residuals for `mod1`.
+
+```{r}
+get_regression_points(mod1)
+```
+
+Add the least squares line to the scatterplot for `collgpa` versus `hsgpa`.
+
+```{r}
+ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(x = "High School GPA", y = "College GPA") +
+  theme_bw() 
+```
+
+## Assessing the fit
+
+```{r, fig.width = 8, fig.height = 4}
+library(ggfortify)
+autoplot(mod1, ncol = 2, nrow = 1, which = 1:2) + theme_bw()
+```
+
