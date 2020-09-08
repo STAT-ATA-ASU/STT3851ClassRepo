@@ -1,0 +1,43 @@
+---
+title: "Practice"
+author: "Alan T. Arnholt"
+date: "9/8/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
+## Population Mean ($\mu$)
+
+$$\mu = \sum_{i=1}^{N}\frac{x_i}{N} = \frac{x_1 + x_2 + \cdots + x_N}{N}$$
+
+## Sample Mean ($\bar{x}$)
+
+$$\bar{x} = \sum_{i=1}^{n}\frac{x_i}{n} = \frac{x_1 + x_2 + \cdots + x_n}{n}$$
+
+## Sample Variance ($s^2$)
+
+$$s^2 = \sum_{i=1}^n\frac{(x_i - \bar{x})^2}{n-1}$$
+
+##Sample Standard Deviation ($s$)
+
+$$s = \sqrt{\sum_{i=1}^n\frac{(x_i - \bar{x})^2}{n-1}}$$
+
+```{r}
+set.seed(13)
+x <- rexp(50, .1)
+x
+xbar <- sum(x)/length(x)
+xbar
+mean(x)
+S2 <- sum((x - mean(x))^2)/(length(x)-1)
+S2
+var(x)
+S <- sqrt(sum((x - mean(x))^2)/(length(x)-1))
+S
+sd(x)
+```
+
+The mean $\bar{x} = `r round(xbar, 2)`$, the standard deviation $s = `r round(S, 2)`$.
