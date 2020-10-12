@@ -261,7 +261,7 @@ _____________
 
 * Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-* Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
+* Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
 
@@ -289,7 +289,7 @@ _____________
 
 * Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-* Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
+* Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
 
@@ -319,7 +319,7 @@ _____________
 
 * Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-* Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
+* Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
 
@@ -352,7 +352,7 @@ ___________________
 
 * Read chapter 5 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-* Resampling Methods ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/cv_boot.pdf))
+* Resampling Methods ([slides](https://courses.edx.org/assets/courseware/v1/714c63b497ee6718f12a7fcd24c35866/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/cv_boot-handout.pdf))
 
 * Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
 
@@ -387,7 +387,7 @@ ___________________
 
 * Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-* Linear Model Selection and Regularization ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/model_selection.pdf))
+* Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
 
 
 * Complete the **Tuning model parameters to improve performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 6
@@ -421,7 +421,7 @@ ___________________
 
 * Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
-* Linear Model Selection and Regularization ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/model_selection.pdf))
+* Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
 
 
 * Reproduce [Machine Learning with `caret` in R]() --- Due NLT Nov 13

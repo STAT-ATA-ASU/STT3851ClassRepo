@@ -23,12 +23,12 @@ title: "Welcome"
 
 * [Course Notes STT 3850 (Spring 2018)](https://alanarnholt.github.io/STT3850/Notes/Parent/Parent.html) 
 
-### Chapter 1: Introduction ([slides](https://lagunita.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/introduction.pdf))
+### Chapter 1: Introduction ([slides](https://courses.edx.org/assets/courseware/v1/af163b1b5874fcb7a86de55dd8205d39/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/introduction-handout.pdf))
 
 * [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
 * [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
 
-### Chapter 2: Statistical Learning ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/statistical_learning.pdf))
+### Chapter 2: Statistical Learning ([slides](https://courses.edx.org/assets/courseware/v1/389682606dce6fd04aaa833c86e6f577/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/statistical_learning-handout.pdf))
 
 * [Statistical Learning and Regression](https://www.youtube.com/watch?v=WjyuiK5taS8) (11:41)
 * [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=UvxHOkYQl8g) (11:40)
@@ -36,7 +36,7 @@ title: "Welcome"
 * [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=vVj2itVNku4) (15:37)
 * [Lab: Introduction to R](https://www.youtube.com/watch?v=jwBgGS_4RQA) (14:12)
 
-### Chapter 3: Linear Regression ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/linear_regression.pdf))
+### Chapter 3: Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=PsE9UqoWtS4) (13:01)
 * [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
@@ -45,7 +45,7 @@ title: "Welcome"
 * [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
 * [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
 
-### Chapter 4: Classification ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/classification.pdf))
+### Chapter 4: Classification ([slides](https://courses.edx.org/assets/courseware/v1/0c7a529a8d32d0449fb5f96d260628ad/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/classification-handout.pdf))
 
 * [Introduction to Classification](https://www.youtube.com/watch?v=sqq21-VIa1c) (10:25)
 * [Logistic Regression and Maximum Likelihood](https://www.youtube.com/watch?v=31Q5FGRnxt4) (9:07)
@@ -59,7 +59,7 @@ title: "Welcome"
 * [Lab: Linear Discriminant Analysis](https://www.youtube.com/watch?v=2cl7JiPzkBY) (8:22)
 * [Lab: K-Nearest Neighbors](https://www.youtube.com/watch?v=9TVVF7CS3F4) (5:01)
 
-### Chapter 5: Resampling Methods ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/cv_boot.pdf))
+### Chapter 5: Resampling Methods ([slides](https://courses.edx.org/assets/courseware/v1/714c63b497ee6718f12a7fcd24c35866/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/cv_boot-handout.pdf))
 
 * [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=_2ij6eaaSl0) (14:01)
 * [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
@@ -69,7 +69,7 @@ title: "Welcome"
 * [Lab: Cross-Validation](https://www.youtube.com/watch?v=6dSXlqHAoMk) (11:21)
 * [Lab: The Bootstrap](https://www.youtube.com/watch?v=YVSmsWoBKnA) (7:40)
 
-### Chapter 6: Linear Model Selection and Regularization ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/model_selection.pdf))
+### Chapter 6: Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
 
 * [Linear Model Selection and Best Subset Selection](https://www.youtube.com/watch?v=91si52nk3LA) (13:44)
 * [Forward Stepwise Selection](https://www.youtube.com/watch?v=nLpJd_iKmrE) (12:26)
@@ -86,7 +86,7 @@ title: "Welcome"
 * [Lab: Model Selection Using Cross-Validation](https://www.youtube.com/watch?v=F8MMHCCoALU) (5:32)
 * [Lab: Ridge Regression and Lasso ](https://www.youtube.com/watch?v=1REe3qSotx8) (16:34)
 
-### Chapter 7: Moving Beyond Linearity ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/nonlinear.pdf))
+### Chapter 7: Moving Beyond Linearity ([slides](https://courses.edx.org/assets/courseware/v1/ca57813d9b515a08f35564427c41b781/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/nonlinear-handout.pdf))
 
 * [Polynomial Regression and Step Functions ](https://www.youtube.com/watch?v=gtXQXA7qF3c) (14:59)
 * [Piecewise Polynomials and Splines](https://www.youtube.com/watch?v=7ZIqzTNB8lk) (13:13)
@@ -95,7 +95,7 @@ title: "Welcome"
 * [Lab: Polynomials](https://www.youtube.com/watch?v=uQBnDGu6TYU) (21:11)
 * [Lab: Splines and Generalized Additive Models](https://www.youtube.com/watch?v=DCn83aXXuHc) (12:15)
 
-### Chapter 8:  Tree-Based Methods ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/trees.pdf))
+### Chapter 8:  Tree-Based Methods ([slides](https://courses.edx.org/assets/courseware/v1/62c570de505d28b78e8e4ea932daddf2/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/trees-handout.pdf))
 
 * [Decision Trees](https://www.youtube.com/watch?v=6ENTbK3yQUQ) (14:37)
 * [Pruning a Decision Tree](https://www.youtube.com/watch?v=GfPR7Xhdokc) (11:45)
@@ -105,7 +105,7 @@ title: "Welcome"
 * [Lab: Decision Trees](https://www.youtube.com/watch?v=0wZUXtvAtDc) (10:13)
 * [Lab: Random Forests and Boosting ](https://www.youtube.com/watch?v=IY7oWGXb77o) (15:35)
 
-### Chapter 9: Support Vector Machines ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/svm.pdf))
+### Chapter 9: Support Vector Machines ([slides](https://courses.edx.org/assets/courseware/v1/65d76a3a40298590d15ab2a875e218e2/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/svm-handout.pdf))
 
 * [Maximal Margin Classifier](https://www.youtube.com/watch?v=QpbynqiTCsY) (11:35)
 * [Support Vector Classifier](https://www.youtube.com/watch?v=xKsTsGE7KpI) (8:04)
@@ -114,7 +114,7 @@ title: "Welcome"
 * [Lab: Support Vector Machine for Classification](https://www.youtube.com/watch?v=qhyyufR0930) (10:13)
 * [Lab: Nonlinear Support Vector Machine](https://www.youtube.com/watch?v=L3n2VF7yKkk) (7:54)
 
-### Chapter 10: Unsupervised Learning ([slides](https://class.stanford.edu/c4x/HumanitiesScience/StatLearning/asset/unsupervised.pdf))
+### Chapter 10: Unsupervised Learning ([slides](https://courses.edx.org/assets/courseware/v1/fd6af987d74d7a6bbc81668ac47ccda6/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/unsupervised-handout.pdf))
 
 * [Unsupervised Learning and Principal Components Analysis ](https://www.youtube.com/watch?v=ipyxSYXgzjQ) (12:37)
 * [Exploring Principal Components Analysis and Proportion of Variance Explained](https://www.youtube.com/watch?v=dbuSGWCgdzw) (17:39)
