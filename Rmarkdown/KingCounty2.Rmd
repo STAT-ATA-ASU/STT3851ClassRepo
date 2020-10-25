@@ -153,7 +153,7 @@ Your goal is to create a model with as small a test error as possible.  Note tha
 
 
 
-```{r, fig.width=10, fig.height = 10}
+```{r, fig.width=10, fig.height = 10, eval = FALSE}
 library(ggmap)
 KingMap <-
   get_map(
