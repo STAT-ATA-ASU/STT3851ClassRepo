@@ -365,8 +365,7 @@ ___________________
 
 * Complete the **Classification models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 30
 
-
-* Complete [Lab4](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 30
+* Start [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
 
 ```{block, week11optional, type='rmdoptional'}
@@ -377,6 +376,15 @@ ___________________
 * Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
 
 * Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
+
+* Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
+
+* The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
+    
+
+* [Example Template Directory](https://github.com/STAT-ATA-ASU/STT3851Spring2016/blob/gh-pages/BDbetaTemplate)
+
+* Use the [housedata.csv](https://github.com/STAT-ATA-ASU/STT3851Spring2016/raw/gh-pages/Data/housedata.csv) file - See [King County Housing Data](../Rmarkdown/KingCounty.html)  
 
 ```
 
@@ -395,6 +403,10 @@ ___________________
 * Complete the **Preprocessing your data** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 6
 
 * Complete the **Selecting models: a case study in churn prediction** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 6
+
+* Complete [Lab4](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Nov 6
+
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
 
 ```{block, week12optional, type='rmdoptional'}
@@ -423,10 +435,9 @@ ___________________
 
 * Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
 
-
 * Reproduce [Machine Learning with `caret` in R]() --- Due NLT Nov 13
 
-* Start [kaggle](https://www.kaggle.com/) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
 ```{block, week13optional, type='rmdoptional'}
 #### Optional {-}
@@ -455,19 +466,12 @@ ___________________
 
 ## Week 14: (Nov 17, 19) {-}
 
-* Work on [kaggle](https://www.kaggle.com/) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
 ```{block, week14optional, type='rmdoptional'}
 #### Optional {-}
 
-* Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
 
-* The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
-    
-
-* [Example Template Directory](https://github.com/STAT-ATA-ASU/STT3851Spring2016/blob/gh-pages/BDbetaTemplate)
-
-* Use the [housedata.csv](https://github.com/STAT-ATA-ASU/STT3851Spring2016/raw/gh-pages/Data/housedata.csv) file - See [King County Housing Data](../Rmarkdown/KingCounty.html)  
 ```
 
 
@@ -475,13 +479,13 @@ ___________________
 
 ## Week 15: (Nov 24) {-}
 
-* Work on [kaggle](https://www.kaggle.com/) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
 
 _________________
 
 ## Final Exam: (Dec 8---2-4:30) {-}
 
-* Three minute presentation on kaggle competition --- Limited to three slides.
+* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) competition --- Limited to three slides.
 
 _________________
