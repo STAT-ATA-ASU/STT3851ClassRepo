@@ -481,11 +481,13 @@ ___________________
 
 * Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
+* Accept [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) slides repository inside ASULEARN.
+
 
 _________________
 
 ## Final Exam: (Dec 8---2-4:30) {-}
 
-* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) competition --- Limited to three slides.
+* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) competition --- Limited to three slides.  Accept assignment inside ASULEARN.
 
 _________________
