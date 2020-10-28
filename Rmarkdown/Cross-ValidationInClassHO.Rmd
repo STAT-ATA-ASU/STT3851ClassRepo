@@ -88,6 +88,7 @@ datatable(DF)
 * Sort the observations in the training and testing sets.
 
 ```{r}
+set.seed(31)
 n <- nrow(DF)
 train <- sample(n, floor(0.75 * n), replace = FALSE)
 trainSET <- DF[train, ]
