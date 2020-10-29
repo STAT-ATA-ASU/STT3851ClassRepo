@@ -51,7 +51,7 @@ The MSPE is computed with each testing set resulting in $n$ values of MSPE. The 
 
 ## $k$-Fold Cross Validation
 
-$k$-fold cross-validation is similar to LOOCV in that the available data is split into training sets and testing sets; however, instead of creating $n$ different training and testing sets, $k$ folds/groups of training and testing sets are created where $k < n$ and each fold consists of roughly $n/k$ values in the testing set and $1 - n/k$ values in the training set. Figure \@ref(fig:KFCV) shows a schematic display of 5-fold cross-validation. The lightly shaded rectangles are the testing sets and the darker shaded rectangles are the training sets. 
+$k$-fold cross-validation is similar to LOOCV in that the available data is split into training sets and testing sets; however, instead of creating $n$ different training and testing sets, $k$ folds/groups of training and testing sets are created where $k < n$ and each fold consists of roughly $n/k$ values in the testing set and $n - n/k$ values in the training set. Figure \@ref(fig:KFCV) shows a schematic display of 5-fold cross-validation. The lightly shaded rectangles are the testing sets and the darker shaded rectangles are the training sets. 
 
 ```{r, label = "KFCV", echo = FALSE, fig.cap = "Five fold cross-validation"}
 knitr::include_graphics("./PNG/cv.png", dpi = 96)
