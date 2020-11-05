@@ -393,6 +393,8 @@ ___________________
 
 ## Week 12: (Nov 3, 5) {-}
 
+* Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
+
 * Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
 * Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
@@ -430,6 +432,8 @@ ___________________
 
 
 ## Week 13: (Nov 10, 12) {-}
+
+* Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
 
 * Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
 
