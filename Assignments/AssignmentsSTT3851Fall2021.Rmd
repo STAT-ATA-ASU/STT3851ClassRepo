@@ -49,6 +49,7 @@ _________
 
 * Work through chapter 2 (Introduction to R) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
 
+* Start [PS-01](https://classroom.github.com/classrooms/87543903-stt3850-fall2021) by 10:00 am Aug 24 --- Final corrections due by 5:00 pm Aug 26 (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169))
  
 ```{block, week1optional, type='rmdoptional'}
 #### Optional {-}
@@ -85,10 +86,11 @@ ______________
 * Work through chapter 4 (Data Manipulation) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
 
 
-* Complete the **Data Wrangling** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Aug 24
+* Complete the **Data Wrangling** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Aug 24
 
-* Complete the **Data Visualization** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Aug 26
+* Complete the **Data Visualization** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Aug 26
 
+* Start [PS-03](https://classroom.github.com/classrooms/87543903-stt3850-fall2021) by 10:00 am Aug 31 --- Final corrections due by 5:00 pm Sep 2 --- (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
 
 
 ```{block, week2optional, type='rmdoptional'}
@@ -116,10 +118,11 @@ __________________
 
 * [Partial Lecture Slides](../Handouts/short_pre_lecture.pdf)
 
-* Complete the **Grouping and Summarizing** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Aug 31
+* Complete the **Grouping and Summarizing** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Aug 31
 
-* Complete the **Types of Visualizations** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 2
+* Complete the **Types of Visualizations** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 2
 
+* Start [PS-02](https://classroom.github.com/classrooms/87543903-stt3850-fall2021) by 10:00 am Sep 7 --- Final corrections due by 5:00 pm Sep 9---(assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
 
 
 ```{block, test3, type='rmdexercise'}
@@ -152,9 +155,9 @@ ___________
 
 * Go over in class this [document](../Handouts/regression.html)
 
-* Complete the **Introduction to Modeling** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 7
+* Complete the **Introduction to Modeling** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 7
 
-* Complete the **Modeling with Basic Regression** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 9
+* Complete the **Modeling with Basic Regression** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 9
 
 
 ```{block, week4optional, type='rmdoptional'}
@@ -176,9 +179,9 @@ __________________
 
 * Before class read chapter 6 (Multiple Regression) of [MD](https://moderndive.com) --- pgs 161-191
 
-* Complete the **Modeling with Multiple Regression** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 14
+* Complete the **Modeling with Multiple Regression** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 14
 
-* Complete the **Model Assessment and Selection** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 16
+* Complete the **Model Assessment and Selection** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 16
 
 * Start working on Bookdown assignment _Modeling with Data in the Tidyverse_ - Due NLT 5:00 pm Sep 23 --- assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169) 
 
@@ -215,7 +218,7 @@ _____________
 
 ## Week 7: (Sep 28, 30) {-}
 
-* Read chapters 1 and 2 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapters 1 and 2 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Lecture - Bias Variance Tradeoff - Take notes - [Slides](../Rmarkdown/BiasVarDer.pdf) 
 
@@ -225,26 +228,26 @@ _____________
 
 * Discuss flexible models and when to use them
 
-* Complete the **Visualizing two variables** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 28
+* Complete the **Visualizing two variables** chapter of _Correlation and Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 28
 
-* Complete the **Correlation** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 30
+* Complete the **Correlation** chapter of _Correlation and Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 30
 
-
+* Start [Lab1](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
 
 ```{block, week7optional, type='rmdoptional'}
 #### Optional {-}
 
-* Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
+* Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=5N9V07EIfIg&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V) (18:18)
 
-* Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
+* Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=Z0v9QMkA3dA&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=2) (12:12)
 
-* Watch [Statistical Learning and Regression](https://www.youtube.com/watch?v=WjyuiK5taS8) (11:41)
+* Watch [Statistical Learning and Regression](https://www.youtube.com/watch?v=p9n2w236B48&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=3) (11:41)
 
-* Watch [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=UvxHOkYQl8g) (11:40)
+* Watch [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=HndOzII4jzs&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=4) (11:40)
 
-* Watch [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VusKAosxxyk) (10:04)
+* Watch [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VaN1RUDuioQ&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=5) (10:04)
 
-* Watch [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=vVj2itVNku4) (15:37)
+* Watch [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=TnVRhLqThR4&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=6) (15:37)
 
 * Read Section 3.4 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
 ```
@@ -256,27 +259,27 @@ _____________
 
 * Complete [Lab1](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
 
-* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapter 3 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
 
-* Complete the **Simple Linear Regression** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 5
+* Complete the **Simple Linear Regression** chapter of _Correlation and Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 5
 
-* Complete the **Interpreting Regression Models** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 5
+* Complete the **Interpreting Regression Models** chapter of _Correlation and Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 5
 
-* Complete the **Model Fit** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 7
+* Complete the **Model Fit** chapter of _Correlation and Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 7
 
 
 
 ```{block, week8optional, type='rmdoptional'}
 #### Optional {-}
-* Watch [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=PsE9UqoWtS4) (13:01)
+* Watch [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=7TgVO_K75EY&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=8) (13:01)
 
-* Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
+* Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=z10DqaVJh3c&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=9) (8:24)
 
-* Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=1hbCJyM9ccs) (15:38)
+* Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=yzQHONabWhs&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=10) (15:38)
 ```
 
 _____________
@@ -284,25 +287,30 @@ _____________
 
 ## Week 9: (Oct 12---Fall Break, Oct 14) {-}
 
-* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapter 3 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
 
-* Complete the **Multiple Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 14
+* Complete the **Parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 14
 
-* Complete the **Evaluating and extending parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 14
+* Complete the **Evaluating and extending parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 14
 
+* Complete the **Multiple Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 14
+
+
+
+* Start [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Oct 19 --- Final corrections due by 5:00 pm Oct 21
 
 
 ```{block, week9optional, type='rmdoptional'}
 #### Optional {-}
-* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
+* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=lo7KnnvyEU0&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=11) (14:51)
 
-* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
+* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=sK80ZnhiaRI&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=12) (14:16)
 
-* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
+* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=W0WILgmAGao&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=13) (22:10)
 
 * [Code](https://raw.githubusercontent.com/alanarnholt/GeneralStatistics/master/rmarkdown/ResidualGraphs.Rmd) to help with the creation of Figure 6.1 in the DataCamp assignment.
 
@@ -313,29 +321,29 @@ _____________
 
 ## Week 10: (Oct 19, 21) {-}
 
-* Complete [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 19---Final corrections due by 5:00 pm Oct 21
+* Complete [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 19 --- Final corrections due by 5:00 pm Oct 21
 
-* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapter 3 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
 
 * Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
 
-* Complete the **Parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 19
 
-* Complete the **Logistic Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 19
+* Complete the **Logistic Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 19
 
-* Complete the **Case Study** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 21
+* Complete the **Case Study** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 21
 
+* Start [Lab3](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 5:00 pm Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
 
 ```{block, week10optional, type='rmdoptional'}
 #### Optional {-}
 
-* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
+* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=lo7KnnvyEU0&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=11) (14:51)
 
-* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
+* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=sK80ZnhiaRI&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=12) (14:16)
 
-* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
+* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=W0WILgmAGao&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=13) (22:10)
 
 ```
 
@@ -347,7 +355,7 @@ ___________________
 
 * Complete [Lab3](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
 
-* Read chapter 5 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapter 5 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Resampling Methods ([slides](https://courses.edx.org/assets/courseware/v1/714c63b497ee6718f12a7fcd24c35866/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/cv_boot-handout.pdf))
 
@@ -358,9 +366,9 @@ ___________________
 * Bootstrap [example](../Rmarkdown/TheBootstrap.html)
 
 
-* Complete the **Regression models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 26
+* Complete the **Regression models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 26
 
-* Complete the **Classification models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 28
+* Complete the **Classification models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 28
 
 * Start [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
@@ -368,11 +376,11 @@ ___________________
 ```{block, week11optional, type='rmdoptional'}
 #### Optional {-}
 
-* Watch [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=_2ij6eaaSl0) (14:01)
+* Watch [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=ngrOYWgJjb4&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=21) (14:01)
 
-* Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
+* Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=rSGzUy13F_0&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=22) (13:33)
 
-* Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
+* Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=r64tRyHFAJ8&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=23) (10:07)
 
 * Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
 
@@ -392,33 +400,33 @@ ___________________
 
 * Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
 
-* Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapter 6 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
 
 
-* Complete the **Tuning model parameters to improve performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 2
+* Complete the **Tuning model parameters to improve performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Nov 2
 
-* Complete the **Preprocessing your data** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 2
+* Complete the **Preprocessing your data** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Nov 2
 
-* Complete the **Selecting models: a case study in churn prediction** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 4
-
+* Complete the **Selecting models: a case study in churn prediction** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Nov 4
 
 * Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
+* Start [Lab4 - Linear and Nonlinear Modeling](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Nov 9 --- Final corrections due by 5:00 pm Nov 11
 
 ```{block, week12optional, type='rmdoptional'}
 #### Optional {-}
 
-* Watch [Linear Model Selection and Best Subset Selection](https://www.youtube.com/watch?v=91si52nk3LA) (13:44)
+* Watch [Linear Model Selection and Best Subset Selection](https://www.youtube.com/watch?v=XgNub00Uovs&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=28) (13:44)
 
-* Watch [Forward Stepwise Selection](https://www.youtube.com/watch?v=nLpJd_iKmrE) (12:26)
+* Watch [Forward Stepwise Selection](https://www.youtube.com/watch?v=3WA-UjeTdQM&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=29) (12:26)
 
-* Watch [Backward Stepwise Selection ](https://www.youtube.com/watch?v=NJhMSpI2Uj8) (5:26)
+* Watch [Backward Stepwise Selection ](https://www.youtube.com/watch?v=JNTe6T26xss&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=30) (5:26)
 
-* Watch [Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared](https://www.youtube.com/watch?v=LkifE44myLc) (14:06)
+* Watch [Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared](https://www.youtube.com/watch?v=WWuvcg23O_M&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=31) (14:06)
 
-* Watch [Estimating Test Error Using Cross-Validation](https://www.youtube.com/watch?v=3p9JNaJCOb4) (8:43)
+* Watch [Estimating Test Error Using Cross-Validation](https://www.youtube.com/watch?v=f_hkP_We0JY&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=32) (8:43)
 
 
 ```
@@ -433,7 +441,7 @@ ___________________
 
 * Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
 
-* Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+* Read chapter 6 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
 * Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
 
@@ -444,23 +452,23 @@ ___________________
 ```{block, week13optional, type='rmdoptional'}
 #### Optional {-}
 
-* Watch [Shrinkage Methods and Ridge Regression](https://www.youtube.com/watch?v=cSKzqb0EKS0) (12:37)
+* Watch [Shrinkage Methods and Ridge Regression](https://www.youtube.com/watch?v=I8bPQ272Pbs&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=33) (12:37)
 
-* Watch [The Lasso](https://www.youtube.com/watch?v=A5I1G1MfUmA) (15:21)
+* Watch [The Lasso](https://www.youtube.com/watch?v=FlSQgXv7Dvw&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=34) (15:21)
 
-* Watch [Tuning Parameter Selection for Ridge Regression and Lasso](https://www.youtube.com/watch?v=xMKVUstjXBE) (5:27)
+* Watch [Tuning Parameter Selection for Ridge Regression and Lasso](https://www.youtube.com/watch?v=8oEZkHqf_Rk&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=35) (5:27)
 
-* Watch [Dimension Reduction](https://www.youtube.com/watch?v=QlyROnAjnEk) (4:45)
+* Watch [Dimension Reduction](https://www.youtube.com/watch?v=-jgfdSprgnQ&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=36) (4:45)
 
-* Watch [Principal Components Regression and Partial Least Squares ](https://www.youtube.com/watch?v=eYxwWGJcOfw) (15:48)
+* Watch [Principal Components Regression and Partial Least Squares ](https://www.youtube.com/watch?v=v4lqtr9YZec&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=37) (15:48)
 
-* Watch [Lab: Best Subset Selection](https://www.youtube.com/watch?v=3kwdDGnV8MM) (10:36)
+* Watch [Lab: Best Subset Selection](https://www.youtube.com/watch?v=MR7rpjN3C6I&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=38) (10:36)
 
-* Watch [Lab: Forward Stepwise Selection and Model Selection Using Validation Set](https://www.youtube.com/watch?v=mv-vdysZIb4) (10:32)
+* Watch [Lab: Forward Stepwise Selection and Model Selection Using Validation Set](https://www.youtube.com/watch?v=2QV3RAOmZ2k&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=39) (10:32)
 
-* Watch [Lab: Model Selection Using Cross-Validation](https://www.youtube.com/watch?v=F8MMHCCoALU) (5:32)
+* Watch [Lab: Model Selection Using Cross-Validation](https://www.youtube.com/watch?v=6COMEmQMTLQ&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=40) (5:32)
 
-* Watch [Lab: Ridge Regression and Lasso ](https://www.youtube.com/watch?v=1REe3qSotx8) (16:34)
+* Watch [Lab: Ridge Regression and Lasso ](https://www.youtube.com/watch?v=ldqJ2sfosqA&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=41) (16:34)
 ```
 
 ___________________
@@ -471,12 +479,6 @@ ___________________
 * Complete reproduction of [Machine Learning with `caret` in R]() --- Due 10:00 am Nov 16 --- Final corrections due by 5:00 pm Nov 18
 
 * Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
-
-```{block, week14optional, type='rmdoptional'}
-#### Optional {-}
-
-
-```
 
 
 ___________________
