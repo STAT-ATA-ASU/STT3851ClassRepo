@@ -1,0 +1,502 @@
+---
+title: "Tentative STT 3851 Course Schedule - Fall 2021"
+author: "Alan T. Arnholt"
+date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
+output: 
+  bookdown::html_document2: 
+    highlight: textmate
+    theme: yeti
+    css: "../CSS/style.css"
+---
+
+
+__________
+
+### General Notes: {-}
+
+```{block, note-text, type='rmdnote'}
+1.  Please bring a notebook and pencil to every class
+2.  The principal documents for this course are [_ModernDive: An Introduction to Statistical and Data Sciences via R_](https://moderndive.com) (MD), [_Data Science with R_](https://stat-ata-asu.github.io/R_DS_BD2020/) (DSWR), and [_An Introduction to Statistical Learning with Applications in R_](https://web.stanford.edu/~hastie/ISLRv2_website.pdf) (ISLR)
+```
+
+___________
+
+#### Grading Rubric for Assignments {-}
+
+Field | Excellent (3) | Competent (2)  | Needs Work (1)
+------|---------------|----------------|---------------
+Reproducible | All graphs, code, and answers are created from text files.  Answers are never hard-coded but instead are inserted using inline R code.  An automatically generated references section with properly formatted citations when appropriate and `sessionInfo()` are provided at the end of the document. | All graphs, code, and answers are created from text files.  Answers are  hard coded. No `sessionInfo()` is provided at the end of the document. References are present but not cited properly or not automatically generated. | Document uses copy and paste with graphs or code.  Answers are hard coded; and references, when appropriate are hard coded.
+Statistical Understanding | Answers to questions demonstrate clear statistical understanding by comparing theoretical answers to simulated answers.  When hypotheses are tested, classical methods are compared and contrasted to randomization methods.  When confidence intervals are constructed, classical approaches are compared and contrasted with bootstrap procedures.  The scope of inferential conclusions made is appropriate for the sampling method. | Theoretical and simulated answers are computed but no discussion is present comparing and contrasting the results.  When hypotheses are tested, results for classical and randomization methods are presented but are not compared and contrasted.  When confidence intervals are constructed, classical and bootstrap approaches are computed but the results are not compared and contrasted.  The scope of inferential conclusions made is appropriate for the sampling method. | Theoretical and simulated answers are not computed correctly.  No comparison between classical and randomization approaches is present when testing hypotheses.  When confidence intervals are constructed, there is no comparison between classical and bootstrap confidence intervals .
+Graphics | Graphs for categorical data (barplot, mosaic plot, etc.) have appropriately labeled axes and titles.  Graphs for quantitative data (histograms, density plots, violin plots, etc.) have appropriately labeled axes and titles.  Multivariate graphs use appropriate legends and labels.  Computer variable names are replaced with descriptive variable names. | Appropriate graphs for the type of data are used.  Not all axes have appropriate labels or computer variable names are used in the graphs. | Inappropriate graphs are used for the type of data.  Axes are not labeled and computer variable names appear in the graphs.
+Coding  | Code (primarily R) produces correct answers.  Non-standard or complex functions are commented.  Code is formatted using a consistent standard. | Code produces correct answers.  Commenting is not used with non-standard and complex functions.  No consistent code formatting is used. | Code does not produce correct answers.  Code has no comments and is not formatted.
+Clarity  | Few errors of grammar and usage; any minor errors do not interfere with meaning.  Language style and word choice are highly effective and enhance meaning.  Style and word choice are appropriate for the assignment. | Some errors of grammar and usage; errors do not interfere with meaning.  Language style and word choice are, for the most part, effective and appropriate for the assignment. | Major errors of grammar and usage make meaning unclear.  Language style and word choice are ineffective and/or inappropriate.
+
+
+_________
+
+## Week 1: (Aug 17, 19) {-}
+
+
+* **Before** the first class meeting, read chapter 1 (Getting Started with Data in R) of [MD](https://moderndive.com)---pgs 1-20
+
+* Become familiar with the Appstate [RStudio server](https://mathr.math.appstate.edu/). You will use your Appstate user name and password to log in to the server.  You must be registered in the class to access the server.
+
+* Sign-up for a free account on [GitHub](https://github.com).  When you register for a free individual GitHub account, request a [student discount](https://education.github.com) to obtain a few private repositories as well as unlimited public repositories.  Please use something similar to **FirstNameLastName** as your username when you register with GitHub.  For example, my username on GitHub is *alanarnholt*. If you have a popular name such as John Smith, you may need to provide some other distinguishing characteristic in your username.   
+
+* Work through chapter 1 (Git and GitHub) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/).  Make sure RStudio is set up to communicate with Git by following the directions in [HappyGitWithR](https://happygitwithr.com/hello-git.html) for introducing yourself to Git.
+
+* Set cache your credentials and set up a personal access token (PAT) by following the directions in [HappyGitWithR](https://happygitwithr.com/credential-caching.html). 
+
+* Work through chapter 2 (Introduction to R) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
+
+ 
+```{block, week1optional, type='rmdoptional'}
+#### Optional {-}
+*  _Introduction to R_ [slides](https://alanarnholt.github.io/GeneralStatistics/rmarkdown/IntroToR.html)
+
+* Watch Paul the Octopus [clip](https://www.youtube.com/watch?v=3ESGpRUMj9E) (61 seconds).
+
+* You may want to install [Git](http://git-scm.com/downloads), [R](http://cran.r-project.org), [RStudio](http://www.rstudio.com/products/rstudio/download/), [zotero](https://www.zotero.org), and optionally [$LaTeX$](http://www.ctan.org/starter) on your personal computer. If you do, you will want to follow Jenny Bryan's excellent advice for [installing R and RStudio](http://stat545-ubc.github.io/block000_r-rstudio-install.html) and [installing Git](http://stat545-ubc.github.io/git01_git-install.html).  Jenny's advice is also in chapters 6 and 7 of [Happy Git and GitHub for the useR](http://happygitwithr.com/).  Note: [Git](http://git-scm.com/downloads), [R](http://cran.r-project.org), [RStudio](http://www.rstudio.com/products/rstudio/download/), and [$LaTeX$](http://www.ctan.org/starter) are installed on the [Appstate RStudio](https://mathr.math.appstate.edu/) server.
+
+* Watch the following videos as appropriate:
+
+* [Install R on Mac (2 min)](https://www.youtube.com/watch?v=lJxVRgiX-ik)    
+
+* [Install R for Windows (3 min)](https://www.youtube.com/watch?v=LII6of-5Odw)    
+
+* [Install R and RStudio on Windows (5 min)](https://www.youtube.com/watch?v=eD07NznguA4)    
+
+```
+
+______________
+
+## Week 2: (Aug 24, 26) {-}
+
+* Complete [PS-01](https://classroom.github.com/classrooms/87543903-stt3850-fall2021) by 10:00 am Aug 24 --- Final corrections due by 5:00 pm Aug 26 (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169))
+
+* Before class read chapter 3 (Data Wrangling) of [MD](https://moderndive.com) --- pgs 65-96
+
+* Before class read chapter 4 (Data Importing and "Tidy" Data) of [MD](https://moderndive.com) --- pgs 99-117
+
+* [Partial Lecture Slides](../Handouts/pre_lecture.pdf)
+
+* Work through chapter 3 (Starting with Data) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
+
+* Work through chapter 4 (Data Manipulation) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
+
+
+* Complete the **Data Wrangling** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Aug 24
+
+* Complete the **Data Visualization** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Aug 26
+
+
+
+```{block, week2optional, type='rmdoptional'}
+#### Optional {-}
+
+* Read [Getting used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/)
+
+* Watch the following Videos:
+    + [Phillip Guo's Unix-like command line tutorials (Four tutorials about 10 minutes each)](http://www.pgbovine.net/command-line-tutorial.htm)
+    + [Phillip Guo's Basic Git and Github tutorials (Three tutorials about 10 minutes each)](http://www.pgbovine.net/git-tutorial.htm)
+    + [Clone a GitHub Repo with RStudio (Video)](https://www.youtube.com/watch?v=YxZ8J2rqhEM) (5:05)
+
+```
+
+__________________
+
+
+## Week 3: (Aug 31, Sep 2) {-}
+
+* Complete [PS-03](https://classroom.github.com/classrooms/87543903-stt3850-fall2021) by 10:00 am Aug 31 --- Final corrections due by 5:00 pm Sep 2 --- (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
+
+* Before class read chapter 2 (Data Visualization) of [MD](https://moderndive.com) --- pgs 21-62
+
+* Work through chapter 5 (Using `ggplot2`) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
+
+* [Partial Lecture Slides](../Handouts/short_pre_lecture.pdf)
+
+* Complete the **Grouping and Summarizing** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Aug 31
+
+* Complete the **Types of Visualizations** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 2
+
+
+
+```{block, test3, type='rmdexercise'}
+Test yourself:
+
+1. [R Markdown Practice](RMarkdown.pdf)
+2. [R Markdown Extra Credit](RMarkdownEC.pdf)
+3. [LaTeX/knitr Extra Credit](knitrEC.pdf)
+```
+
+```{block, week3optional, type='rmdoptional'}
+#### Optional {-}
+
+* [Overplotting Examples and possible Solutions](../Rmarkdown/HousingData.html)
+
+* Read Chapters 1-2 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+
+* Complete _Data Visualization with `ggplot2`_ (Part 1) [(DataCamp)](https://www.datacamp.com/)
+
+* Nice [Tidyverse Cheat Sheet](http://datacamp-community.s3.amazonaws.com/e63a8f6b-2aa3-4006-89e0-badc294b179c)
+```
+
+___________
+
+## Week 4: (Sep 7, 9) {-}
+
+* Complete [PS-02](https://classroom.github.com/classrooms/87543903-stt3850-fall2021) by 10:00 am Sep 7 --- Final corrections due by 5:00 pm Sep 9---(assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
+
+* Before class read chapter 5 (Basic Regression) of [MD](https://moderndive.com) --- pgs 119-160
+
+* Go over in class this [document](../Handouts/regression.html)
+
+* Complete the **Introduction to Modeling** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 7
+
+* Complete the **Modeling with Basic Regression** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 9
+
+
+```{block, week4optional, type='rmdoptional'}
+#### Optional {-}
+
+* Add an avatar or picture on your GitHub account
+
+* Read the [Git and GitHub](http://r-pkgs.had.co.nz/git.html) chapter from Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/)
+
+* Brian Caffo's take on [R IDEs](https://www.youtube.com/watch?v=O2UFfiGdGFA)
+
+```
+
+__________________
+
+
+
+## Week 5: (Sep 14, 16) {-}
+
+* Before class read chapter 6 (Multiple Regression) of [MD](https://moderndive.com) --- pgs 161-191
+
+* Complete the **Modeling with Multiple Regression** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 14
+
+* Complete the **Model Assessment and Selection** chapter of _Modeling with Data in the Tidyverse_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 16
+
+* Start working on Bookdown assignment _Modeling with Data in the Tidyverse_ - Due NLT 5:00 pm Sep 23 --- assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169) 
+
+
+
+```{block, week5optional, type='rmdoptional'}
+#### Optional {-}
+* Complete _Data Manipulation in R with `dplyr`_ [(DataCamp)](https://www.datacamp.com/)
+```
+
+_______________
+
+## Week 6: (Sep 21, 23) {-}
+
+* Bookdown assignment _Modeling with Data in the Tidyverse_ - Due NLT 5:00 pm Sep 23 --- assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169) 
+
+* Before class read chapter 6 (Multiple Regression) of [MD](https://moderndive.com) --- pgs 161-191
+
+
+
+```{block, week6optional, type='rmdoptional'}
+#### Optional {-}
+* Read through [_Misc Regression_](../Rmarkdown/MiscRegression.html)
+
+* Answer the questions at the end of [_Misc Regression_](../Rmarkdown/MiscRegression.html) for extra credit (Turn in before Oct 2)
+
+* Work on [Is this Discrimination?](../Rmarkdown/ClassAssignment.html)
+
+* Some ideas for how to answer the [Is this Discrimination?](../Rmarkdown/discrimination.html)
+```
+
+_____________
+
+
+## Week 7: (Sep 28, 30) {-}
+
+* Read chapters 1 and 2 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Lecture - Bias Variance Tradeoff - Take notes - [Slides](../Rmarkdown/BiasVarDer.pdf) 
+
+* Go over [Bias Variance Graphs](../Rmarkdown/BiasVariance.html) 
+
+* Go over [Chapter 2 Graphs](../Rmarkdown/Chap2Slides.html)
+
+* Discuss flexible models and when to use them
+
+* Complete the **Visualizing two variables** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 28
+
+* Complete the **Correlation** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Sep 30
+
+
+
+```{block, week7optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Opening Remarks and Examples](https://www.youtube.com/watch?v=2wLfFB_6SKI) (18:18)
+
+* Watch [Supervised and Unsupervised Learning](https://www.youtube.com/watch?v=LvaTokhYnDw) (12:12)
+
+* Watch [Statistical Learning and Regression](https://www.youtube.com/watch?v=WjyuiK5taS8) (11:41)
+
+* Watch [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=UvxHOkYQl8g) (11:40)
+
+* Watch [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VusKAosxxyk) (10:04)
+
+* Watch [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=vVj2itVNku4) (15:37)
+
+* Read Section 3.4 of [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+```
+
+_____________
+
+
+## Week 8: (Oct 5, 7) {-}
+
+* Complete [Lab1](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
+
+* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
+
+* Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
+
+* Complete the **Simple Linear Regression** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 5
+
+* Complete the **Interpreting Regression Models** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 5
+
+* Complete the **Model Fit** chapter of _Correlation and Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 7
+
+
+
+```{block, week8optional, type='rmdoptional'}
+#### Optional {-}
+* Watch [Simple Linear Regression and Confidence Intervals](https://www.youtube.com/watch?v=PsE9UqoWtS4) (13:01)
+
+* Watch [Hypothesis Testing ](https://www.youtube.com/watch?v=J6AdoiNUyWI) (8:24)
+
+* Watch [Multiple Linear Regression and Interpreting Regression Coefficients ](https://www.youtube.com/watch?v=1hbCJyM9ccs) (15:38)
+```
+
+_____________
+
+
+## Week 9: (Oct 12---Fall Break, Oct 14) {-}
+
+* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
+
+* Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
+
+* Complete the **Multiple Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 14
+
+* Complete the **Evaluating and extending parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 14
+
+
+
+```{block, week9optional, type='rmdoptional'}
+#### Optional {-}
+* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
+
+* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
+
+* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
+
+* [Code](https://raw.githubusercontent.com/alanarnholt/GeneralStatistics/master/rmarkdown/ResidualGraphs.Rmd) to help with the creation of Figure 6.1 in the DataCamp assignment.
+
+```
+
+_____________
+
+
+## Week 10: (Oct 19, 21) {-}
+
+* Complete [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 19---Final corrections due by 5:00 pm Oct 21
+
+* Read chapter 3 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Regression ([slides](https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf))
+
+* Go over [chapter 3 material using R](../Rmarkdown/Chap2Slides.html)
+
+* Complete the **Parallel slopes model** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 19
+
+* Complete the **Logistic Regression** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 19
+
+* Complete the **Case Study** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 21
+
+
+```{block, week10optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Model Selection and Qualitative Predictors](https://www.youtube.com/watch?v=3T6RXmIHbJ4) (14:51)
+
+* Watch [Interactions and Nonlinearity](https://www.youtube.com/watch?v=IFzVxLv0TKQ) (14:16)
+
+* Watch [Lab: Linear Regression](https://www.youtube.com/watch?v=5ONFqIk3RFg) (22:10)
+
+```
+
+___________________
+
+
+
+## Week 11: (Oct 26, 28) {-}
+
+* Complete [Lab3](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 5:00 pm Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
+
+* Read chapter 5 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Resampling Methods ([slides](https://courses.edx.org/assets/courseware/v1/714c63b497ee6718f12a7fcd24c35866/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/cv_boot-handout.pdf))
+
+* Discuss [Cross-Validation Hand Out](../Rmarkdown/Cross-ValidationInClassHO.html)
+
+* Flow control [example](../Rmarkdown/FlowControl.html)
+
+* Bootstrap [example](../Rmarkdown/TheBootstrap.html)
+
+
+* Complete the **Regression models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 26
+
+* Complete the **Classification models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Oct 28
+
+* Start [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+
+
+```{block, week11optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Estimating Prediction Error and Validation Set Approach](https://www.youtube.com/watch?v=_2ij6eaaSl0) (14:01)
+
+* Watch [K-fold Cross-Validation](https://www.youtube.com/watch?v=nZAM5OXrktY) (13:33)
+
+* Watch [Cross-Validation: The Right and Wrong Ways](https://www.youtube.com/watch?v=S06JpVoNaA0) (10:07)
+
+* Read the article [_Modeling Home Prices Using Realtor Data_](https://www.tandfonline.com/doi/full/10.1080/10691898.2008.11889569).
+
+* The data set can be downloaded from http://www.amstat.org/publications/jse/datasets/homes76.dat.txt, while the code book is available from http://www.amstat.org/publications/jse/datasets/homes76.txt
+    
+
+* [Example Template Directory](https://github.com/STAT-ATA-ASU/STT3851Spring2016/blob/gh-pages/BDbetaTemplate)
+
+* Use the [housedata.csv](https://github.com/STAT-ATA-ASU/STT3851Spring2016/raw/gh-pages/Data/housedata.csv) file - See [King County Housing Data](../Rmarkdown/KingCounty.html)  
+
+```
+
+___________________
+
+
+## Week 12: (Nov 2, 4) {-}
+
+* Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
+
+* Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
+
+
+* Complete the **Tuning model parameters to improve performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 2
+
+* Complete the **Preprocessing your data** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 2
+
+* Complete the **Selecting models: a case study in churn prediction** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://www.datacamp.com/enterprise/stt3851-fall2020/assignments) --- Due NLT 5:00 pm Nov 4
+
+
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+
+
+```{block, week12optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Linear Model Selection and Best Subset Selection](https://www.youtube.com/watch?v=91si52nk3LA) (13:44)
+
+* Watch [Forward Stepwise Selection](https://www.youtube.com/watch?v=nLpJd_iKmrE) (12:26)
+
+* Watch [Backward Stepwise Selection ](https://www.youtube.com/watch?v=NJhMSpI2Uj8) (5:26)
+
+* Watch [Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared](https://www.youtube.com/watch?v=LkifE44myLc) (14:06)
+
+* Watch [Estimating Test Error Using Cross-Validation](https://www.youtube.com/watch?v=3p9JNaJCOb4) (8:43)
+
+
+```
+
+___________________
+
+
+
+## Week 13: (Nov 9, 11) {-}
+
+* Complete [Lab4 - Linear and Nonlinear Modeling](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Nov 9 --- Final corrections due by 5:00 pm Nov 11
+
+* Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
+
+* Read chapter 6 of [ISLR](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+
+* Linear Model Selection and Regularization ([slides](https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf))
+
+* Start reproduction of [Machine Learning with `caret` in R]() --- Due 10:00 am Nov 16 --- Final corrections due by 5:00 pm Nov 18
+
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+
+```{block, week13optional, type='rmdoptional'}
+#### Optional {-}
+
+* Watch [Shrinkage Methods and Ridge Regression](https://www.youtube.com/watch?v=cSKzqb0EKS0) (12:37)
+
+* Watch [The Lasso](https://www.youtube.com/watch?v=A5I1G1MfUmA) (15:21)
+
+* Watch [Tuning Parameter Selection for Ridge Regression and Lasso](https://www.youtube.com/watch?v=xMKVUstjXBE) (5:27)
+
+* Watch [Dimension Reduction](https://www.youtube.com/watch?v=QlyROnAjnEk) (4:45)
+
+* Watch [Principal Components Regression and Partial Least Squares ](https://www.youtube.com/watch?v=eYxwWGJcOfw) (15:48)
+
+* Watch [Lab: Best Subset Selection](https://www.youtube.com/watch?v=3kwdDGnV8MM) (10:36)
+
+* Watch [Lab: Forward Stepwise Selection and Model Selection Using Validation Set](https://www.youtube.com/watch?v=mv-vdysZIb4) (10:32)
+
+* Watch [Lab: Model Selection Using Cross-Validation](https://www.youtube.com/watch?v=F8MMHCCoALU) (5:32)
+
+* Watch [Lab: Ridge Regression and Lasso ](https://www.youtube.com/watch?v=1REe3qSotx8) (16:34)
+```
+
+___________________
+
+
+## Week 14: (Nov 16, 18) {-}
+
+* Complete reproduction of [Machine Learning with `caret` in R]() --- Due 10:00 am Nov 16 --- Final corrections due by 5:00 pm Nov 18
+
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+
+```{block, week14optional, type='rmdoptional'}
+#### Optional {-}
+
+
+```
+
+
+___________________
+
+## Week 15: (Nov 23) {-}
+
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+
+* Accept [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) slides repository inside ASULEARN.
+
+_________________
+
+## Week 16: (Nov 30) {-}
+
+Work on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) assignment.
+
+_________________
+
+## Final Exam: (Dec 8---2-4:30) {-}
+
+* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) competition --- Limited to three slides.  Accept assignment inside ASULEARN.
+
+_________________
