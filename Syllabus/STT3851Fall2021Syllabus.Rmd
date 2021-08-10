@@ -14,7 +14,7 @@ output:
 **Office:** Walker Hall 237      
 **Office Hours:** 1-3pm M & W, 10am-12pm R, and by appointment
 
-Make an appointment to see me by clicking https://arnholtat.youcanbook.me/.
+Make an appointment to see me by clicking [here](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUtZb3I1Z1pFczdjfGRlZmF1bHR8MTZjOTU5MGY0ZTFlOTA2MmExNzhlYWQ5MGIzZWQ0OGM).
 
 _________
 
@@ -63,7 +63,7 @@ _____________
 
 * 25% of the course grade will come from (25) Data Camp assignments
 
-* 40% of the grade will come from four labs
+* 40% of the grade will come from four labs and three problem sets
 
 * 20% of the grade will come from reproducing two data camp assignments with bookdown
 
