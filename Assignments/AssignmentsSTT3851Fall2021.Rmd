@@ -447,7 +447,7 @@ ___________________
 
 * Start reproduction of [Machine Learning with `caret` in R]() --- Due 10:00 am Nov 16 --- Final corrections due by 5:00 pm Nov 18
 
-* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2021) competition --- Last submission Nov 25
 
 ```{block, week13optional, type='rmdoptional'}
 #### Optional {-}
@@ -478,14 +478,14 @@ ___________________
 
 * Complete reproduction of [Machine Learning with `caret` in R]() --- Due 10:00 am Nov 16 --- Final corrections due by 5:00 pm Nov 18
 
-* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2021) competition --- Last submission Nov 25
 
 
 ___________________
 
 ## Week 15: (Nov 23) {-}
 
-* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2021) competition --- Last submission Nov 25
 
 * Accept [kaggle](https://classroom.github.com/classrooms/87544033-stt3851-fall2021/assignments/kagglepresentation) slides repository inside ASULEARN.
 
