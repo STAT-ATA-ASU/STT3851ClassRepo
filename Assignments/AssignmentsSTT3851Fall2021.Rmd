@@ -232,7 +232,7 @@ _____________
 
 * Complete the **Correlation** chapter of _Correlation and Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 30
 
-* Start [Lab1](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
+* Start [Lab1](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
 
 ```{block, week7optional, type='rmdoptional'}
 #### Optional {-}
@@ -257,7 +257,7 @@ _____________
 
 ## Week 8: (Oct 5, 7) {-}
 
-* Complete [Lab1](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
+* Complete [Lab1](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Oct 5---Final corrections due by 5:00 pm Oct 7 --- (assignment link in asulearn)
 
 * Read chapter 3 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
@@ -301,7 +301,7 @@ _____________
 
 
 
-* Start [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Oct 19 --- Final corrections due by 5:00 pm Oct 21
+* Start [Writing Assignment - Lab2](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Oct 19 --- Final corrections due by 5:00 pm Oct 21
 
 
 ```{block, week9optional, type='rmdoptional'}
@@ -321,7 +321,7 @@ _____________
 
 ## Week 10: (Oct 19, 21) {-}
 
-* Complete [Writing Assignment - Lab2](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 19 --- Final corrections due by 5:00 pm Oct 21
+* Complete [Writing Assignment - Lab2](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Oct 19 --- Final corrections due by 5:00 pm Oct 21
 
 * Read chapter 3 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
@@ -334,7 +334,7 @@ _____________
 
 * Complete the **Case Study** chapter of _Multiple and Logistic Regression in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 21
 
-* Start [Lab3](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
+* Start [Lab3](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
 
 ```{block, week10optional, type='rmdoptional'}
 #### Optional {-}
@@ -353,7 +353,7 @@ ___________________
 
 ## Week 11: (Oct 26, 28) {-}
 
-* Complete [Lab3](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
+* Complete [Lab3](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Oct 26 --- Final corrections due by 5:00 pm Oct 28 --- (assignment link in ASULEARN)
 
 * Read chapter 5 of [ISLR](https://web.stanford.edu/~hastie/ISLRv2_website.pdf)
 
@@ -370,7 +370,7 @@ ___________________
 
 * Complete the **Classification models: fitting them and evaluating their performance** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Oct 28
 
-* Start [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+* Start [kaggle](https://www.kaggle.com/c/stt3851-fall2021) competition --- Last submission Nov 25
 
 
 ```{block, week11optional, type='rmdoptional'}
@@ -411,9 +411,9 @@ ___________________
 
 * Complete the **Selecting models: a case study in churn prediction** chapter of _Machine Learning with `caret` in R_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Nov 4
 
-* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
+* Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2021) competition --- Last submission Nov 25
 
-* Start [Lab4 - Linear Modeling](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) due by 10:00 am Nov 9 --- Final corrections due by 5:00 pm Nov 11
+* Start [Lab4 - Linear Modeling](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Nov 9 --- Final corrections due by 5:00 pm Nov 11
 
 ```{block, week12optional, type='rmdoptional'}
 #### Optional {-}
@@ -437,7 +437,7 @@ ___________________
 
 ## Week 13: (Nov 9, 11) {-}
 
-* Complete [Lab4 - Linear and Nonlinear Modeling](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom) by 10:00 am Nov 9 --- Final corrections due by 5:00 pm Nov 11
+* Complete [Lab4 - Linear and Nonlinear Modeling](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Nov 9 --- Final corrections due by 5:00 pm Nov 11
 
 * Read [Predictive Model Building](https://stat-ata-asu.github.io/PredictiveModelBuilding/)
 
@@ -487,18 +487,18 @@ ___________________
 
 * Work on [kaggle](https://www.kaggle.com/c/stt3851-fall2020) competition --- Last submission Nov 25
 
-* Accept [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) slides repository inside ASULEARN.
+* Accept [kaggle](https://classroom.github.com/classrooms/87544033-stt3851-fall2021/assignments/kagglepresentation) slides repository inside ASULEARN.
 
 _________________
 
 ## Week 16: (Nov 30) {-}
 
-Work on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) assignment.
+Work on [kaggle](https://classroom.github.com/classrooms/87544033-stt3851-fall2021/assignments/kagglepresentation) assignment.
 
 _________________
 
 ## Final Exam: (Dec 8---2-4:30) {-}
 
-* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/53707791-stt3851-fall2020-classroom/assignments/kagglepresentation) competition --- Limited to three slides.  Accept assignment inside ASULEARN.
+* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/87544033-stt3851-fall2021/assignments/kagglepresentation) competition --- Limited to three slides.  Accept assignment inside ASULEARN.
 
 _________________
