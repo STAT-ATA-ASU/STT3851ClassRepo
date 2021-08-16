@@ -49,7 +49,7 @@ _________
 
 * Work through chapter 2 (Introduction to R) of [DSWR](https://stat-ata-asu.github.io/R_DS_BD2020/)
 
-* Start [PS-01](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Aug 24 --- Final corrections due by 5:00 pm Aug 26 (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169))
+* Start [PS-01](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Aug 24 --- Final corrections due by 5:00 pm Aug 26 (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169))
  
 ```{block, week1optional, type='rmdoptional'}
 #### Optional {-}
@@ -90,7 +90,7 @@ ______________
 
 * Complete the **Data Visualization** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Aug 26
 
-* Start [PS-03](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Aug 31 --- Final corrections due by 5:00 pm Sep 2 --- (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
+* Start [PS-03](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Aug 31 --- Final corrections due by 5:00 pm Sep 2 --- (assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
 
 
 ```{block, week2optional, type='rmdoptional'}
@@ -122,7 +122,7 @@ __________________
 
 * Complete the **Types of Visualizations** chapter of _Introduction to the Tidyverse_--- [DataCamp](https://app.datacamp.com/groups/stt3851-fall2021/assignments) --- Due NLT 5:00 pm Sep 2
 
-* Start [PS-02](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) by 10:00 am Sep 7 --- Final corrections due by 5:00 pm Sep 9---(assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
+* Start [PS-02](https://classroom.github.com/classrooms/87544033-stt3851-fall2021) due by 10:00 am Sep 7 --- Final corrections due by 5:00 pm Sep 9---(assignment link in [ASULEARN](https://asulearn.appstate.edu/course/view.php?id=131169)) 
 
 
 ```{block, test3, type='rmdexercise'}
