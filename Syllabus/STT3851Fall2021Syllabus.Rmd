@@ -3,11 +3,11 @@ title: "STT 3851 Syllabus - Fall 2021"
 author: ''
 date: "Fall 2021"
 output:
+  pdf_document: default
   html_document:
     css: asu.css
     highlight: textmate
     theme: yeti
-  pdf_document: default
 ---
 
 **Instructor:**  Dr. Alan T. Arnholt  
