@@ -1,6 +1,6 @@
 #set.seed(3)
-roll1 <- sample(1:6, 1000000, replace = TRUE)
-roll2 <- sample(1:6, 1000000, replace = TRUE)
+roll1 <- sample(1:6, 100000, replace = TRUE)
+roll2 <- sample(1:6, 100000, replace = TRUE)
 STR <- roll1 + roll2
 A <- STR == 6
 B <- roll1 == 3
@@ -33,3 +33,23 @@ roll2 <- sample(1:6, 1000000, replace = TRUE)
 STR <- roll1 + roll2
 mean(STR)
 var(STR)
+
+
+###################
+
+rdf <- function(SIZE = 10000){
+  roll1 <- sample(1:6, size = SIZE, replace = TRUE)
+  roll2 <- sample(1:6, size = SIZE, replace = TRUE)
+  STR <- roll1 + roll2
+  A <- STR == 6
+  B <- roll1 == 3
+  PB <- mean(B)
+  PA <- mean(A)
+  PAB <- mean(A & B)
+  ans <- PAB/PB
+  ans
+}
+rdf()
+
+ans <- replicate(1000, rdf())
+hist(ans)
