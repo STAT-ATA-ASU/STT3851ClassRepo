@@ -19,7 +19,7 @@ knitr::opts_chunk$set(comment = NA,  fig.align = 'center', fig.height = 5, fig.w
 # Read in data with `read.csv()`
 
 ```{r message = FALSE}
-site <- "http://faculty.marshall.usc.edu/gareth-james/ISL/Advertising.csv"
+site <- "https://statlearning.com/s/Advertising.csv"
 AD <- read.csv(site)
 head(AD)
 dim(AD)
@@ -110,7 +110,7 @@ scatterplotMatrix(~ sales + TV + radio + newspaper, data = AD)
 ```
 
 
-# Chapter 3
+# Linear Regression
 
 Recall `mod1`
 
@@ -156,7 +156,13 @@ c(b0, b1)
 # Or using
 coef(mod1)
 summary(mod1)
+#
+X <- model.matrix(mod1)
+XTXI <- solve(t(X)%*%X)
+XTXI
+#
 XTXI <- summary(mod1)$cov.unscaled
+XTXI
 MSE <- summary(mod1)$sigma^2
 var.cov.b <- MSE*XTXI
 var.cov.b
@@ -249,7 +255,7 @@ $$\hat{\mathbf{\beta}} \sim\mathcal{N}(\mathbf{\beta}, \sigma^2(\mathbf{X'X})^{-
 
 ### Estimation of the Mean Response for New Values $X_h$
 
-Not only is it desireable to create confidence intervals on the parameters of the regression models, bit it is also common to estimate the mean response $\left(E(Y_h)\right)$ for a particular set of $\mathbf{X}$ values.
+Not only is it desireable to create confidence intervals on the parameters of the regression models, but it is also common to estimate the mean response $\left(E(Y_h)\right)$ for a particular set of $\mathbf{X}$ values.
 
 $$\hat{Y}_h \sim \mathcal{N}(Y_h = X_h\beta, \sigma^2\mathbf{X_h}(\mathbf{X'X})^{-1}\mathbf{X_h'})$$
 For a vector of given values $(\mathbf{X_h})$, a $(1 - \alpha)\cdot 100\%$ confidence interval for the mean response $E(Y_h)$ is
@@ -497,10 +503,10 @@ summary(nam2)
 
 ## Qualitative Predictors
 
-In the `Credit` data frame there are four qualitative features/variables `Gender`, `Student`, `Married`, and `Ethnicity`.
+In the `Credit` data frame of the `ISLR` package there are four qualitative features/variables `Gender`, `Student`, `Married`, and `Ethnicity`.
 
 ```{r}
-Credit <- read.csv("http://faculty.marshall.usc.edu/gareth-james/ISL/Credit.csv")
+library(ISLR)
 datatable(Credit[, -1], rownames = FALSE)
 ```
 
