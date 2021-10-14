@@ -255,7 +255,7 @@ $$\hat{\mathbf{\beta}} \sim\mathcal{N}(\mathbf{\beta}, \sigma^2(\mathbf{X'X})^{-
 
 ### Estimation of the Mean Response for New Values $X_h$
 
-Not only is it desireable to create confidence intervals on the parameters of the regression models, but it is also common to estimate the mean response $\left(E(Y_h)\right)$ for a particular set of $\mathbf{X}$ values.
+Not only is it desirable to create confidence intervals on the parameters of the regression models, but it is also common to estimate the mean response $\left(E(Y_h)\right)$ for a particular set of $\mathbf{X}$ values.
 
 $$\hat{Y}_h \sim \mathcal{N}(Y_h = X_h\beta, \sigma^2\mathbf{X_h}(\mathbf{X'X})^{-1}\mathbf{X_h'})$$
 For a vector of given values $(\mathbf{X_h})$, a $(1 - \alpha)\cdot 100\%$ confidence interval for the mean response $E(Y_h)$ is
@@ -291,7 +291,7 @@ var_cov_b <- MSE*XTXI
 var_cov_b
 ```
 
-**Example** Use the `GRADES` data set and model `gpa` as a function of `sat`.  Compute the expected GPA (`gpa`) for an SAT score (`sat`) of 1300.  Construct a 90% confidence interval for the mean GPA for students scoring 1300 on the SAT.
+**Example** Use the `GRADES` data set from the `PASWR2` package and model `gpa` as a function of `sat`.  Compute the expected GPA (`gpa`) for an SAT score (`sat`) of 1300.  Construct a 90% confidence interval for the mean GPA for students scoring 1300 on the SAT.
 
 ```{r}
 library(PASWR2)
