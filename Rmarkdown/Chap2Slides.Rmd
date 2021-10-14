@@ -528,12 +528,19 @@ modS <- lm(Balance ~ Gender, data = Credit)
 summary(modS)
 coef(modS)
 tapply(Credit$Balance, Credit$Gender, mean)
+# Or
+library(dplyr)
+Credit %>% 
+  group_by(Gender) %>% 
+  summarize(AvgBalnace = mean(Balance))
+#
 library(ggplot2)
-ggplot(data = Credit, aes(x = Gender, y = Balance)) + 
-  geom_point() + 
-  theme_bw() + 
-  geom_hline(yintercept = coef(modS)[1] + coef(modS)[2], color = "purple") + 
-  geom_hline(yintercept = coef(modS)[1], color = "green")
+ggplot(data = Credit, aes(x = Gender, y = Balance, color = Gender)) +
+  geom_boxplot() +
+  stat_summary(fun = mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y.., color = Gender),
+               width = 0.75, size = 1, linetype = "dashed") +
+  geom_jitter() + 
+  theme_bw() 
 ```
 
 Do females have a higher ratio of `Balance` to `Income` (credit utilization)? Here is an article from the [Washington Post](https://www.washingtonpost.com/news/get-there/wp/2016/02/17/how-being-a-woman-can-ding-your-credit-score/) with numbers that mirror some of the results in the `Credit` data set.
@@ -553,7 +560,7 @@ modU <- lm(Utilization ~ Gender, data = Credit)
 summary(modU)
 coef(modU)
 ggplot(data = Credit, aes(x = Gender, y = Utilization)) + 
-  geom_point() + 
+  geom_jitter() + 
   theme_bw() + 
   geom_hline(yintercept = coef(modU)[1] + coef(modU)[2], color = "purple") + 
   geom_hline(yintercept = coef(modU)[1], color = "green")
@@ -582,7 +589,7 @@ Several points:
 ```{r}
 ggplot(data = Credit, aes(x = Limit, y = Balance, color = Student)) + 
   geom_point() + 
-  stat_smooth(method = "lm") + 
+  stat_smooth(method = "lm", se = FALSE) + 
   theme_bw()
 ```
 
@@ -598,6 +605,16 @@ ggplot(data = Credit, aes(x = Limit, y = Balance, color = Student)) +
   geom_abline(intercept = coef(S2M)[1] + coef(S2M)[3], slope = coef(S2M)[2], color = "blue") + 
   scale_color_manual(values = c("red", "blue"))
 ```
+
+```{r}
+# Or using the moderndive package
+library(moderndive)
+ggplot(data = Credit, aes(x = Limit, y = Balance, color = Student)) +
+  geom_point() +
+  geom_parallel_slopes(se = FALSE) + 
+  theme_bw()
+```
+
 
 
 ```{r}
@@ -642,7 +659,7 @@ ggplot(data = Credit, aes(x = Limit, y = Balance, color = Ethnicity)) +
 ggplot(data = Credit, aes(x = Limit, y = Balance)) +
   geom_point(aes(color = Ethnicity)) + 
   theme_bw() +
-  stat_smooth(method = "lm")
+  stat_smooth(method = "lm", se = FALSE)
 ```
 
 ## Matrix Scatterplots
