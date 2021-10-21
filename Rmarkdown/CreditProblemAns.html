@@ -174,7 +174,7 @@ pre code {
 
 <h1 class="title toc-ignore">Credit Problem</h1>
 <h4 class="author">Alan Arnholt</h4>
-<h4 class="date">Last updated: October 19, 2021 at 09:21:39 AM</h4>
+<h4 class="date">Last updated: October 21, 2021 at 11:41:08 AM</h4>
 
 </div>
 
@@ -283,6 +283,15 @@ Rating ~ Limit + Cards + Married + Student + Education
 + Ethnicity    2   218.573 40685 1864.9 1.05298 0.3499
 + Gender       1     0.031 40903 1865.0 0.00030 0.9863
 + Balance      1     0.019 40903 1865.0 0.00018 0.9892</code></pre>
+<pre class="r"><code>&gt; mod.fs</code></pre>
+<pre><code>
+Call:
+lm(formula = Rating ~ Limit + Cards + Married + Student + Education, 
+    data = Credit)
+
+Coefficients:
+(Intercept)        Limit        Cards   MarriedYes   StudentYes    Education  
+   26.23209      0.06677      4.85206      2.17320      3.08807     -0.25985  </code></pre>
 <pre class="r"><code>&gt; mod.be &lt;- stepAIC(lm(Rating ~ Income + Limit + Cards + Age + Education + Gender + Student + Married + Ethnicity + Balance + Utilization, data = Credit), direction = &quot;backward&quot;, test = &quot;F&quot;)</code></pre>
 <pre><code>Start:  AIC=1867.55
 Rating ~ Income + Limit + Cards + Age + Education + Gender + 
@@ -320,6 +329,246 @@ Rating ~ Income + Limit + Cards + Age + Education + Gender +
 - Income     1       720  40668 1870.7    6.99  0.008522 ** 
 - Cards      1     14230  54178 1985.4  138.21 &lt; 2.2e-16 ***
 - Limit      1    202143 242091 2584.2 1963.32 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1863.6
+Rating ~ Income + Limit + Cards + Age + Education + Student + 
+    Married + Ethnicity + Balance
+
+            Df Sum of Sq    RSS    AIC F Value     Pr(F)    
+- Age        1        18  39971 1861.8    0.17  0.676864    
+- Ethnicity  2       246  40199 1862.0    1.20  0.303584    
+- Student    1        51  40004 1862.1    0.49  0.483262    
+&lt;none&gt;                    39953 1863.6                      
+- Education  1       213  40166 1863.7    2.07  0.150896    
+- Married    1       523  40476 1866.8    5.09  0.024565 *  
+- Balance    1       548  40501 1867.0    5.34  0.021423 *  
+- Income     1       715  40668 1868.7    6.96  0.008651 ** 
+- Cards      1     14227  54180 1983.4  138.52 &lt; 2.2e-16 ***
+- Limit      1    203001 242954 2583.7 1976.51 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1861.78
+Rating ~ Income + Limit + Cards + Education + Student + Married + 
+    Ethnicity + Balance
+
+            Df Sum of Sq    RSS    AIC F Value     Pr(F)    
+- Student    1        47  40018 1860.2    0.46  0.497337    
+- Ethnicity  2       253  40224 1860.3    1.23  0.292026    
+&lt;none&gt;                    39971 1861.8                      
+- Education  1       211  40182 1861.9    2.06  0.152060    
+- Married    1       511  40482 1864.9    4.99  0.026094 *  
+- Balance    1       533  40504 1865.1    5.20  0.023079 *  
+- Income     1       714  40685 1866.9    6.97  0.008645 ** 
+- Cards      1     14396  54367 1982.8  140.47 &lt; 2.2e-16 ***
+- Limit      1    204753 244724 2584.6 1997.79 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1860.25
+Rating ~ Income + Limit + Cards + Education + Married + Ethnicity + 
+    Balance
+
+            Df Sum of Sq    RSS    AIC F Value     Pr(F)    
+- Ethnicity  2       253  40271 1858.8     1.2  0.292098    
+&lt;none&gt;                    40018 1860.2                      
+- Education  1       229  40247 1860.5     2.2  0.135534    
+- Married    1       523  40541 1863.4     5.1  0.024364 *  
+- Balance    1       834  40852 1866.5     8.2  0.004534 ** 
+- Income     1       931  40950 1867.5     9.1  0.002723 ** 
+- Cards      1     15829  55847 1991.6   154.7 &lt; 2.2e-16 ***
+- Limit      1    515739 555758 2910.7  5039.1 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1858.77
+Rating ~ Income + Limit + Cards + Education + Married + Balance
+
+            Df Sum of Sq    RSS    AIC F Value     Pr(F)    
+&lt;none&gt;                    40271 1858.8                      
+- Education  1       238  40509 1859.1     2.3  0.128206    
+- Married    1       457  40728 1861.3     4.5  0.035339 *  
+- Balance    1       773  41044 1864.4     7.5  0.006293 ** 
+- Income     1       879  41150 1865.4     8.6  0.003596 ** 
+- Cards      1     15849  56120 1989.5   154.7 &lt; 2.2e-16 ***
+- Limit      1    520764 561035 2910.4  5082.1 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>&gt; mod.be</code></pre>
+<pre><code>
+Call:
+lm(formula = Rating ~ Income + Limit + Cards + Education + Married + 
+    Balance, data = Credit)
+
+Coefficients:
+(Intercept)       Income        Limit        Cards    Education   MarriedYes  
+   30.57853      0.09803      0.06411      4.67871     -0.24806      2.20414  
+    Balance  
+    0.00859  </code></pre>
+<pre class="r"><code>&gt; # OR 
+&gt; null &lt;- lm(Rating ~ 1, data = Credit)
+&gt; full &lt;- lm(Rating ~ ., data = Credit)
+&gt; mod.fs &lt;- stepAIC(null, scope = list(lower = null, upper = full), direction = &quot;forward&quot;, test = &quot;F&quot;)</code></pre>
+<pre><code>Start:  AIC=4034.31
+Rating ~ 1
+
+              Df Sum of Sq     RSS    AIC F Value     Pr(F)    
++ Limit        1   9492369   59516 2005.0   63478 &lt; 2.2e-16 ***
++ Balance      1   7124258 2427627 3488.4    1168 &lt; 2.2e-16 ***
++ Income       1   5982140 3569744 3642.6     667 &lt; 2.2e-16 ***
++ Utilization  1    548579 9003306 4012.7      24 1.242e-06 ***
++ Age          1    101661 9450224 4032.0       4   0.03917 *  
+&lt;none&gt;                     9551885 4034.3                      
++ Cards        1     27074 9524811 4035.2       1   0.28814    
++ Married      1     12901 9538984 4035.8       1   0.46358    
++ Education    1      8675 9543210 4036.0       0   0.54786    
++ ID           1      4617 9547268 4036.1       0   0.66111    
++ Gender       1       754 9551131 4036.3       0   0.85940    
++ Student      1        39 9551845 4036.3       0   0.96775    
++ Ethnicity    2     19388 9532496 4037.5       0   0.66810    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=2005.01
+Rating ~ Limit
+
+              Df Sum of Sq   RSS    AIC F Value   Pr(F)    
++ Cards        1   17695.8 41820 1865.9 167.988 &lt; 2e-16 ***
++ Balance      1     790.7 58725 2001.7   5.345 0.02129 *  
++ Education    1     424.0 59092 2004.2   2.848 0.09224 .  
++ Married      1     309.9 59206 2004.9   2.078 0.15023    
+&lt;none&gt;                     59516 2005.0                    
++ Utilization  1     171.1 59345 2005.9   1.145 0.28533    
++ Student      1     150.5 59365 2006.0   1.006 0.31644    
++ Income       1      79.5 59436 2006.5   0.531 0.46666    
++ Age          1      64.8 59451 2006.6   0.433 0.51095    
++ ID           1      42.6 59473 2006.7   0.284 0.59409    
++ Gender       1       2.2 59514 2007.0   0.015 0.90307    
++ Ethnicity    2     129.3 59386 2008.1   0.431 0.65013    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1865.87
+Rating ~ Limit + Cards
+
+              Df Sum of Sq   RSS    AIC F Value   Pr(F)  
++ Married      1    358.63 41461 1864.4  3.4253 0.06495 .
++ Student      1    247.87 41572 1865.5  2.3611 0.12519  
++ Income       1    215.43 41605 1865.8  2.0505 0.15294  
+&lt;none&gt;                     41820 1865.9                  
++ Education    1    191.63 41628 1866.0  1.8230 0.17773  
++ Balance      1     61.72 41758 1867.3  0.5853 0.44469  
++ Utilization  1     25.06 41795 1867.6  0.2374 0.62635  
++ Age          1      6.00 41814 1867.8  0.0568 0.81176  
++ ID           1      2.77 41817 1867.8  0.0263 0.87136  
++ Gender       1      2.36 41818 1867.8  0.0223 0.88130  
++ Ethnicity    2    147.57 41672 1868.5  0.6994 0.49750  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1864.42
+Rating ~ Limit + Cards + Married
+
+              Df Sum of Sq   RSS    AIC F Value   Pr(F)  
++ Student      1   297.755 41164 1863.5 2.85722 0.09175 .
++ Education    1   218.850 41242 1864.3 2.09604 0.14847  
+&lt;none&gt;                     41461 1864.4                  
++ Income       1   205.838 41255 1864.4 1.97079 0.16115  
++ Balance      1    82.336 41379 1865.6 0.78597 0.37586  
++ Utilization  1    23.646 41438 1866.2 0.22541 0.63521  
++ Age          1    15.259 41446 1866.3 0.14543 0.70315  
++ ID           1     4.287 41457 1866.4 0.04085 0.83994  
++ Gender       1     1.715 41460 1866.4 0.01634 0.89836  
++ Ethnicity    2   196.408 41265 1866.5 0.93766 0.39242  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1863.54
+Rating ~ Limit + Cards + Married + Student
+
+              Df Sum of Sq   RSS    AIC F Value  Pr(F)
++ Education    1   260.198 40903 1863.0 2.50635 0.1142
+&lt;none&gt;                     41164 1863.5               
++ Income       1   186.638 40977 1863.7 1.79455 0.1811
++ Utilization  1    86.626 41077 1864.7 0.83090 0.3626
++ Ethnicity    2   226.674 40937 1865.3 1.08805 0.3379
++ Age          1    20.276 41143 1865.3 0.19416 0.6597
++ ID           1     1.923 41162 1865.5 0.01841 0.8921
++ Gender       1     0.123 41163 1865.5 0.00117 0.9727
++ Balance      1     0.004 41164 1865.5 0.00004 0.9952
+
+Step:  AIC=1863
+Rating ~ Limit + Cards + Married + Student + Education
+
+              Df Sum of Sq   RSS    AIC F Value  Pr(F)
+&lt;none&gt;                     40903 1863.0               
++ Income       1   177.560 40726 1863.3 1.71343 0.1913
++ Utilization  1    91.021 40812 1864.1 0.87648 0.3497
++ Age          1    22.460 40881 1864.8 0.21592 0.6424
++ Ethnicity    2   218.573 40685 1864.9 1.05298 0.3499
++ ID           1     1.959 40901 1865.0 0.01883 0.8909
++ Gender       1     0.031 40903 1865.0 0.00030 0.9863
++ Balance      1     0.019 40903 1865.0 0.00018 0.9892</code></pre>
+<pre class="r"><code>&gt; mod.be &lt;- stepAIC(full, scope = list(lower = null, upper = full), direction = &quot;backward&quot;, test = &quot;F&quot;)</code></pre>
+<pre><code>Start:  AIC=1869.41
+Rating ~ ID + Income + Limit + Cards + Age + Education + Gender + 
+    Student + Married + Ethnicity + Balance + Utilization
+
+              Df Sum of Sq    RSS    AIC F Value   Pr(F)    
+- Utilization  1         0  39935 1867.4    0.00 0.98454    
+- Gender       1         3  39938 1867.5    0.03 0.86352    
+- ID           1        13  39948 1867.5    0.13 0.71939    
+- Age          1        19  39954 1867.6    0.19 0.66532    
+- Ethnicity    2       252  40186 1867.9    1.22 0.29761    
+- Student      1        53  39988 1868.0    0.51 0.47463    
+&lt;none&gt;                      39935 1869.4                    
+- Education    1       211  40146 1869.5    2.04 0.15378    
+- Married      1       525  40460 1872.6    5.07 0.02484 *  
+- Income       1       538  40473 1872.8    5.20 0.02314 *  
+- Balance      1       550  40485 1872.9    5.32 0.02167 *  
+- Cards        1     13854  53788 1986.5  133.91 &lt; 2e-16 ***
+- Limit        1    192631 232566 2572.2 1861.93 &lt; 2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1867.42
+Rating ~ ID + Income + Limit + Cards + Age + Education + Gender + 
+    Student + Married + Ethnicity + Balance
+
+            Df Sum of Sq    RSS    AIC F Value   Pr(F)    
+- Gender     1         3  39938 1865.5    0.03 0.86284    
+- ID         1        13  39948 1865.5    0.13 0.71784    
+- Age        1        20  39954 1865.6    0.19 0.66351    
+- Ethnicity  2       252  40187 1865.9    1.22 0.29606    
+- Student    1        55  39990 1866.0    0.54 0.46401    
+&lt;none&gt;                    39935 1867.4                    
+- Education  1       211  40146 1867.5    2.05 0.15306    
+- Married    1       526  40460 1870.6    5.09 0.02458 *  
+- Balance    1       559  40493 1871.0    5.41 0.02049 *  
+- Income     1       728  40663 1872.6    7.05 0.00824 ** 
+- Cards      1     14143  54077 1986.7  137.05 &lt; 2e-16 ***
+- Limit      1    201575 241510 2585.3 1953.43 &lt; 2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Step:  AIC=1865.45
+Rating ~ ID + Income + Limit + Cards + Age + Education + Student + 
+    Married + Ethnicity + Balance
+
+            Df Sum of Sq    RSS    AIC F Value     Pr(F)    
+- ID         1        15  39953 1863.6    0.15  0.700824    
+- Age        1        20  39958 1863.6    0.19  0.661161    
+- Ethnicity  2       251  40189 1864.0    1.22  0.296618    
+- Student    1        54  39992 1864.0    0.52  0.469793    
+&lt;none&gt;                    39938 1865.5                      
+- Education  1       212  40150 1865.6    2.06  0.151817    
+- Married    1       527  40465 1868.7    5.12  0.024195 *  
+- Balance    1       556  40494 1869.0    5.40  0.020634 *  
+- Income     1       725  40663 1870.6    7.04  0.008293 ** 
+- Cards      1     14140  54078 1984.7  137.37 &lt; 2.2e-16 ***
+- Limit      1    202266 242204 2584.4 1965.04 &lt; 2.2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
@@ -606,11 +855,27 @@ MarriedYes   1.399399e-03 -9.138279e-05
 StudentYes   2.812164e-02 -2.022349e-04
 Education   -2.022349e-04  2.594959e-04</code></pre>
 <pre class="r"><code>&gt; betahat &lt;- coef(mod)
-&gt; # For 3
+&gt; betahat &lt;- matrix(betahat, nrow = 6)
+&gt; dim(betahat)</code></pre>
+<pre><code>[1] 6 1</code></pre>
+<pre class="r"><code>&gt; # For 3
 &gt; Xh &lt;- matrix(c(1, 6000, 4, 1, 0, 16), nrow = 1)
 &gt; (Yhath &lt;- Xh %*%betahat)</code></pre>
 <pre><code>         [,1]
 [1,] 444.2975</code></pre>
+<pre class="r"><code>&gt; anova(mod)</code></pre>
+<pre><code>Analysis of Variance Table
+
+Response: Rating
+           Df  Sum Sq Mean Sq    F value  Pr(&gt;F)    
+Limit       1 9492369 9492369 91434.8930 &lt; 2e-16 ***
+Cards       1   17696   17696   170.4546 &lt; 2e-16 ***
+Married     1     359     359     3.4545 0.06382 .  
+Student     1     298     298     2.8681 0.09114 .  
+Education   1     260     260     2.5064 0.11419    
+Residuals 394   40903     104                       
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>&gt; MSE &lt;- anova(mod)[6,3]
 &gt; varcovB &lt;- MSE*XTXI
 &gt; (s2yhath &lt;- Xh %*% varcovB %*% t(Xh))</code></pre>

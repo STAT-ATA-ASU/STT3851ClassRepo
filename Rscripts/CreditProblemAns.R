@@ -1,28 +1,16 @@
----
-title: "Credit Problem"
-author: "Alan Arnholt"
-date: 'Last updated: `r format(Sys.time(), "%B %d, %Y at %X")`'
-output: bookdown::html_document2
----
-
-```{r, label = "SETUP", echo = FALSE, results= 'hide', message = FALSE, warning = FALSE}
+## ---- label = "SETUP", echo = FALSE, results= 'hide', message = FALSE, warning = FALSE----
 set.seed(123)
 library(knitr)
 knitr::opts_chunk$set(comment = NA, fig.show = 'as.is', fig.align = 'center', fig.height = 5, fig.width = 5, prompt = TRUE, highlight = TRUE, tidy = FALSE, warning = FALSE, message = FALSE, tidy.opts=list(blank = TRUE, width.cutoff= 75, cache = TRUE))
 library(ISLR)
-```
 
-Read in the data:
 
-```{r}
+## ---------------------------------------------------------------------------------------
 Credit$Utilization <- Credit$Balance / (Credit$Income*100)
 DT::datatable(Credit[, -1], rownames = FALSE)
-```
-
-1. Create a model that predicts an individuals credit rating (`Rating`). Use both forward selection (store the model in `mod.fs`) and backwards elimination (store the model in `mod.be`) to create models. Evaluate your models for variance inflation and report the model you think is best.
 
 
-```{r}
+## ---------------------------------------------------------------------------------------
 library(MASS)
 mod.fs <- stepAIC(lm(Rating ~ 1, data = Credit), scope = .~Income + Limit + Cards + Age + Education + Gender + Student + Married + Ethnicity + Balance + Utilization, direction = "forward", test = "F")
 mod.fs
@@ -37,13 +25,9 @@ summary(mod.fs)
 summary(mod.be) 
 car::vif(mod.be)
 car::vif(mod.fs)
-```
 
-I prefer `mod.fs` since it has less multicollinearity.
 
-2. Create another model that predicts rating with `Limit`, `Cards`, `Married`, `Student`, and `Education` as features (store the model in `mod`). 
-
-```{r}
+## ---------------------------------------------------------------------------------------
 mod <- lm(Rating ~ Limit + Cards + Married + Student + Education, data = Credit)
 summary(mod)
 par(mfrow = c(2, 2))
@@ -55,43 +39,33 @@ summary(modN)
 car::residualPlots(modN)
 car::vif(modN)
 summary(modN)
-```
-
-3. Use your model from exercise 2 to predict the `Rating` for an individual who has a credit card limit of $6,000, has 4 credit cards, is married, is not a student, and has an undergraduate degree (`Education = 16`).
 
 
-```{r}
+## ---------------------------------------------------------------------------------------
 predict(mod, newdata = data.frame(Limit = 6000, Cards = 4, Married = "Yes", Student = "No", Education = 16))
-```
 
 
-```{r}
+## ---------------------------------------------------------------------------------------
 predict(modN, newdata = data.frame(Limit = 6000, Cards = 4, Married = "Yes", Student = "No", Education = 16))
 ### Should be the same as:
 coef(modN)[1] + coef(modN)[2]*6000 + coef(modN)[3]*6000^2 + coef(modN)[4]*4 + coef(modN)[5]*4^2 + coef(modN)[6]*1 + coef(modN)[7]*0 + coef(modN)[8]*16
 predict(modN, newdata = data.frame(Limit = 12000, Cards = 2, Married = "Yes", Student = "No", Education = 8), response = "pred")
-```
 
-4. Use your model to predict the `Rating` for an individual who has a credit card limit of $12,000, has 2 credit cards, is married, is not a student, and has an eighth grade education (`Education = 8`).
 
-```{r}
+## ---------------------------------------------------------------------------------------
 predict(mod, newdata = data.frame(Limit = 12000, Cards = 2, Married = "Yes", Student = "No", Education = 8))
-```
-Or using `modN`:
 
-```{r}
+
+## ---------------------------------------------------------------------------------------
 predict(modN, newdata = data.frame(Limit = 12000, Cards = 2, Married = "Yes", Student = "No", Education = 8))
-```
 
-5. Follow the linear algebra in Section 2.1.3 to develop 95% confidence intervals for the mean response (`Rating`) with the values from exercise 3 and exercise 4.
 
-```{r}
+## ---------------------------------------------------------------------------------------
 # Using predict function first:
 predict(mod, newdata = data.frame(Limit = 6000, Cards = 4, Married = "Yes", Student = "No", Education = 16), interval = "conf", level = 0.95)
-```
 
 
-```{r}
+## ---------------------------------------------------------------------------------------
 X <- model.matrix(mod)
 XTXI <- solve(t(X)%*%X)
 XTXI
@@ -124,5 +98,4 @@ syhath <- sqrt(s2yhath)
 (crit_t <- qt(0.975, df.residual(mod)))
 CI_EYh <- c(Yhath - crit_t*syhath, Yhath + crit_t*syhath)
 CI_EYh
-```
 
