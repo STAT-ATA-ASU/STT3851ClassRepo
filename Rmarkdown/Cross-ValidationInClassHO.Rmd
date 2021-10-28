@@ -1,7 +1,7 @@
 ---
-title: "Cross-Validation"
+title: "Cross-Validation Hand Out"
 author: "Alan Arnholt"
-date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
+date: 'Last knit on: `r format(Sys.time(), "%B %d, %Y at %X")`'
 bibliography: ./BIB/CV.bib
 output: 
   bookdown::html_document2: 
@@ -88,13 +88,11 @@ datatable(DF)
 * Sort the observations in the training and testing sets.
 
 ```{r}
-set.seed(31)
 n <- nrow(DF)
 train <- sample(n, floor(0.75 * n), replace = FALSE)
+train <- sort(train) 
 trainSET <- DF[train, ]
-trainSET <- trainSET[order(trainSET$x), ]
 testSET <- DF[-train, ]
-testSET <- testSET[order(testSET$x), ]
 dim(trainSET)
 dim(testSET)
 ```
@@ -173,7 +171,9 @@ MSPEtest
 * Note how the answers of your classmates are all different.  The validation estimate of the test MSPE can be highly variable.  
 
 ```{r}
-# Your Code Here
+# Your code here
+library(PASWR2)
+#
 #
 #
 #
@@ -185,6 +185,7 @@ MSPEtest
 #
 #
 ```
+
 
 
 ## Your Turn
@@ -199,6 +200,7 @@ plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(15, 30),
 IND <- sample(1:n, size = floor(n/2), replace = FALSE)
 train <- Auto[IND, ]
 test <- Auto[-IND, ]
+MSPE <- numeric(10)
 for(i in 1:10){
     mod <- lm(mpg ~ poly(horsepower, i), data = train)
     pred <- predict(mod, newdata = test)
@@ -221,7 +223,29 @@ ggplot(data = DF2, aes(x = x, y = MSPE)) +
 * Modify the code above to recreate a graph similar to the right side of Figure 5.2 on page 178 of @james_introduction_2013.  Hint: Place a `for` loop before `IND`.
 
 ```{r, fig.width = 5, fig.height = 5}
-# Your Code Here
+# Your code here
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# ggplot2 approach
+#
+#
+#
+#
+#
 #
 #
 #
@@ -252,6 +276,8 @@ k <- 5
 MSPE <- numeric(k)
 folds <- sample(x = 1:k, size = nrow(DF), replace = TRUE)
 xtabs(~folds)
+# or
+table(folds)
 sum(xtabs(~folds))
 for(j in 1:k){
   modq <- lm(y ~ poly(x, 2, raw = TRUE), data = DF[folds != j, ])
@@ -262,16 +288,33 @@ MSPE
 weighted.mean(MSPE, table(folds)/sum(folds))
 ```
 
+### Using `caret`
+
+```{r}
+library(caret)
+model <- train(
+  form = y ~ poly(x, 2, raw = TRUE),
+  data = DF,
+  method = "lm",
+  trControl = trainControl(
+    method = "cv", number = 5
+  )
+)  
+model  
+```
+
+
 ## Your Turn
 
 * Compute the $\textrm{CV}_8$ for `modf`. Recall that `modf` was created from regressing `hwfat` onto `abs` and `triceps`. 
 
 
 ```{r}
-# Your Code Here
-#
-#
-#
+# Your code here
+set.seed(13)
+k <- 8
+MSPE <- numeric(k)
+folds <- sample(x = 1:k, size = nrow(HSWRESTLER), replace = TRUE)
 #
 #
 #
@@ -282,6 +325,22 @@ weighted.mean(MSPE, table(folds)/sum(folds))
 #
 #
 ```
+
+### Using `caret`
+
+```{r}
+model <- train(
+  form = hwfat ~ abs + triceps,
+  data = HSWRESTLER,
+  method = "lm",
+  trControl = trainControl(
+    method = "cv", number = 8
+  )
+)  
+model
+model$results$RMSE^2
+```
+
 
 
 ## Using `cv.glm` from `boot`
@@ -300,35 +359,49 @@ cv.err
 * Compute $\textrm{CV}_8$ for `modf` using `cv.glm`.  Recall that `modf` was created from regressing `hwfat` onto `abs` and `triceps`. 
 
 ```{r}
+# Your code here
+glm.fit <- glm(hwfat ~ abs + triceps, data = HSWRESTLER)
+#
+#
+```
+*  Use `caret` and compare answers.
+
+```{r}
 # Your Code Here
 #
 #
 #
+#
+#
+#
+#
+#
+#
+#
 ```
-
-
 
 ## Your Turn
 
 The right side of Figure 5.4 on page 180 of @james_introduction_2013 shows the 10-fold cross-validation approach used on the `Auto` data set in order to estimate the test error that results from predicting `mpg` using polynomial functions of `horsepower` run nine separate times.  The code below creates a graph showing one particular run.
 
 ```{r}
+# Your code here
 plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
      ylab = "Mean Squared Prediction Error", main = "10-fold CV") 
 k <- 10 # number of folds
 MSPE <- numeric(k)
 cv <- numeric(k)
-  for(i in 1:10){
-    folds <- sample(x = 1:k, size = nrow(Auto), replace = TRUE)
-    for(j in 1:k){
-      mod <- lm(mpg ~ poly(horsepower, i, raw = TRUE), data = Auto[folds != j, ])
-      pred <- predict(mod, newdata = Auto[folds ==j, ])
-      MSPE[j] <- mean((Auto[folds == j, ]$mpg - pred)^2) 
-    }
-    cv[i] <- weighted.mean(MSPE, table(folds)/sum(folds))
-  }
-  lines(1:10, cv, col = "red")
-  points(1:10, cv, col = "red", pch = 19)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 ```
 
 
@@ -336,6 +409,32 @@ cv <- numeric(k)
 
 ```{r}
 # Your Code Here
+set.seed(123)
+plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+     ylab = "Mean Squared Prediction Error", main = "10-fold CV") 
+k <- 10      # number of folds
+MSPE <- numeric(k)
+cv <- numeric(k)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+## GGplot2 approach
+set.seed(123)
+cv <- matrix(NA, 10, 9)
+k <- 10      # number of folds
+MSPE <- numeric(k)
+#
+#
 #
 #
 #
@@ -360,6 +459,24 @@ cv <- numeric(k)
 
 ```{r}
 # Your Code Here
+plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+     ylab = "Mean Squared Prediction Error", main = "10-fold CV") 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# GGplot2 approach
+cv.err <- matrix(NA, 10, 9)
+#
+#
+#
+#
+#
 #
 #
 #
@@ -396,8 +513,9 @@ mean(MSPE)
 
 ```{r}
 # Your Code Here
-#
-#
+set.seed(1)
+k <- nrow(HSWRESTLER)
+MSPE <- numeric(k)
 #
 #
 #
@@ -425,6 +543,7 @@ CVn
 
 ```{r}
 # Your Code Here
+modf <- lm(hwfat ~ abs + triceps, data = HSWRESTLER)
 #
 #
 #
@@ -450,7 +569,7 @@ cv.err
 
 ```{r}
 # Your Code Here
-#
+glm.fit <- glm(hwfat ~ abs + triceps, data = HSWRESTLER)
 #
 #
 ```
@@ -462,9 +581,11 @@ cv.err
 
 ```{r}
 # Your Code Here
-#
-#
-#
+plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+     ylab = "Mean Squared Prediction Error") 
+k <- nrow(Auto) # number of folds
+MSPE <- numeric(k)
+cv <- numeric(10)
 #
 #
 #
@@ -483,8 +604,9 @@ Using the short cut formula:
 
 ```{r}
 # Your Code Here
-#
-#
+plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+     ylab = "Mean Squared Prediction Error")
+cv <- numeric(10)
 #
 #
 #
