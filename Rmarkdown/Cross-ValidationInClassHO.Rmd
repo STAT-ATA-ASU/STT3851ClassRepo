@@ -7,7 +7,6 @@ output: bookdown::html_document2
 ---
 
 ```{r, label = "SETUP", echo = FALSE, results= 'hide', message = FALSE, warning = FALSE}
-set.seed(389)
 library(knitr)
 knitr::opts_chunk$set(fig.show = 'as.is', fig.height = 4, fig.width = 4, prompt = FALSE, highlight = TRUE, tidy = FALSE, warning = FALSE, message = FALSE, fig.align = "center", comment = NA, tidy.opts=list(blank = TRUE, width.cutoff= 75, cache = TRUE))
 ```
@@ -68,7 +67,7 @@ Note that LOOCV is a special case of $k$-fold cross-validation where $k$ is set 
 
 
 ```{r label = "somedata"}
-set.seed(357)
+set.seed(24)
 n <- 1000           # Number of observations to generate
 SD <- 0.5
 xs <- sort(runif(n, 5, 9))
