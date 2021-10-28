@@ -3,10 +3,7 @@ title: "Cross-Validation Hand Out"
 author: "Alan Arnholt"
 date: 'Last knit on: `r format(Sys.time(), "%B %d, %Y at %X")`'
 bibliography: ./BIB/CV.bib
-output: 
-  bookdown::html_document2: 
-    highlight: textmate
-    theme: yeti
+output: bookdown::html_document2
 ---
 
 ```{r, label = "SETUP", echo = FALSE, results= 'hide', message = FALSE, warning = FALSE}
