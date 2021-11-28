@@ -500,6 +500,7 @@ _________________
 
 ## Final Exam: (Dec 7---11:00 am-1:30 pm) {-}
 
-* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/87544033-stt3851-fall2021/assignments/kagglepresentation) competition --- Limited to three slides.  Accept assignment inside ASULEARN.
+* Three minute presentation on [kaggle](https://classroom.github.com/classrooms/87544033-stt3851-fall2021/assignments/kagglepresentation) competition --- Limited to three slides.  Accept assignment inside ASULEARN.  
+  - The training and test data sets should be stored inside your repository.  All data munging and feature engineering should be included inside the presentation but not necessarily shown (use `echo = FALSE`).  Your presentation should include a description of your best two or three models and lessons learned during the competition.
 
 _________________
