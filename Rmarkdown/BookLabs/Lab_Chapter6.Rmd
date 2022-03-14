@@ -57,18 +57,14 @@ The `summary()` function also returns $R^2$, RSS, adjusted $R^2$, $C_p$, and BIC
 names(reg_summary)
 ```
 
-For instance, we see that the $R^2$ statistic increases from 32%, when only
-one variable is included in the model, to almost 55%, when all variables
-are included. As expected, the $R^2$ statistic increases monotonically as more
+For instance, we see that the $R^2$ statistic increases from `r round(min(reg_summary$rsq)*100,2)`%, when only one variable is included in the model, to `r round(max(reg_summary$rsq)*100,2)`%, when all variables are included. As expected, the $R^2$ statistic increases monotonically as more
 variables are included.
 
 ```{r}
 reg_summary$rsq
 ```
 
-Plotting RSS, adjusted $R^2$, $C_p$, and BIC for all of the models at once will
-help us decide which model to select. Note the `type = "l"` option tells `R` to
-connect the plotted points with lines.  The `points()` command works like the `plot()` command, except that it puts points on a plot that has already been created, instead of creating a new plot. The `which.max()` function can be used to identify the location of the maximum point of a vector. We will now plot a red dot to indicate the model with the largest adjusted $R^2$ statistic.  In a similar fashion we can plot the $C_p$ and BIC statistics, and indicate the models with the smallest statistic using `which.min()`.
+Plotting RSS, adjusted $R^2$, $C_p$, and BIC for all of the models at once will help us decide which model to select. Note the `type = "l"` option tells `R` to connect the plotted points with lines.  The `points()` command works like the `plot()` command, except that it puts points on a plot that has already been created, instead of creating a new plot. The `which.max()` function can be used to identify the location of the maximum point of a vector. We will now plot a red dot to indicate the model with the largest adjusted $R^2$ statistic.  In a similar fashion we can plot the $C_p$ and BIC statistics, and indicate the models with the smallest statistic using `which.min()`.
 
 ```{r, fig.width = 8, fig.height = 8}
 par(mfrow = c(2, 2))
@@ -87,10 +83,7 @@ points(which.min(reg_summary$bic), reg_summary$bic[which.min(reg_summary$bic)],
 par(mfrow = c(1, 1))
 ```
 
-The `regsubsets()` function has a built-in `plot()` command which can
-be used to display the selected variables for the best model with a given
-number of predictors, ranked according to the BIC, $C_p$, adjusted $R^2$, or
-AIC. To find out more about this function, type `?plot.regsubsets`.
+The `regsubsets()` function has a built-in `plot()` command which can be used to display the selected variables for the best model with a given number of predictors, ranked according to the BIC, $C_p$, adjusted $R^2$, or AIC. To find out more about this function, type `?plot.regsubsets`.
 
 ```{r, fig.width = 8, fig.height = 8}
 par(mfrow = c(2, 2))
@@ -137,7 +130,7 @@ In order to use the validation set approach, we begin by splitting the observati
 training set/test set split.
 
 ```{r}
-set.seed(1)
+set.seed(135)
 train <- sample(c(TRUE, FALSE), size = nrow(Hitters), rep = TRUE)
 test <- (!train)
 ```
@@ -166,11 +159,12 @@ for(i in 1:19){
 val_errors
 ```
 
-We find the best model is the one that contains ten variables.
+We find the best model is the one that contains **`r which.min(val_errors)`** variables.
 
 ```{r}
 which.min(val_errors)
-coef(regfit_best, 10)
+coef(regfit_best, which.min(val_errors))
+coef(regfit_full, which.min(val_errors))
 ```
 
 This was a little tedious, partly because there is no `predict()` method
@@ -189,31 +183,35 @@ predict.regsubsets <- function (object, newdata, id,...){
 
 Our function pretty much mimics what we did above. The only complex part is how we extracted the formula used in the call to `regsubsets()`. We demonstrate how we use this function below, when we do cross-validation. 
 
-Finally, we perform best subset selection on the **full data set**, and select the best ten-variable model. It is important that we make use of the **full data set** in order to obtain more accurate coefficient estimates. Note that we perform best subset selection on the full data set and select the best ten variable model, rather than simply using the variables that were obtained from the training set, because the best ten-variable model on the full data set may differ from the corresponding model on the training set.
+Finally, we perform best subset selection on the **full data set**, and select the best `r which.min(val_errors)`-variable model. It is important that we make use of the **full data set** in order to obtain more accurate coefficient estimates. Note that we perform best subset selection on the full data set and select the best `r which.min(val_errors)` variable model, rather than simply using the variables that were obtained from the training set, because the best `r which.min(val_errors)`-variable model on the full data set may differ from the corresponding model on the training set.
 
-In fact, we see that the best ten-variable model on the full data set has a different set of variables than the best ten-variable model on the training set.
+In fact, we see that the best `r which.min(val_errors)`-variable model on the full data set has a different set of variables than the best `r which.min(val_errors)`-variable model on the training set.
 
-We now try to choose among the models of different sizes using cross validation. This approach is somewhat involved, as we must perform best
-subset selection _within each of the k training sets_. Despite this, we see that
-with its clever subsetting syntax, `R` makes this job quite easy. First, we
-create a vector that allocates each observation to one of `k = 10` folds, and
-we create a matrix in which we will store the results.
+```{r}
+coef(regfit_full, which.min(val_errors)) # full data set
+coef(regfit_best, which.min(val_errors)) # training data set
+```
+
+____________________
+
+
+We now try to choose among the models of different sizes using cross validation. This approach is somewhat involved, as we must perform best subset selection _within each of the k training sets_. Despite this, we see that with its clever subsetting syntax, `R` makes this job quite easy. First, we create a vector that allocates each observation to one of `k = 10` folds, and we create a matrix in which we will store the results.
 
 ```{r}
 k <- 10
 set.seed(1)
 folds <- sample(1:k, size = nrow(Hitters), replace = TRUE)
-cv.errors <- matrix(NA, k, 19, dimnames = list(NULL, paste(1:19)))
+cv_errors <- matrix(NA, k, 19, dimnames = list(NULL, paste(1:19)))
 ```
 
 Now we write a for loop that performs cross-validation. In the $j^{th}$ fold, the elements of `folds` that equal `j` are in the test set, and the remainder are in the training set. We make our predictions for each model size (using our new `predict()` method), compute the test errors on the appropriate subset, and store them in the appropriate slot in the matrix `cv.errors`.
 
 ```{r}
 for(j in 1:k){
- best.fit = regsubsets(Salary~., data = Hitters[folds!=j, ], nvmax=19)
+ best_fit = regsubsets(Salary ~ ., data = Hitters[folds!=j, ], nvmax=19)
  for(i in 1:19){
- pred = predict(best.fit, Hitters[folds==j, ], id = i)
- cv.errors[j, i] = mean((Hitters$Salary[folds==j] - pred)^2)
+ pred = predict(best_fit, Hitters[folds==j, ], id = i)
+ cv_errors[j, i] = mean((Hitters$Salary[folds==j] - pred)^2)
  }
 }
 ```
@@ -221,17 +219,17 @@ for(j in 1:k){
 This has given us a $10 \times 19$ matrix, of which the $(i, j)$th element corresponds to the test MSE for the ith cross-validation fold for the best $j$-variable model. We use the `apply()` function to average over the columns of this apply() matrix in order to obtain a vector for which the $j$th element is the cross validation error for the $j$-variable model.
 
 ```{r}
-mean_cv_errors <- apply(cv.errors, 2, mean)
+mean_cv_errors <- apply(cv_errors, 2, mean)
 mean_cv_errors
 which.min(mean_cv_errors)
 plot(mean_cv_errors, type = "b")
 ```
 
-We see that cross-validation selects an 11-variable model. We now perform best subset selection on the **full data set** in order to obtain the 11-variable model.
+We see that cross-validation selects an `r which.min(mean_cv_errors)`-variable model. We now perform best subset selection on the **full data set** in order to obtain the `r which.min(mean_cv_errors)`-variable model.
 
 ```{r}
-reg.best <- regsubsets(Salary~., data = Hitters, nvmax = 19)
-coef(reg.best, 11)
+reg_best <- regsubsets(Salary~., data = Hitters, nvmax = 19)
+coef(reg_best, which.min(mean_cv_errors))
 ```
 
 -----------
@@ -241,11 +239,11 @@ coef(reg.best, 11)
 ```{r}
 library(caret)
 myControl <- trainControl(## 10-fold CV
-                           method = "repeatedcv",
-                           number = 10,
+                           method = "cv",
+                           number = 10)
                            ## repeated ten times
-                           repeats = 10)
-set.seed(314)
+                           ## repeats = 10)
+set.seed(14)
 regfit_seq <- train(Salary ~ ., data = Hitters,
                     method = "leapSeq",
                     trControl = myControl,
@@ -253,10 +251,13 @@ regfit_seq <- train(Salary ~ ., data = Hitters,
                     tuneGrid = expand.grid(nvmax = 2:15)
                     )
 regfit_seq
+regfit_seq$results
+min(regfit_seq$results$RMSE)
 coef(regfit_seq$finalModel, id = 9)
-head(predict(regfit_seq, newdata = Hitters[test,]))
-### Note that the following is the same output
-coef(reg.best, 9)
-head(predict(reg.best, id = 9, newdata = Hitters[test,]))
+TEST <- Hitters[!train, ]
+head(predict(regfit_seq, newdata = TEST))
+### Note that the following is the same output???
+coef(reg_best, 9)
+head(predict(reg_best, id = 9, newdata = TEST))
 
 ```
