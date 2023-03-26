@@ -191,7 +191,7 @@ The left side of Figure 5.2 on page 178 of @james_introduction_2013 shows the va
 ```{r}
 library(ISLR)
 n <- nrow(Auto)
-plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(15, 30), 
+plot(1:10, type = "n", xlab = "Degree of Polynomial", ylim = c(15, 30), 
      ylab = "Mean Squared Prediction Error") 
 IND <- sample(1:n, size = floor(n/2), replace = FALSE)
 train <- Auto[IND, ]
@@ -277,11 +277,11 @@ table(folds)
 sum(xtabs(~folds))
 for(j in 1:k){
   modq <- lm(y ~ poly(x, 2, raw = TRUE), data = DF[folds != j, ])
-  pred <- predict(modq, newdata = DF[folds ==j, ])
+  pred <- predict(modq, newdata = DF[folds == j, ])
   MSPE[j] <- mean((DF[folds == j, ]$y - pred)^2) 
 }
 MSPE
-weighted.mean(MSPE, table(folds)/sum(folds))
+weighted.mean(MSPE, w = table(folds)/sum(xtabs(~folds)))
 ```
 
 ### Using `caret`
@@ -382,7 +382,7 @@ The right side of Figure 5.4 on page 180 of @james_introduction_2013 shows the 1
 
 ```{r}
 # Your code here
-plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+plot(1:10, type = "n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
      ylab = "Mean Squared Prediction Error", main = "10-fold CV") 
 k <- 10 # number of folds
 MSPE <- numeric(k)
@@ -406,7 +406,7 @@ cv <- numeric(k)
 ```{r}
 # Your Code Here
 set.seed(123)
-plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+plot(1:10, type = "n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
      ylab = "Mean Squared Prediction Error", main = "10-fold CV") 
 k <- 10      # number of folds
 MSPE <- numeric(k)
@@ -455,7 +455,7 @@ MSPE <- numeric(k)
 
 ```{r}
 # Your Code Here
-plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+plot(1:10, type = "n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
      ylab = "Mean Squared Prediction Error", main = "10-fold CV") 
 #
 #
@@ -577,7 +577,7 @@ glm.fit <- glm(hwfat ~ abs + triceps, data = HSWRESTLER)
 
 ```{r}
 # Your Code Here
-plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+plot(1:10, type = "n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
      ylab = "Mean Squared Prediction Error") 
 k <- nrow(Auto) # number of folds
 MSPE <- numeric(k)
@@ -600,7 +600,7 @@ Using the short cut formula:
 
 ```{r}
 # Your Code Here
-plot(1:10, type ="n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
+plot(1:10, type = "n", xlab = "Degree of Polynomial", ylim = c(16, 26), 
      ylab = "Mean Squared Prediction Error")
 cv <- numeric(10)
 #
