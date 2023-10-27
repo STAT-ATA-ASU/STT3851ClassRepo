@@ -13,8 +13,8 @@
 
 <title>Welcome</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -54,6 +54,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -276,148 +277,258 @@ $(document).ready(function () {
 
 
 <ul>
-<li><p>The course syllabus is stored in the <a href="./Syllabus/STT3851Fall2021Syllabus.html"><code>Syllabus</code></a> directory of the STT 3851 repository.</p></li>
-<li><p>Course pacing and assignments are stored in the <a href="./Assignments/AssignmentsSTT3851Fall2021.html"><code>Assignments</code></a> directory of the STT 3851 repository.</p></li>
-<li><p><a href="https://mathr.math.appstate.edu">Class RStudio Server</a> (you must be registered in the course to access the server)</p></li>
+<li><p>The course syllabus is stored in the <a
+href="./Syllabus/STT3851Fall2021Syllabus.html"><code>Syllabus</code></a>
+directory of the STT 3851 repository.</p></li>
+<li><p>Course pacing and assignments are stored in the <a
+href="./Assignments/AssignmentsSTT3851Fall2021.html"><code>Assignments</code></a>
+directory of the STT 3851 repository.</p></li>
+<li><p><a href="https://mathr.math.appstate.edu">Class RStudio
+Server</a> (you must be registered in the course to access the
+server)</p></li>
 <li><p><a href="./Rmarkdown/FlowControl.html">Flow Control</a></p></li>
-<li><p><a href="./Rmarkdown/TheBootstrap.html">The Bootstrap</a></p></li>
+<li><p><a href="./Rmarkdown/TheBootstrap.html">The
+Bootstrap</a></p></li>
 </ul>
 <div id="resources-you-may-find-helpful" class="section level2">
 <h2>Resources you may find helpful</h2>
 <ul>
-<li><p><a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/">Web site for <em>The Elements of Statistical Learning</em> (free pdf of book)</a></p></li>
-<li><p><a href="http://www-bcf.usc.edu/~gareth/ISL/">Web site for <em>An Introduction to Statistical Learning</em> (free pdf of book)</a></p></li>
-<li><p><a href="https://alanarnholt.github.io/STT3850/Notes/Parent/Parent.html">Course Notes STT 3850 (Spring 2018)</a></p></li>
+<li><p><a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/">Web
+site for <em>The Elements of Statistical Learning</em> (free pdf of
+book)</a></p></li>
+<li><p><a href="http://www-bcf.usc.edu/~gareth/ISL/">Web site for <em>An
+Introduction to Statistical Learning</em> (free pdf of
+book)</a></p></li>
+<li><p><a
+href="https://alanarnholt.github.io/STT3850/Notes/Parent/Parent.html">Course
+Notes STT 3850 (Spring 2018)</a></p></li>
 </ul>
 <div id="chapter-1-introduction-slides" class="section level3">
-<h3>Chapter 1: Introduction (<a href="https://courses.edx.org/assets/courseware/v1/af163b1b5874fcb7a86de55dd8205d39/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/introduction-handout.pdf">slides</a>)</h3>
+<h3>Chapter 1: Introduction (<a
+href="https://courses.edx.org/assets/courseware/v1/af163b1b5874fcb7a86de55dd8205d39/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/introduction-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=5N9V07EIfIg">Opening Remarks and Examples</a> (18:18)</li>
-<li><a href="https://www.youtube.com/watch?v=Z0v9QMkA3dA">Supervised and Unsupervised Learning</a> (12:12)</li>
+<li><a href="https://www.youtube.com/watch?v=5N9V07EIfIg">Opening
+Remarks and Examples</a> (18:18)</li>
+<li><a href="https://www.youtube.com/watch?v=Z0v9QMkA3dA">Supervised and
+Unsupervised Learning</a> (12:12)</li>
 </ul>
 </div>
 <div id="chapter-2-statistical-learning-slides" class="section level3">
-<h3>Chapter 2: Statistical Learning (<a href="https://courses.edx.org/assets/courseware/v1/389682606dce6fd04aaa833c86e6f577/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/statistical_learning-handout.pdf">slides</a>)</h3>
+<h3>Chapter 2: Statistical Learning (<a
+href="https://courses.edx.org/assets/courseware/v1/389682606dce6fd04aaa833c86e6f577/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/statistical_learning-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=p9n2w236B48">Statistical Learning and Regression</a> (11:41)</li>
-<li><a href="https://www.youtube.com/watch?v=HndOzII4jzs">Curse of Dimensionality and Parametric Models</a> (11:40)</li>
-<li><a href="https://www.youtube.com/watch?v=VaN1RUDuioQ">Assessing Model Accuracy and Bias-Variance Trade-off</a> (10:04)</li>
-<li><a href="https://www.youtube.com/watch?v=TnVRhLqThR4">Classification Problems and K-Nearest Neighbors</a> (15:37)</li>
-<li><a href="https://www.youtube.com/watch?v=PrIt1t-uCC4">Lab: Introduction to R</a> (14:12)</li>
+<li><a href="https://www.youtube.com/watch?v=p9n2w236B48">Statistical
+Learning and Regression</a> (11:41)</li>
+<li><a href="https://www.youtube.com/watch?v=HndOzII4jzs">Curse of
+Dimensionality and Parametric Models</a> (11:40)</li>
+<li><a href="https://www.youtube.com/watch?v=VaN1RUDuioQ">Assessing
+Model Accuracy and Bias-Variance Trade-off</a> (10:04)</li>
+<li><a href="https://www.youtube.com/watch?v=TnVRhLqThR4">Classification
+Problems and K-Nearest Neighbors</a> (15:37)</li>
+<li><a href="https://www.youtube.com/watch?v=PrIt1t-uCC4">Lab:
+Introduction to R</a> (14:12)</li>
 </ul>
 </div>
 <div id="chapter-3-linear-regression-slides" class="section level3">
-<h3>Chapter 3: Linear Regression (<a href="https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf">slides</a>)</h3>
+<h3>Chapter 3: Linear Regression (<a
+href="https://courses.edx.org/assets/courseware/v1/e4f2f4823252ead8c1a68722e3415c28/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/linear_regression-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=7TgVO_K75EY">Simple Linear Regression and Confidence Intervals</a> (13:01)</li>
-<li><a href="https://www.youtube.com/watch?v=z10DqaVJh3c">Hypothesis Testing</a> (8:24)</li>
-<li><a href="https://www.youtube.com/watch?v=yzQHONabWhs">Multiple Linear Regression and Interpreting Regression Coefficients</a> (15:38)</li>
-<li><a href="https://www.youtube.com/watch?v=lo7KnnvyEU0">Model Selection and Qualitative Predictors</a> (14:51)</li>
-<li><a href="https://www.youtube.com/watch?v=sK80ZnhiaRI">Interactions and Nonlinearity</a> (14:16)</li>
-<li><a href="https://www.youtube.com/watch?v=W0WILgmAGao">Lab: Linear Regression</a> (22:10)</li>
+<li><a href="https://www.youtube.com/watch?v=7TgVO_K75EY">Simple Linear
+Regression and Confidence Intervals</a> (13:01)</li>
+<li><a href="https://www.youtube.com/watch?v=z10DqaVJh3c">Hypothesis
+Testing</a> (8:24)</li>
+<li><a href="https://www.youtube.com/watch?v=yzQHONabWhs">Multiple
+Linear Regression and Interpreting Regression Coefficients</a>
+(15:38)</li>
+<li><a href="https://www.youtube.com/watch?v=lo7KnnvyEU0">Model
+Selection and Qualitative Predictors</a> (14:51)</li>
+<li><a href="https://www.youtube.com/watch?v=sK80ZnhiaRI">Interactions
+and Nonlinearity</a> (14:16)</li>
+<li><a href="https://www.youtube.com/watch?v=W0WILgmAGao">Lab: Linear
+Regression</a> (22:10)</li>
 </ul>
 </div>
 <div id="chapter-4-classification-slides" class="section level3">
-<h3>Chapter 4: Classification (<a href="https://courses.edx.org/assets/courseware/v1/0c7a529a8d32d0449fb5f96d260628ad/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/classification-handout.pdf">slides</a>)</h3>
+<h3>Chapter 4: Classification (<a
+href="https://courses.edx.org/assets/courseware/v1/0c7a529a8d32d0449fb5f96d260628ad/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/classification-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=RN_dweQpcpo">Introduction to Classification</a> (10:25)</li>
-<li><a href="https://www.youtube.com/watch?v=31Q5FGRnxt4">Logistic Regression and Maximum Likelihood</a> (9:07)</li>
-<li><a href="Multivariate%20Logistic%20Regression%20and%20Confounding">Multivariate Logistic Regression and Confounding</a> (9:53)</li>
-<li><a href="https://www.youtube.com/watch?v=RIW3H03MNrE">Case-Control Sampling and Multiclass Logistic Regression</a> (7:28)</li>
-<li><a href="https://www.youtube.com/watch?v=gPOMLCR1oF8">Linear Discriminant Analysis and Bayes Theorem</a> (7:12)</li>
-<li><a href="https://www.youtube.com/watch?v=QG0pVJXT6EU">Univariate Linear Discriminant Analysis</a> (7:37)</li>
-<li><a href="https://www.youtube.com/watch?v=pZodpSfe9IA">Multivariate Linear Discriminant Analysis and ROC Curves</a> (17:42)</li>
-<li><a href="https://www.youtube.com/watch?v=6FiNGTYAOAA">Quadratic Discriminant Analysis and Naive Bayes</a> (10:07)</li>
-<li><a href="https://www.youtube.com/watch?v=MGertB06qjQ">Lab: Logistic Regression</a> (10:14)</li>
-<li><a href="https://www.youtube.com/watch?v=2cl7JiPzkBY">Lab: Linear Discriminant Analysis</a> (8:22)</li>
-<li><a href="https://www.youtube.com/watch?v=OUqMjCfWKiQ">Lab: K-Nearest Neighbors</a> (5:01)</li>
+<li><a href="https://www.youtube.com/watch?v=RN_dweQpcpo">Introduction
+to Classification</a> (10:25)</li>
+<li><a href="https://www.youtube.com/watch?v=31Q5FGRnxt4">Logistic
+Regression and Maximum Likelihood</a> (9:07)</li>
+<li><a
+href="Multivariate%20Logistic%20Regression%20and%20Confounding">Multivariate
+Logistic Regression and Confounding</a> (9:53)</li>
+<li><a href="https://www.youtube.com/watch?v=RIW3H03MNrE">Case-Control
+Sampling and Multiclass Logistic Regression</a> (7:28)</li>
+<li><a href="https://www.youtube.com/watch?v=gPOMLCR1oF8">Linear
+Discriminant Analysis and Bayes Theorem</a> (7:12)</li>
+<li><a href="https://www.youtube.com/watch?v=QG0pVJXT6EU">Univariate
+Linear Discriminant Analysis</a> (7:37)</li>
+<li><a href="https://www.youtube.com/watch?v=pZodpSfe9IA">Multivariate
+Linear Discriminant Analysis and ROC Curves</a> (17:42)</li>
+<li><a href="https://www.youtube.com/watch?v=6FiNGTYAOAA">Quadratic
+Discriminant Analysis and Naive Bayes</a> (10:07)</li>
+<li><a href="https://www.youtube.com/watch?v=MGertB06qjQ">Lab: Logistic
+Regression</a> (10:14)</li>
+<li><a href="https://www.youtube.com/watch?v=2cl7JiPzkBY">Lab: Linear
+Discriminant Analysis</a> (8:22)</li>
+<li><a href="https://www.youtube.com/watch?v=OUqMjCfWKiQ">Lab: K-Nearest
+Neighbors</a> (5:01)</li>
 </ul>
 </div>
 <div id="chapter-5-resampling-methods-slides" class="section level3">
-<h3>Chapter 5: Resampling Methods (<a href="https://courses.edx.org/assets/courseware/v1/714c63b497ee6718f12a7fcd24c35866/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/cv_boot-handout.pdf">slides</a>)</h3>
+<h3>Chapter 5: Resampling Methods (<a
+href="https://courses.edx.org/assets/courseware/v1/714c63b497ee6718f12a7fcd24c35866/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/cv_boot-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=ngrOYWgJjb4">Estimating Prediction Error and Validation Set Approach</a> (14:01)</li>
-<li><a href="https://www.youtube.com/watch?v=rSGzUy13F_0">K-fold Cross-Validation</a> (13:33)</li>
-<li><a href="https://www.youtube.com/watch?v=r64tRyHFAJ8">Cross-Validation: The Right and Wrong Ways</a> (10:07)</li>
-<li><a href="https://www.youtube.com/watch?v=fBaqG3vpIIg">The Bootstrap</a> (11:29)</li>
-<li><a href="https://www.youtube.com/watch?v=uX5kPAK0lpo">More on the Bootstrap</a> (14:35)</li>
-<li><a href="https://www.youtube.com/watch?v=kfl_32v3P_E&amp;t=3s">Lab: Cross-Validation</a> (11:21)</li>
-<li><a href="https://www.youtube.com/watch?v=X_UCeAGdAHE">Lab: The Bootstrap</a> (7:40)</li>
+<li><a href="https://www.youtube.com/watch?v=ngrOYWgJjb4">Estimating
+Prediction Error and Validation Set Approach</a> (14:01)</li>
+<li><a href="https://www.youtube.com/watch?v=rSGzUy13F_0">K-fold
+Cross-Validation</a> (13:33)</li>
+<li><a
+href="https://www.youtube.com/watch?v=r64tRyHFAJ8">Cross-Validation: The
+Right and Wrong Ways</a> (10:07)</li>
+<li><a href="https://www.youtube.com/watch?v=fBaqG3vpIIg">The
+Bootstrap</a> (11:29)</li>
+<li><a href="https://www.youtube.com/watch?v=uX5kPAK0lpo">More on the
+Bootstrap</a> (14:35)</li>
+<li><a href="https://www.youtube.com/watch?v=kfl_32v3P_E&amp;t=3s">Lab:
+Cross-Validation</a> (11:21)</li>
+<li><a href="https://www.youtube.com/watch?v=X_UCeAGdAHE">Lab: The
+Bootstrap</a> (7:40)</li>
 </ul>
 </div>
-<div id="chapter-6-linear-model-selection-and-regularization-slides" class="section level3">
-<h3>Chapter 6: Linear Model Selection and Regularization (<a href="https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf">slides</a>)</h3>
+<div id="chapter-6-linear-model-selection-and-regularization-slides"
+class="section level3">
+<h3>Chapter 6: Linear Model Selection and Regularization (<a
+href="https://courses.edx.org/assets/courseware/v1/7eb37b0059a4d1660d163578934a9dcb/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/model_selection-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=XgNub00Uovs">Linear Model Selection and Best Subset Selection</a> (13:44)</li>
-<li><a href="https://www.youtube.com/watch?v=3WA-UjeTdQM">Forward Stepwise Selection</a> (12:26)</li>
-<li><a href="https://www.youtube.com/watch?v=JNTe6T26xss">Backward Stepwise Selection</a> (5:26)</li>
-<li><a href="https://www.youtube.com/watch?v=WWuvcg23O_M">Estimating Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared</a> (14:06)</li>
-<li><a href="https://www.youtube.com/watch?v=f_hkP_We0JY">Estimating Test Error Using Cross-Validation</a> (8:43)</li>
-<li><a href="https://www.youtube.com/watch?v=I8bPQ272Pbs">Shrinkage Methods and Ridge Regression</a> (12:37)</li>
-<li><a href="https://www.youtube.com/watch?v=FlSQgXv7Dvw">The Lasso</a> (15:21)</li>
-<li><a href="https://www.youtube.com/watch?v=8oEZkHqf_Rk">Tuning Parameter Selection for Ridge Regression and Lasso</a> (5:27)</li>
-<li><a href="https://www.youtube.com/watch?v=-jgfdSprgnQ">Dimension Reduction</a> (4:45)</li>
-<li><a href="https://www.youtube.com/watch?v=v4lqtr9YZec">Principal Components Regression and Partial Least Squares</a> (15:48)</li>
-<li><a href="https://www.youtube.com/watch?v=MR7rpjN3C6I&amp;t=5s">Lab: Best Subset Selection</a> (10:36)</li>
-<li><a href="https://www.youtube.com/watch?v=2QV3RAOmZ2k">Lab: Forward Stepwise Selection and Model Selection Using Validation Set</a> (10:32)</li>
-<li><a href="https://www.youtube.com/watch?v=6COMEmQMTLQ">Lab: Model Selection Using Cross-Validation</a> (5:32)</li>
-<li><a href="https://www.youtube.com/watch?v=ldqJ2sfosqA">Lab: Ridge Regression and Lasso</a> (16:34)</li>
+<li><a href="https://www.youtube.com/watch?v=XgNub00Uovs">Linear Model
+Selection and Best Subset Selection</a> (13:44)</li>
+<li><a href="https://www.youtube.com/watch?v=3WA-UjeTdQM">Forward
+Stepwise Selection</a> (12:26)</li>
+<li><a href="https://www.youtube.com/watch?v=JNTe6T26xss">Backward
+Stepwise Selection</a> (5:26)</li>
+<li><a href="https://www.youtube.com/watch?v=WWuvcg23O_M">Estimating
+Test Error Using Mallow’s Cp, AIC, BIC, Adjusted R-squared</a>
+(14:06)</li>
+<li><a href="https://www.youtube.com/watch?v=f_hkP_We0JY">Estimating
+Test Error Using Cross-Validation</a> (8:43)</li>
+<li><a href="https://www.youtube.com/watch?v=I8bPQ272Pbs">Shrinkage
+Methods and Ridge Regression</a> (12:37)</li>
+<li><a href="https://www.youtube.com/watch?v=FlSQgXv7Dvw">The Lasso</a>
+(15:21)</li>
+<li><a href="https://www.youtube.com/watch?v=8oEZkHqf_Rk">Tuning
+Parameter Selection for Ridge Regression and Lasso</a> (5:27)</li>
+<li><a href="https://www.youtube.com/watch?v=-jgfdSprgnQ">Dimension
+Reduction</a> (4:45)</li>
+<li><a href="https://www.youtube.com/watch?v=v4lqtr9YZec">Principal
+Components Regression and Partial Least Squares</a> (15:48)</li>
+<li><a href="https://www.youtube.com/watch?v=MR7rpjN3C6I&amp;t=5s">Lab:
+Best Subset Selection</a> (10:36)</li>
+<li><a href="https://www.youtube.com/watch?v=2QV3RAOmZ2k">Lab: Forward
+Stepwise Selection and Model Selection Using Validation Set</a>
+(10:32)</li>
+<li><a href="https://www.youtube.com/watch?v=6COMEmQMTLQ">Lab: Model
+Selection Using Cross-Validation</a> (5:32)</li>
+<li><a href="https://www.youtube.com/watch?v=ldqJ2sfosqA">Lab: Ridge
+Regression and Lasso</a> (16:34)</li>
 </ul>
 </div>
-<div id="chapter-7-moving-beyond-linearity-slides" class="section level3">
-<h3>Chapter 7: Moving Beyond Linearity (<a href="https://courses.edx.org/assets/courseware/v1/ca57813d9b515a08f35564427c41b781/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/nonlinear-handout.pdf">slides</a>)</h3>
+<div id="chapter-7-moving-beyond-linearity-slides"
+class="section level3">
+<h3>Chapter 7: Moving Beyond Linearity (<a
+href="https://courses.edx.org/assets/courseware/v1/ca57813d9b515a08f35564427c41b781/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/nonlinear-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=ItEnKfxKreo">Polynomial Regression and Step Functions</a> (14:59)</li>
-<li><a href="https://www.youtube.com/watch?v=s86bsq_EgzU">Piecewise Polynomials and Splines</a> (13:13)</li>
-<li><a href="https://www.youtube.com/watch?v=UDDXkffB-aE">Smoothing Splines</a> (10:10)</li>
-<li><a href="https://www.youtube.com/watch?v=h-ExScLnj24">Local Regression and Generalized Additive Models</a> (10:45)</li>
-<li><a href="https://www.youtube.com/watch?v=u-rVXhsFyxo">Lab: Polynomials</a> (21:11)</li>
-<li><a href="https://www.youtube.com/watch?v=Str26mJDDXI">Lab: Splines and Generalized Additive Models</a> (12:15)</li>
+<li><a href="https://www.youtube.com/watch?v=ItEnKfxKreo">Polynomial
+Regression and Step Functions</a> (14:59)</li>
+<li><a href="https://www.youtube.com/watch?v=s86bsq_EgzU">Piecewise
+Polynomials and Splines</a> (13:13)</li>
+<li><a href="https://www.youtube.com/watch?v=UDDXkffB-aE">Smoothing
+Splines</a> (10:10)</li>
+<li><a href="https://www.youtube.com/watch?v=h-ExScLnj24">Local
+Regression and Generalized Additive Models</a> (10:45)</li>
+<li><a href="https://www.youtube.com/watch?v=u-rVXhsFyxo">Lab:
+Polynomials</a> (21:11)</li>
+<li><a href="https://www.youtube.com/watch?v=Str26mJDDXI">Lab: Splines
+and Generalized Additive Models</a> (12:15)</li>
 </ul>
 </div>
 <div id="chapter-8-tree-based-methods-slides" class="section level3">
-<h3>Chapter 8: Tree-Based Methods (<a href="https://courses.edx.org/assets/courseware/v1/62c570de505d28b78e8e4ea932daddf2/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/trees-handout.pdf">slides</a>)</h3>
+<h3>Chapter 8: Tree-Based Methods (<a
+href="https://courses.edx.org/assets/courseware/v1/62c570de505d28b78e8e4ea932daddf2/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/trees-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=XvdLKUOldkE">Decision Trees</a> (14:37)</li>
-<li><a href="https://www.youtube.com/watch?v=U9ypJ7UFL3I">Pruning a Decision Tree</a> (11:45)</li>
-<li><a href="https://www.youtube.com/watch?v=8foe-MKLgtU">Classification Trees and Comparison with Linear Models</a> (11:00)</li>
-<li><a href="https://www.youtube.com/watch?v=omSN-shKM1Y">Bootstrap Aggregation (Bagging) and Random Forests</a> (13:45)</li>
-<li><a href="https://www.youtube.com/watch?v=RSWg_islt9c">Boosting and Variable Importance</a> (12:03)</li>
-<li><a href="https://www.youtube.com/watch?v=YPz2J5lHeVM">Lab: Decision Trees</a> (10:13)</li>
-<li><a href="https://www.youtube.com/watch?v=MpDEU96Ss8E">Lab: Random Forests and Boosting</a> (15:35)</li>
+<li><a href="https://www.youtube.com/watch?v=XvdLKUOldkE">Decision
+Trees</a> (14:37)</li>
+<li><a href="https://www.youtube.com/watch?v=U9ypJ7UFL3I">Pruning a
+Decision Tree</a> (11:45)</li>
+<li><a href="https://www.youtube.com/watch?v=8foe-MKLgtU">Classification
+Trees and Comparison with Linear Models</a> (11:00)</li>
+<li><a href="https://www.youtube.com/watch?v=omSN-shKM1Y">Bootstrap
+Aggregation (Bagging) and Random Forests</a> (13:45)</li>
+<li><a href="https://www.youtube.com/watch?v=RSWg_islt9c">Boosting and
+Variable Importance</a> (12:03)</li>
+<li><a href="https://www.youtube.com/watch?v=YPz2J5lHeVM">Lab: Decision
+Trees</a> (10:13)</li>
+<li><a href="https://www.youtube.com/watch?v=MpDEU96Ss8E">Lab: Random
+Forests and Boosting</a> (15:35)</li>
 </ul>
 </div>
-<div id="chapter-9-support-vector-machines-slides" class="section level3">
-<h3>Chapter 9: Support Vector Machines (<a href="https://courses.edx.org/assets/courseware/v1/65d76a3a40298590d15ab2a875e218e2/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/svm-handout.pdf">slides</a>)</h3>
+<div id="chapter-9-support-vector-machines-slides"
+class="section level3">
+<h3>Chapter 9: Support Vector Machines (<a
+href="https://courses.edx.org/assets/courseware/v1/65d76a3a40298590d15ab2a875e218e2/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/svm-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=m59UOo5jAFU">Maximal Margin Classifier</a> (11:35)</li>
-<li><a href="https://www.youtube.com/watch?v=_TR28WOymkE">Support Vector Classifier</a> (8:04)</li>
-<li><a href="https://www.youtube.com/watch?v=ooYwHNvH-YU">Kernels and Support Vector Machines</a> (15:04)</li>
-<li><a href="https://www.youtube.com/watch?v=6EFgNdwpB7s">Example and Comparison with Logistic Regression</a> (14:47)</li>
-<li><a href="https://www.youtube.com/watch?v=4KoL9vUI7xs">Lab: Support Vector Machine for Classification</a> (10:13)</li>
-<li><a href="https://www.youtube.com/watch?v=327P9vMz19Y">Lab: Nonlinear Support Vector Machine</a> (7:54)</li>
+<li><a href="https://www.youtube.com/watch?v=m59UOo5jAFU">Maximal Margin
+Classifier</a> (11:35)</li>
+<li><a href="https://www.youtube.com/watch?v=_TR28WOymkE">Support Vector
+Classifier</a> (8:04)</li>
+<li><a href="https://www.youtube.com/watch?v=ooYwHNvH-YU">Kernels and
+Support Vector Machines</a> (15:04)</li>
+<li><a href="https://www.youtube.com/watch?v=6EFgNdwpB7s">Example and
+Comparison with Logistic Regression</a> (14:47)</li>
+<li><a href="https://www.youtube.com/watch?v=4KoL9vUI7xs">Lab: Support
+Vector Machine for Classification</a> (10:13)</li>
+<li><a href="https://www.youtube.com/watch?v=327P9vMz19Y">Lab: Nonlinear
+Support Vector Machine</a> (7:54)</li>
 </ul>
 </div>
-<div id="chapter-10-unsupervised-learning-slides" class="section level3">
-<h3>Chapter 10: Unsupervised Learning (<a href="https://courses.edx.org/assets/courseware/v1/fd6af987d74d7a6bbc81668ac47ccda6/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/unsupervised-handout.pdf">slides</a>)</h3>
+<div id="chapter-10-unsupervised-learning-slides"
+class="section level3">
+<h3>Chapter 10: Unsupervised Learning (<a
+href="https://courses.edx.org/assets/courseware/v1/fd6af987d74d7a6bbc81668ac47ccda6/asset-v1:StanfordOnline+STATSX0001+1T2020+type@asset+block/unsupervised-handout.pdf">slides</a>)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=WIMgMBYqhKE">Unsupervised Learning and Principal Components Analysis</a> (12:37)</li>
-<li><a href="https://www.youtube.com/watch?v=zMfomUERNww">Exploring Principal Components Analysis and Proportion of Variance Explained</a> (17:39)</li>
-<li><a href="https://www.youtube.com/watch?v=6psm_Y5QREU">K-means Clustering</a> (17:17)</li>
-<li><a href="https://www.youtube.com/watch?v=7r3jfKKXhjY">Hierarchical Clustering</a> (14:45)</li>
-<li><a href="https://www.youtube.com/watch?v=59TkGcuh5FA">Breast Cancer Example of Hierarchical Clustering</a> (9:24)</li>
-<li><a href="https://www.youtube.com/watch?v=pOUE0_3aPX8">Lab: Principal Components Analysis</a> (6:28)</li>
-<li><a href="https://www.youtube.com/watch?v=Zp4FJApjOY0">Lab: K-means Clustering</a> (6:31)</li>
-<li><a href="https://www.youtube.com/watch?v=-yxzBiesg48">Lab: Hierarchical Clustering</a> (6:33)</li>
+<li><a href="https://www.youtube.com/watch?v=WIMgMBYqhKE">Unsupervised
+Learning and Principal Components Analysis</a> (12:37)</li>
+<li><a href="https://www.youtube.com/watch?v=zMfomUERNww">Exploring
+Principal Components Analysis and Proportion of Variance Explained</a>
+(17:39)</li>
+<li><a href="https://www.youtube.com/watch?v=6psm_Y5QREU">K-means
+Clustering</a> (17:17)</li>
+<li><a href="https://www.youtube.com/watch?v=7r3jfKKXhjY">Hierarchical
+Clustering</a> (14:45)</li>
+<li><a href="https://www.youtube.com/watch?v=59TkGcuh5FA">Breast Cancer
+Example of Hierarchical Clustering</a> (9:24)</li>
+<li><a href="https://www.youtube.com/watch?v=pOUE0_3aPX8">Lab: Principal
+Components Analysis</a> (6:28)</li>
+<li><a href="https://www.youtube.com/watch?v=Zp4FJApjOY0">Lab: K-means
+Clustering</a> (6:31)</li>
+<li><a href="https://www.youtube.com/watch?v=-yxzBiesg48">Lab:
+Hierarchical Clustering</a> (6:33)</li>
 </ul>
 </div>
 <div id="interviews" class="section level3">
 <h3>Interviews</h3>
 <ul>
-<li><a href="http://blog.revolutionanalytics.com/2014/01/john-chambers-recounts-the-history-of-s-and-r.html">John Chambers recounts the history of S and R</a> (10:10)</li>
-<li><a href="https://www.youtube.com/watch?v=6l9V1sINzhE">Interview with Bradley Efron</a> (12:08)</li>
-<li><a href="https://www.youtube.com/watch?v=79tR7BvYE6w">Interview with Jerome Friedman</a> (10:29)</li>
-<li><a href="https://www.youtube.com/watch?v=MEMGOlJxxz0">Graduate students</a> (7:44)</li>
+<li><a
+href="http://blog.revolutionanalytics.com/2014/01/john-chambers-recounts-the-history-of-s-and-r.html">John
+Chambers recounts the history of S and R</a> (10:10)</li>
+<li><a href="https://www.youtube.com/watch?v=6l9V1sINzhE">Interview with
+Bradley Efron</a> (12:08)</li>
+<li><a href="https://www.youtube.com/watch?v=79tR7BvYE6w">Interview with
+Jerome Friedman</a> (10:29)</li>
+<li><a href="https://www.youtube.com/watch?v=MEMGOlJxxz0">Graduate
+students</a> (7:44)</li>
 </ul>
 <hr />
 </div>
