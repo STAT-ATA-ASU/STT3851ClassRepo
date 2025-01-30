@@ -44,28 +44,28 @@ ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) +
 ```
 :::
 
-The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot in @fig-sp1 shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = 0.844$, which indicates that a straight line is a reasonable relationship between the two variables.
+The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot in @fig-sp1 shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = `r cor(Gpa$hsgpa, Gpa$collgpa)`$, which indicates that a straight line is a reasonable relationship between the two variables.
 
 * Compute the correlation coefficient using the equation presented earlier.
 
 ::: {.callout-caution icon="false" title="R Code"}
 ```{r}
 head(Gpa)
-values <- Gpa %>% 
+values <- Gpa |> 
   mutate(y_ybar = collgpa - mean(collgpa), 
          x_xbar = hsgpa - mean(hsgpa), 
          zx = x_xbar/sd(hsgpa), 
          zy = y_ybar/sd(collgpa))
 knitr::kable(values)
 #
-values %>% 
+values |>  
   summarize(r = (1/9)*sum(zx*zy))
 ```
 
 Using the build in `cor()` function:
 
 ```{r}
-Gpa %>% 
+Gpa |>  
   summarize(r = cor(collgpa, hsgpa))
 ```
 :::
@@ -121,7 +121,7 @@ Find the least squares regression line $\hat{y} = b_0 + b_1x$ for the `Gpa` data
 
 ::: {.callout-caution icon="false" title="R Code"}
 ```{r}
-Gpa %>% 
+Gpa |>  
   summarize(b1 = cor(hsgpa, collgpa)*sd(collgpa)/sd(hsgpa),
             b0 = mean(collgpa) - b1*mean(hsgpa))
 ```
@@ -136,6 +136,13 @@ mod1
 summary(mod1)
 library(moderndive)
 get_regression_table(mod1)
+#
+broom::tidy(mod1, conf.int = TRUE) |>
+  knitr::kable()
+# 
+broom::glance(mod1) |>
+  knitr::kable()
+# 
 ```
 :::
 
