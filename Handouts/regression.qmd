@@ -151,6 +151,8 @@ Find the residuals for `mod1`.
 ::: {.callout-caution icon="false" title="R Code"}
 ```{r}
 get_regression_points(mod1)
+# or broom
+broom::augment(mod1)
 ```
 :::
 
@@ -167,6 +169,17 @@ ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) +
 :::
 
 ## Assessing the fit
+
+```{r}
+# R^2 plot
+broom::augment(mod1) |> 
+  ggplot(aes(x = collgpa, y = .fitted)) + 
+  geom_point() +
+  geom_abline(color = "red") + 
+  tune::coord_obs_pred() +
+  theme_bw()
+```
+
 
 ::: {.callout-caution icon="false" title="R Code"}
 ```{r, fig.width = 8, fig.height = 4}
