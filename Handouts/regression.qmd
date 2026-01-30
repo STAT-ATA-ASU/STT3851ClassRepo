@@ -6,7 +6,7 @@ date-format: "[Last modified on] MMMM DD, YYYY HH:mm:ss zzz"
 format: 
   html: default
   pdf: default
-editor: visual
+editor: source
 ---
 
 ```{r setup, include=FALSE}
@@ -44,7 +44,7 @@ ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) +
 ```
 :::
 
-The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot in @fig-sp1 shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = `r cor(Gpa$hsgpa, Gpa$collgpa)`$, which indicates that a straight line is a reasonable relationship between the two variables.
+The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot in @fig-sp1 shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = `r round(cor(Gpa$hsgpa, Gpa$collgpa), 3)`$, which indicates that a straight line is a reasonable relationship between the two variables.
 
 * Compute the correlation coefficient using the equation presented earlier.
 
@@ -55,11 +55,12 @@ values <- Gpa |>
   mutate(y_ybar = collgpa - mean(collgpa), 
          x_xbar = hsgpa - mean(hsgpa), 
          zx = x_xbar/sd(hsgpa), 
-         zy = y_ybar/sd(collgpa))
+         zy = y_ybar/sd(collgpa),
+         zxzy = zx*zy)
 knitr::kable(values)
 #
 values |>  
-  summarize(r = (1/9)*sum(zx*zy))
+  summarize(r = (1/9)*sum(zxzy))
 ```
 
 Using the build in `cor()` function:
@@ -83,7 +84,9 @@ library(gridExtra)
 grid.arrange(p1, p2, ncol = 1, nrow = 2)
 # Or better yet
 library(patchwork)
-p1/p2
+p1 / p2
+p1 + p2
+p1  + gt::gt(Gpa)
 ```
 
 
@@ -123,7 +126,8 @@ Find the least squares regression line $\hat{y} = b_0 + b_1x$ for the `Gpa` data
 ```{r}
 Gpa |>  
   summarize(b1 = cor(hsgpa, collgpa)*sd(collgpa)/sd(hsgpa),
-            b0 = mean(collgpa) - b1*mean(hsgpa))
+            b0 = mean(collgpa) - b1*mean(hsgpa)) |> 
+  knitr::kable()
 ```
 :::
 
@@ -134,15 +138,18 @@ The coefficients are also computed when using the `lm()` function.
 mod1 <- lm(collgpa ~ hsgpa, data = Gpa)
 mod1
 summary(mod1)
+knitr::kable(summary(mod1)$coef)
 library(moderndive)
 get_regression_table(mod1)
+# Spruce up some
+get_regression_table(mod1) |> 
+  knitr::kable()
 #
 broom::tidy(mod1, conf.int = TRUE) |>
   knitr::kable()
 # 
 broom::glance(mod1) |>
   knitr::kable()
-# 
 ```
 :::
 
@@ -151,8 +158,14 @@ Find the residuals for `mod1`.
 ::: {.callout-caution icon="false" title="R Code"}
 ```{r}
 get_regression_points(mod1)
+# Spruced up
+get_regression_points(mod1) |> 
+  knitr::kable()
 # or broom
 broom::augment(mod1)
+# Spruced up
+broom::augment(mod1) |> 
+  knitr::kable()
 ```
 :::
 
