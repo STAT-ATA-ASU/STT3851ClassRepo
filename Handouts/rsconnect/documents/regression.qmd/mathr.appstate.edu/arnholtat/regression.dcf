@@ -1,0 +1,12 @@
+name: regression
+title: regression
+username: arnholtat
+account: arnholtat
+server: mathr.appstate.edu
+hostUrl: https://mathr.appstate.edu/connect/__api__
+appId: 150
+bundleId: 420
+url: https://mathr.appstate.edu/connect/content/9f93ace2-eabc-4127-9be1-b96c99de175c/
+version: 1
+asMultiple: FALSE
+asStatic: TRUE
