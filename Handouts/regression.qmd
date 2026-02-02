@@ -216,8 +216,8 @@ What does the least squares regression model (`mod`) predict for `collgpa` for a
 ```{r}
 -0.950366 + 1.346999*3.3
 mod1$coef[1] + mod1$coef[2]*3.3
-predict(mod1, newdata = data.frame(hsgpa = 3.3))
-get_regression_points(mod1, newdata = data.frame(hsgpa = 3.3), digits = 7) -> T3
+predict(mod1, newdata = tibble(hsgpa = 3.3))
+get_regression_points(mod1, newdata = tibble(hsgpa = 3.3), digits = 7) -> T3
 T3
 T3$collgpa_hat
 T3[1, 3]
