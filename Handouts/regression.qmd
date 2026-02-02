@@ -17,10 +17,9 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALS
 
 The **correlation coefficient**, denoted by $r$, measures the direction and strength of the linear relationship between two numerical variables.  Is is given by the equation
 
-\begin{equation}
-\label{eq-cor}
+$$
 r = \frac{1}{(n-1)}\sum_{i=1}^n\left(\frac{x_i - \bar{x}}{s_x}\right)\left(\frac{y_i - \bar{y}}{s_y}\right)
-\end{equation}
+$${#eq-cor}
 
 Following are the high school GPAs and the college GPAs at the end of the freshman year for ten different students from the `Gpa` data set of the `BSDA` package.
 
@@ -46,7 +45,7 @@ ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) +
 
 The college GPA is the response variable and is labeled on the vertical axis.  The scatterplot in @fig-sp1 shows that the college GPA increases as the high school GPA increases.  In fact, the the dots appear to cluster along a straight line.  The correlation coefficient is $r = `r round(cor(Gpa$hsgpa, Gpa$collgpa), 3)`$, which indicates that a straight line is a reasonable relationship between the two variables.
 
-* Compute the correlation coefficient using the equation presented earlier.
+* Compute the correlation coefficient using @eq-cor.
 
 ::: {.callout-caution icon="false" title="R Code"}
 ```{r}
@@ -94,31 +93,31 @@ p1  + gt::gt(Gpa)
 
 The equation of a straight line is
 
-$$y = b_0 + b_1x$$
+$$y = b_0 + b_1x$${#eq-sl}
 
 where $b_0$ is the $y$-intercept and $b_1$ is the slope of the line.  From the equation of the line that best fits the data,
 
-$$\hat{y} = b_0 + b_1x$$
+$$\hat{y} = b_0 + b_1x$${#eq-lr}
 
 we can compute a predicted $y$ for each value of $x$ and then measure the error of the prediction.  The error of the prediction, $e_i$ (also called the residual) is the difference in the actual $y_i$ and the predicted $\hat{y}_i$.  That is, the residual associated with the data point $(x_i, y_i)$ is
 
-$$e_i = y_i - \hat{y}_i.$$
+$$e_i = y_i - \hat{y}_i.$${#eq-res}
 
 The least squares regression line is
 
-$$\hat{y} = b_0 + b_1x$$
+$$\hat{y} = b_0 + b_1x$${#eq-lsr}
 
 where
 
-\begin{equation}
+$$
 b_1 = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2} = r\frac{s_y}{s_x}
-\end{equation}
+$${#eq-b1}
 
 and 
 
-\begin{equation}
+$$
 b_0 = \bar{y} - b_1\bar{x}
-\end{equation}
+$${#eq-b0}
 
 Find the least squares regression line $\hat{y} = b_0 + b_1x$ for the `Gpa` data.
 
@@ -126,9 +125,14 @@ Find the least squares regression line $\hat{y} = b_0 + b_1x$ for the `Gpa` data
 ```{r}
 Gpa |>  
   summarize(b1 = cor(hsgpa, collgpa)*sd(collgpa)/sd(hsgpa),
-            b0 = mean(collgpa) - b1*mean(hsgpa)) |> 
+            b0 = mean(collgpa) - b1*mean(hsgpa)) -> ans1
+ans1 |> 
   knitr::kable()
 ```
+$$
+\widehat{\text{collgpa}} = `r ans1$b0` + `r ans1$b1` \times \text{hsgpa}
+$${#eq-lsl}
+
 :::
 
 The coefficients are also computed when using the `lm()` function.
@@ -138,19 +142,43 @@ The coefficients are also computed when using the `lm()` function.
 mod1 <- lm(collgpa ~ hsgpa, data = Gpa)
 mod1
 summary(mod1)
+```
+
+$$
+\widehat{\text{collgpa}} = `r mod1$coef[1]` + `r mod1$coef[2]` \times \text{hsgpa}
+$${#eq-lsl2}
+
+Or
+
+$$
+\widehat{\text{collgpa}} = `r summary(mod1)$coef[1, 1]` + `r summary(mod1)$coef[1, 2]` \times \text{hsgpa}
+$${#eq-lsl3}
+
+```{r}
 knitr::kable(summary(mod1)$coef)
 library(moderndive)
 get_regression_table(mod1)
 # Spruce up some
 get_regression_table(mod1) |> 
   knitr::kable()
-#
+```
+
+$$
+\widehat{\text{collgpa}} = `r get_regression_table(mod1)[1, 2]` + `r get_regression_table(mod1)[2, 2]` \times \text{hsgpa}
+$${#eq-lsl4}
+
+```{r}
 broom::tidy(mod1, conf.int = TRUE) |>
   knitr::kable()
-# 
+# GOF measures
 broom::glance(mod1) |>
   knitr::kable()
 ```
+
+$$
+\widehat{\text{collgpa}} = `r broom::tidy(mod1)[1, 2]` + `r broom::tidy(mod1)[2, 2]` \times \text{hsgpa}
+$${#eq-lsl5}
+
 :::
 
 Find the residuals for `mod1`.
