@@ -1,6 +1,6 @@
 ---
 title: "Least Squares Regression"
-author: "Alan T. Arnholt"
+author: "Alan Arnholt"
 date: last-modified
 date-format: "[Last modified on] MMMM DD, YYYY HH:mm:ss zzz"
 format: 
