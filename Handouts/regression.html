@@ -100,7 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified on February 02, 2026 10:36:15 Eastern Standard Time</p>
+      <p class="date">Last modified on February 02, 2026 11:50:08 Eastern Standard Time</p>
     </div>
   </div>
   
@@ -516,7 +516,7 @@ F-statistic:  19.8 on 1 and 8 DF,  p-value: 0.002141</code></pre>
 \tag{9}\]</span></span></p>
 <p>Or</p>
 <p><span id="eq-lsl3"><span class="math display">\[
-\widehat{\text{collgpa}} = -0.950366 + 0.8317729 \times \text{hsgpa}
+\widehat{\text{collgpa}} = -0.950366 + 1.3469985 \times \text{hsgpa}
 \tag{10}\]</span></span></p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">summary</span>(mod1)<span class="sc">$</span>coef)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1011,7 +1011,7 @@ R Code
 </div>
 <section id="using-the-model-to-predict" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-model-to-predict">Using the model to predict</h2>
-<p>What does the least squares regression model (<code>mod</code>) predict for <code>collgpa</code> for a student with a 3.3 <code>hsgpa</code>?</p>
+<p>What does the least squares regression model (<code>mod1</code>) predict for <code>collgpa</code> for a student with a 3.3 <code>hsgpa</code>?</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span><span class="fl">0.950366</span> <span class="sc">+</span> <span class="fl">1.346999</span><span class="sc">*</span><span class="fl">3.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

@@ -151,7 +151,7 @@ $${#eq-lsl2}
 Or
 
 $$
-\widehat{\text{collgpa}} = `r summary(mod1)$coef[1, 1]` + `r summary(mod1)$coef[1, 2]` \times \text{hsgpa}
+\widehat{\text{collgpa}} = `r summary(mod1)$coef[1, 1]` + `r summary(mod1)$coef[2, 1]` \times \text{hsgpa}
 $${#eq-lsl3}
 
 ```{r}
@@ -211,7 +211,7 @@ ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) +
 
 ## Using the model to predict
 
-What does the least squares regression model (`mod`) predict for `collgpa` for a student with a 3.3 `hsgpa`?
+What does the least squares regression model (`mod1`) predict for `collgpa` for a student with a 3.3 `hsgpa`?
 
 ```{r}
 -0.950366 + 1.346999*3.3
